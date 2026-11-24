@@ -1,0 +1,1126 @@
+<!--
+============================================================================
+WORDPRESS PASTE INSTRUCTIONS
+
+1. Paste everything BELOW the "BEGIN POST CONTENT" line into the WordPress
+   post body (in the Code Editor / HTML view, not the Visual editor).
+
+2. Paste the contents of the "ADDITIONAL CSS" block (further below) into:
+     Appearance → Customize → Additional CSS
+   (or your theme's equivalent). The CSS targets only this article via the
+   .ltd-paper class, so it will not affect the rest of your site.
+
+3. Math expressions are written in plain text (e.g. dx₄/dt = ic, [q̂, p̂] = iℏ).
+   No MathJax or KaTeX is required. If you later wish to render LaTeX math,
+   the source LaTeX file is the canonical version.
+============================================================================
+-->
+
+<!-- =================== ADDITIONAL CSS (paste into Customizer) =================== -->
+<!--
+.ltd-paper {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, "URW Palladio L", "TeX Gyre Pagella", Georgia, serif;
+  background: #ffffff;
+  color: #000000;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5em 1em 3em 1em;
+  line-height: 1.55;
+  font-size: 18px;
+}
+.ltd-paper h1, .ltd-paper h2, .ltd-paper h3, .ltd-paper h4 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, "URW Palladio L", "TeX Gyre Pagella", Georgia, serif;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+.ltd-paper h1.ltd-title { font-size: 1.55em; text-align: center; margin-top: 0.3em; }
+.ltd-paper h2 { font-size: 1.25em; border-bottom: 1px solid #999; padding-bottom: 0.15em; }
+.ltd-paper h3 { font-size: 1.08em; }
+.ltd-paper h4 { font-size: 1.0em; font-style: italic; font-weight: 600; }
+.ltd-paper p { margin: 0 0 1.0em 0; text-align: justify; hyphens: auto; }
+.ltd-paper .ltd-author { text-align: center; font-style: italic; margin-bottom: 0.4em; }
+.ltd-paper .ltd-affil  { text-align: center; font-style: italic; margin-bottom: 0.2em; font-size: 0.95em; }
+.ltd-paper .ltd-date   { text-align: center; margin-bottom: 1.6em; font-size: 0.95em; }
+.ltd-paper .ltd-epigraph {
+  border-left: 3px solid #000;
+  margin: 1.2em 1.5em;
+  padding: 0.2em 0 0.2em 1em;
+  font-style: italic;
+  font-size: 0.96em;
+  color: #222;
+}
+.ltd-paper .ltd-epigraph .ltd-attrib { font-style: normal; display: block; margin-top: 0.4em; font-size: 0.92em; }
+.ltd-paper blockquote { margin: 1em 1.5em; font-style: italic; }
+.ltd-paper .ltd-eq {
+  display: block;
+  text-align: center;
+  margin: 1.1em 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, "URW Palladio L", "TeX Gyre Pagella", Georgia, serif;
+  font-style: italic;
+  font-size: 1.02em;
+  line-height: 1.6;
+  white-space: normal;
+}
+.ltd-paper .ltd-eq em { font-style: italic; }
+.ltd-paper .ltd-eq .upright { font-style: normal; }
+.ltd-paper ul, .ltd-paper ol { margin: 0 0 1em 1.5em; padding: 0; }
+.ltd-paper li { margin-bottom: 0.4em; }
+.ltd-paper .ltd-abstract {
+  margin: 1.5em 0;
+  font-size: 0.97em;
+}
+.ltd-paper .ltd-abstract h2 { border: none; font-size: 1.1em; text-align: center; }
+.ltd-paper hr { border: none; border-top: 1px solid #999; margin: 2em 0; }
+.ltd-paper ol.ltd-refs {
+  margin: 1em 0 1em 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: refnum;
+}
+.ltd-paper ol.ltd-refs li {
+  counter-increment: refnum;
+  position: relative;
+  padding-left: 2.4em;
+  margin-bottom: 1em;
+  font-size: 0.93em;
+  line-height: 1.55;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.ltd-paper ol.ltd-refs li::before {
+  content: "[" counter(refnum) "]";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+}
+.ltd-paper ol.ltd-refs li a {
+  color: #000;
+  text-decoration: underline;
+  word-break: break-all;
+}
+.ltd-paper ol.ltd-refs li:target {
+  background: #f5f5dc;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.ltd-paper .ltd-thm {
+  margin: 1em 0;
+  padding: 0.7em 1em;
+  border-left: 3px solid #444;
+  background: #f9f9f4;
+  font-style: italic;
+}
+.ltd-paper .ltd-thm-label {
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  margin-right: 0.3em;
+}
+.ltd-paper .ltd-plain {
+  margin: 1em 0;
+  padding: 0.7em 1em;
+  border-left: 3px solid #888;
+  background: #f7f7f7;
+}
+.ltd-paper .ltd-remark {
+  margin: 1em 0;
+  padding: 0.7em 1em;
+  border-left: 3px solid #b59b3a;
+  background: #fbf8ec;
+}
+.ltd-paper ol.ltd-enum,
+.ltd-paper ul.ltd-bullet {
+  margin: 0.8em 0 0.8em 1.5em;
+}
+.ltd-paper ol.ltd-enum li,
+.ltd-paper ul.ltd-bullet li {
+  margin-bottom: 0.4em;
+}
+.ltd-paper table.ltd-chain {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.93em;
+  background: #fff;
+}
+.ltd-paper table.ltd-chain thead tr:first-child th {
+  text-align: center;
+  font-size: 1.15em;
+  padding: 0.6em 0.4em 0.3em 0.4em;
+  border-bottom: 2px solid #000;
+  font-style: italic;
+}
+.ltd-paper table.ltd-chain thead tr:nth-child(2) th {
+  text-align: center;
+  padding: 0.4em 0.6em;
+  border-bottom: 1px solid #000;
+  font-size: 1em;
+}
+.ltd-paper table.ltd-chain td {
+  padding: 0.45em 0.7em;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  width: 50%;
+}
+.ltd-paper table.ltd-chain td:first-child { border-right: 1px solid #ccc; }
+.ltd-paper table.ltd-chain tbody tr:last-child td { border-bottom: none; }
+@media (max-width: 600px) {
+  .ltd-paper table.ltd-chain { font-size: 0.86em; }
+  .ltd-paper table.ltd-chain td { padding: 0.35em 0.4em; }
+}
+@media (max-width: 600px) {
+  .ltd-paper { font-size: 17px; padding: 1em 0.6em; }
+  .ltd-paper .ltd-epigraph { margin: 1em 0.5em; }
+}
+-->
+<!-- =================== END ADDITIONAL CSS =================== -->
+
+
+<!-- =================== BEGIN POST CONTENT =================== -->
+
+<div class="ltd-paper">
+
+<h1 class="ltd-title">On the Unification of General Relativity and Quantum Mechanics by a Single Geometric Principle:<br>The McGucken Principle dx₄/dt = ic as the Common Foundation of GR and QM</h1>
+
+<p class="ltd-author">Dr. Elliot McGucken</p>
+<p class="ltd-affil">Light, Time, Dimension Theory — elliotmcguckenphysics.com</p>
+<p class="ltd-date">May 2026</p>
+
+<div class="ltd-epigraph">
+"More intellectual curiosity, versatility and yen for physics than Elliot McGucken's I have never seen in any senior or graduate student. Originality, powerful motivation, and a can-do spirit make me think that McGucken is a top bet."
+<span class="ltd-attrib">— John Archibald Wheeler, Joseph Henry Professor of Physics, Princeton University</span>
+</div>
+
+<div class="ltd-epigraph">
+"A theory is the more impressive the greater is the simplicity of its premises, the more different are the kinds of things it relates and the more extended the range of its applicability."
+<span class="ltd-attrib">— Albert Einstein</span>
+</div>
+
+<div class="ltd-epigraph">
+"Behind it all is surely an idea so simple, so beautiful, that when we grasp it — in a decade, a century, or a millennium — we will all say to each other, how could it have been otherwise?"
+<span class="ltd-attrib">— John Archibald Wheeler</span>
+</div>
+
+<div class="ltd-abstract">
+<h2>Abstract</h2>
+<p>A single foundational, physical, geometric principle — the McGucken Principle which states that the fourth dimension is expanding at the velocity of light <em>dx₄/dt = ic</em> — unifies general relativity and quantum mechanics. It is demonstrated that as <em>dx₄/dt = ic</em> exalts both algebraic-symmetry and geometric-propagation, it simultaneously exalts the spacetime metric (algebraically: <em>dx₄ = ic dt</em> substituted into the Euclidean four-distance gives the Minkowski metric) and the full content of quantum mechanical phenomena (geometrically: <em>x₄</em>'s spherical expansion is Huygens' principle, generating the path integral and the Schrödinger equation), with both QM and GR then developing through independent logical chains of theorems incorporating both algebraic and geometric approaches, as shown. Both general relativity and quantum mechanics are built as chains of theorems in logical steps as outlined in the table below, as fully developed in the companion chain papers [<a href="#ref1">1</a>, <a href="#ref2">2</a>] and the body of the present paper. Perhaps it is easier for the contemporary physicist to perceive that the spacetime metric immediately follows from the principle <em>dx₄/dt = ic</em>, while it is more difficult to grasp that all of quantum theory also derives from the very same principle. The quantum derivation route becomes clear the moment one accepts McGucken's physical interpretation that <em>dx₄/dt = ic</em> represents a foundational physical invariant: <em>x₄</em> is expanding in a spherically symmetric manner from every spacetime event. With the physical interpretation of <em>dx₄/dt = ic</em>, the derivation of general relativity and quantum mechanics is unified with a common, foundational principle, as sketched in the table below and as rigorously demonstrated in this paper.</p>
+
+<table class="ltd-chain">
+<thead>
+<tr><th colspan="2">dx₄ / dt = ic</th></tr>
+<tr><th>General Relativity</th><th>Quantum Mechanics</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>∫ dx₄/dt = ic &nbsp;⟹&nbsp; <em>x</em>₄ = <em>ict</em></td>
+  <td><em>e</em><sup>−<em>iωt</em></sup> &nbsp;⟹&nbsp; <em>e</em><sup>−<em>ωx</em>₄/<em>c</em></sup></td>
+</tr>
+<tr>
+  <td><em>ds</em>² = <em>dx</em>₁² + <em>dx</em>₂² + <em>dx</em>₃² + <em>dx</em>₄²</td>
+  <td>ψ as wave-amplitude on McGucken Sphere</td>
+</tr>
+<tr>
+  <td><em>ds</em>² = <em>dx</em>² − <em>c</em>² <em>dt</em>²&nbsp;&nbsp;(Minkowski)</td>
+  <td><em>iℏ</em> ∂<em>ψ</em>/∂<em>t</em> = <em>Ĥψ</em>&nbsp;&nbsp;(Schrödinger)</td>
+</tr>
+<tr>
+  <td><em>u</em><sup>μ</sup><em>u</em><sub>μ</sub> = −<em>c</em>²&nbsp;&nbsp;(four-velocity budget)</td>
+  <td>[<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em>&nbsp;&nbsp;(canonical commutation)</td>
+</tr>
+<tr>
+  <td><em>dτ</em>/<em>dt</em> = √(1 − <em>v</em>²/<em>c</em>²)&nbsp;&nbsp;(SR time dilation)</td>
+  <td>Δ<em>q</em> · Δ<em>p</em> ≥ <em>ℏ</em>/2&nbsp;&nbsp;(uncertainty)</td>
+</tr>
+<tr>
+  <td><em>dτ</em>/<em>dt</em> = √(1 − 2<em>GM</em>/<em>rc</em>²)&nbsp;&nbsp;(Schwarzschild)</td>
+  <td><em>P</em>(<em>x</em>) = |<em>ψ</em>|²&nbsp;&nbsp;(Born rule)</td>
+</tr>
+<tr>
+  <td><em>G</em><sub>μν</sub> = (8π<em>G</em>/<em>c</em>⁴) <em>T</em><sub>μν</sub>&nbsp;&nbsp;(Einstein eqns)</td>
+  <td>(<em>iℏγ</em><sup>μ</sup>∂<sub>μ</sub> − <em>mc</em>)<em>ψ</em> = 0&nbsp;&nbsp;(Dirac)</td>
+</tr>
+<tr>
+  <td><em>S</em><sub>BH</sub> = <em>k</em><sub>B</sub><em>A</em>/(4<em>ℓ</em><sub>P</sub>²)&nbsp;&nbsp;(horizon entropy)</td>
+  <td>⟨<em>x</em><sub>f</sub>|<em>x</em><sub>i</sub>⟩ = ∫𝒟<em>x e</em><sup><em>iS</em>/<em>ℏ</em></sup>&nbsp;&nbsp;(path integral)</td>
+</tr>
+<tr>
+  <td>AdS/CFT&nbsp;&nbsp;(asymptotic Channel A ↔ B)</td>
+  <td>Bell-violation = shared <em>x</em>₄-rest&nbsp;&nbsp;(entanglement)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The fact that the physical invariant <em>dx₄/dt = ic</em> contains all the mathematics and physics by which both general relativity and quantum mechanics can be derived as a chain of theorems attests to the deeper truth of the McGucken Principle. And there is more. <em>dx₄/dt = ic</em> generates spacetime and general relativity, and every point of spacetime contains <em>dx₄/dt = ic</em>. <em>dx₄/dt = ic</em> generates the McGucken Sphere in quantum mechanics, and every point of the McGucken Sphere contains <em>dx₄/dt = ic</em>. This mutual generation-containment property of <em>dx₄/dt = ic</em> is also explored and made formal in mathematics via a new mathematical category: the <em>Reciprocal-Generation McGucken Category</em> <strong>McG</strong> built on <em>dx₄/dt = ic</em>, with three theorems on the source-pair (<em>ℳ<sub>G</sub></em>, <em>D<sub>M</sub></em>) — mutual containment, reciprocal generation, and the containment-generation equivalence — establishing a new categorical foundation for mathematical physics which completes the Erlangen Programme [<a href="#ref9">9</a>]. Every atom of spacetime, as defined by the McGucken Sphere [<a href="#ref5">5</a>] of <em>dx₄/dt = ic</em>, contains the action [<a href="#ref3">3</a>], symmetries [<a href="#ref4">4</a>], and spacetime structure [<a href="#ref5">5</a>] for all of known physics.</p>
+
+<p>The two theories that have stood as the unreconciled pillars of twentieth-century physics for over a century are herein demonstrated to descend, as parallel chains of theorems, from the McGucken Principle <em>dx₄/dt = ic</em>. On the gravitational side we will develop the Einstein field equations, the Schwarzschild metric, the geodesic hypothesis, the Equivalence Principle, the Bekenstein–Hawking horizon entropy, and the AdS/CFT correspondence; and on the quantum mechanical side, we will develop the Schrödinger equation, the Dirac equation, the canonical commutation relation [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em>, the Born rule, the Feynman path integral, and quantum nonlocality — all of these physical entities descend from <em>dx₄/dt = ic</em> through what I call the <em>McGucken Duality</em> [<a href="#ref6">6</a>, <a href="#ref7">7</a>, <a href="#ref8">8</a>]: the structural fact that the principle generates simultaneously an algebraic-symmetry content (Channel A) and a geometric-propagation content (Channel B) as parallel sibling consequences in both sectors. The unification is not a postulated correspondence between two pre-existing theories; it is the recognition that the two theories are projections of the same geometric content onto different scales of physical organization. General relativity is what <em>dx₄/dt = ic</em> looks like at macroscopic scales, where the invariant rate of <em>x₄</em>'s expansion meets the curvature of three-dimensional space stretched by mass-energy — the spatial metric <em>h<sub>ij</sub></em> acting as the refractive index of three-dimensional space for <em>x₄</em>'s invariant expansion. Quantum mechanics is what <em>dx₄/dt = ic</em> looks like at the Compton-frequency scale, where the oscillatory advance of <em>x₄</em> is the geometric content of the wavefunction. The <em>i</em> that quantum mechanics has put in by hand for a century, and the <em>c</em> that general relativity has put in by hand for a century, are the same symbol of the same single geometric principle, factored into the two sectors that have not yet recognized their common origin. I trace the origin of this recognition to three Princeton conversations of 1988 (with Peebles, Wheeler, and Taylor), to the first formal articulation in Appendix B of my 1998 UNC dissertation, to the explicit imaginary-rate form in my 2008 FQXi essays, and to the chains of theorems documented over the last decade. I then catalog the ten structural features of the principle that jointly characterize its grand-unification reach across GR and QM, develop the McGucken Duality as the technical heart of the unification, and articulate the no-graviton prediction as the structural difference between my framework and the quantum-gravity programs of the past seventy years.</p>
+</div>
+
+<h2>1. Introduction: The Hundred-Year Gap</h2>
+
+<p>For the last hundred years, foundational physics has carried a problem it has not been able to solve. Einstein's general relativity (1915) and the quantum mechanics of Heisenberg, Schrödinger, Dirac, and von Neumann (1925–1932) are two empirically successful frameworks whose foundational structures have not been derived from a common principle. General relativity geometrizes gravitation as the curvature of a four-dimensional Lorentzian manifold; quantum mechanics describes matter through non-commuting operators on a Hilbert space evolving under <em>iℏ ∂ψ/∂t = Ĥψ</em>. The two theories use different mathematical objects, work at different scales, and resist combination. Every attempt to quantize gravity — canonical quantization, Loop Quantum Gravity, the various string theories, asymptotic safety, causal-set theory, Wheeler–DeWitt, twistors, entropic gravity, constructive gravity — has either produced no falsifiable empirical content, or produced empirical content that cannot be tested with current technology, or, in the case of the string-theoretic programs, produced an effectively infinite landscape of vacuum states from which no unique prediction descends. And none of the previous programmes ever attempted, nor succeeded, in deriving both quantum mechanics and relativity from a common foundational principle in the spirit of Newton's <em>Principia</em>.</p>
+
+<p>I am not the first to think the problem may be that we have been asking the wrong question. Wheeler said to me in Jadwin Hall in 1988, in the conversation that began my work on this principle, that the problem was simpler than the formalism made it look, and that the answer would not come from quantizing gravity but from finding a deeper principle that supplied both the geometry and the quantum at the same time, as the two readings of the same thing. He died in 2008, and I was fortunate enough to publish my first explicit articulation of <em>dx₄/dt = ic</em> in the FQXi essays of that year, and to send him a copy. This paper is the formal QM–GR foundational unification that the chain of theorems built on <em>dx₄/dt = ic</em> over the past decade now makes possible to write down clearly.</p>
+
+<p>The hundred-year gap is closed, in this paper, in the following structural sense. I do not propose to quantize gravity; I propose that gravity is not a force to be quantized in the first place. I do not propose to geometrize quantum mechanics; I propose that the geometry has been there all along, in the equation <em>x₄ = ict</em> that Minkowski wrote in 1908 and that the textbook tradition has read as a notational convenience rather than as a dynamical statement. Differentiate Minkowski's equation with respect to <em>t</em>, and the result is the McGucken Principle, <em>dx₄/dt = ic</em>. The equation is the foundational physical statement that the fourth dimension is dynamic, advancing at the universal invariant rate <em>c</em>, with the imaginary unit <em>i</em> carrying the orientation. From the principle, I derive both general relativity and quantum mechanics as parallel structural projections, with the Einstein field equations and the Schrödinger equation occupying structurally analogous positions in their respective chains of theorems. The Hilbert that has been put in by hand and the curvature that has been put in by hand are the two readings of the same principle's invariance content (Channel A) and propagation content (Channel B). This is what I call the McGucken Duality, and it is the technical heart of the unification.</p>
+
+<p>The paper proceeds as follows. Section 2 traces the physical origin of the principle in the three Princeton conversations of 1988, the synthesis I worked out from them, and the formal articulation I gave in Appendix B of my 1998 UNC dissertation. Section 3 develops the McGucken Duality — what each channel physically means, why the two channels are inseparable, and what makes the principle the first single physical statement to carry both channels as parallel sibling consequences across both QM and GR. Section 4 derives general relativity from the principle, summarizing the chain of theorems that culminates in the Einstein field equations, the Schwarzschild metric, the Bekenstein–Hawking entropy, and the no-graviton prediction. Section 5 derives quantum mechanics from the principle, summarizing the chain of theorems that culminates in the Schrödinger equation, the Dirac equation, the canonical commutation relation, the Born rule, and the Feynman path integral. Section 6 identifies where the two chains meet — in the master-equation pair <em>u<sup>μ</sup>u<sub>μ</sub> = −c²</em> and [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em>, in the Compton coupling that is the structural source of both, and in the Bekenstein–Hawking entropy as the limiting horizon-thermodynamic content where geometry and quantum coincide. Section 7 catalogs the ten structural features that jointly characterize the principle's grand-unification reach across GR and QM. Section 8 states the no-graviton prediction as the falsifiable empirical content that distinguishes my framework from the quantum-gravity programs of the past seventy years. Section 9 concludes.</p>
+
+<p>I write this paper in the first person because the framework's intellectual genealogy is personal, descending from specific conversations with specific teachers — Peebles, Wheeler, Taylor — in specific offices in Jadwin Hall in 1988, and the structural commitments of the framework are direct inheritances from that Princeton tradition. The framework is not the product of formal-mathematical exploration. It is the product of physical intuition about what <em>dx₄/dt = ic</em> actually does, visualized as the expanding McGucken Sphere, and articulated over four decades as the chain of theorems that the principle physically forces. The Princeton tradition that runs from Einstein through Wheeler insisted that physical models come first and mathematics is the formalization of physical content, not its source. This paper is in that tradition.</p>
+
+<h2>2. The Physical Origin: From Princeton 1988 to dx₄/dt = ic</h2>
+
+<p>I arrived at <em>dx₄/dt = ic</em> not through formal-mathematical search but through three specific conversations in Jadwin Hall during my junior year at Princeton in 1988, and the structural synthesis of what those conversations supplied. I describe each in turn, because the principle's reach is the structural consequence of the physical configuration the three conversations together forced.</p>
+
+<h3>2.1 Peebles 1988: The Photon as a Spherically Symmetric Wavefront Expanding at c</h3>
+
+<p>I was reading the galleys of P. J. E. Peebles's <em>Quantum Mechanics</em> for his class, and I went to his office with a question. "So when a photon is emitted from a source, all we can say is that the photon is represented by a spherically-symmetric wavefront of probability expanding at <em>c</em>?" Peebles answered without qualification: "Yes. The photon has an equal chance of being detected anywhere defined by the area of a sphere's surface, which is expanding at <em>c</em>."</p>
+
+<p>What I heard in Peebles's answer was not the standard quantum-mechanical fact but a physical statement about geometry. The photon is not a point particle that happens to have a probability distribution. The photon <em>is</em> the spherically symmetric expanding wavefront. The wavefront is real; the spherical symmetry is real; the expansion at <em>c</em> is real. The probability of detecting the photon at any point on the sphere's surface is fixed by the sphere's geometry, not added on as a separate stipulation. This was Channel B of the eventual principle — the geometric-propagation content — heard for the first time as a foundational physical fact about what photons are.</p>
+
+<h3>2.2 Wheeler 1988: The Photon as Stationary in x₄</h3>
+
+<p>Wheeler was my junior-paper advisor. In a separate conversation in his office, he described a geometric fact about the photon that is structurally encoded in special relativity but rarely articulated as a foundational physical statement: <em>the photon is stationary in x₄</em>. The photon's worldline has zero proper length. The photon never ages. The photon's interval (Δs)² = 0 is a null vector. The photon's coordinate <em>x₄</em> does not advance during the photon's spatial propagation. The photon, in a deep geometric sense, is not moving in the fourth dimension even while moving at the speed of light in space.</p>
+
+<p>This was the structural complement of what Peebles had said. The photon is propagating in space as a spherically symmetric wavefront expanding at <em>c</em>, and at the same time the photon is stationary in the fourth coordinate. Both facts are true simultaneously. Standard relativity supplies the mathematics for the second; standard quantum mechanics supplies the first. Both are available to anyone who has taken graduate courses in either subject. What was novel was <em>what the configuration physically implies</em>.</p>
+
+<h3>2.3 Taylor 1988: Entanglement as the Source of the Quantum</h3>
+
+<p>Joseph Taylor was my second junior-paper advisor. He had won the Nobel Prize for the binary-pulsar observations that supplied the strongest empirical evidence for general relativity outside the Solar System. In Jadwin Hall he put a specific challenge to me: "Schrödinger said that entanglement is the characteristic trait of quantum mechanics. Figure out the source of entanglement, and you'll figure out the source of the quantum, as nobody really knows what, nor why, nor how <em>ℏ</em> is."</p>
+
+<p>What I heard was a foundational identification. Entanglement is the structurally distinctive content of quantum mechanics, and its source is therefore the source of the quantum. Schrödinger's 1935 paper had said as much. Bell 1964 had supplied the inequality; Aspect 1982 had supplied the experimental violation. By 1988, the physics community accepted that entanglement was empirically real. What no one had supplied was a physical model of why two photons separated by macroscopic spatial distances could yet act as if they were at the same place.</p>
+
+<h3>2.4 The Synthesis: dx₄/dt = ic as Forced Conclusion</h3>
+
+<p>The structural insight was the synthesis. <em>If</em> the photon is a spherically symmetric wavefront expanding at <em>c</em> (Peebles), <em>and</em> the photon is stationary in <em>x₄</em> (Wheeler), <em>then x₄</em> itself must be expanding at rate <em>c</em> relative to the three spatial dimensions, in a spherically symmetric manner. There is no other geometric configuration consistent with both facts. A photon that is spatially expanding at <em>c</em> but temporally stationary in <em>x₄</em> requires that <em>x₄</em> itself be the moving frame, advancing at <em>c</em> so as to keep the photon stationary in its own coordinate. The principle that follows is <em>dx₄/dt = ic</em>. I draw the imaginary unit <em>i</em> from Minkowski's 1908 <em>x₄ = ict</em>, which makes the rate Lorentz-invariant and identifies the moving coordinate as <em>x₄</em> rather than as a real fourth axis.</p>
+
+<p>The principle resolves Taylor's challenge immediately. Two photons emitted from a common source remain at the same place in <em>x₄</em>. They were together in <em>x₄</em> at emission, and <em>x₄</em>'s spherical-expansion mechanism distributes their spatial locations outward without separating them in <em>x₄</em>. They retain a non-local quantum correlation that is unaffected by their spatial separation, because their separation in <em>x₄</em> is zero throughout the experiment. Entanglement is the geometric content of the photons' shared stationarity in <em>x₄</em>. Bell-violation experiments confirm what the geometry forces: spacelike-separated correlations that survive the speed-of-light bound because the correlated systems are at the same place in <em>x₄</em>, not in spite of being spatially separated.</p>
+
+<p>The Princeton synthesis admits three logically simple proof sketches that capture the structural content of the framework at its tightest:</p>
+
+<p><strong>Proof 1 (Peebles–Wheeler).</strong> Relativity says a timeless photon stays at one place in <em>x₄</em>. Quantum mechanics says a photon propagates as a spherically symmetric wavefront expanding at <em>c</em>. Therefore <em>x₄</em> is expanding at <em>c</em> in a spherically symmetric manner relative to the three spatial dimensions.</p>
+
+<p><strong>Proof 2 (Einstein–Minkowski).</strong> Minkowski 1908 and Einstein 1912 wrote <em>x₄ = ict</em>. Differentiate. The result is <em>dx₄/dt = ic</em>. The principle is the differential of an equation already in the literature for a hundred years, with the dynamical content made explicit.</p>
+
+<p><strong>Proof 3 (absolute rest).</strong> The only way to remain stationary in space is to advance at <em>c</em> through <em>x₄</em>. The only way to remain stationary in <em>x₄</em> is to advance at <em>c</em> through space. Therefore <em>x₄</em> is moving at <em>c</em> relative to the three spatial dimensions. The principle is forced by the symmetry of relativistic kinematics, with the rate fixed at <em>c</em> by the constancy of the speed of light.</p>
+
+<h3>2.5 The 1998 Articulation: Appendix B of the UNC Dissertation</h3>
+
+<p>I gave the principle its first formal articulation in <em>Appendix B: Physics for Poets — The Law of Moving Dimensions</em> of my 1998 UNC dissertation. The Appendix opens by restating Einstein's two postulates of relativity in an alternative form: the law of moving dimensions states that the time dimension is moving or expanding relative to the three spatial dimensions. I derived the rate from Einstein's second postulate. Beginning with the relativistic null condition Σ<sub>j</sub><em>x<sub>j</sub></em>² − <em>c²t²</em> = 0 for <em>j</em> = 1, 2, 3, the equivalent statement is Σ<sub>j</sub><em>x<sub>j</sub></em>² = <em>c²t²</em>, which in one dimension reduces to <em>x = ct</em>. The differential is <em>dx/dt = c</em>: the rate of one dimension's expansion relative to the others is exactly the velocity of light. The 1998 Appendix B states the real-valued form. The imaginary unit <em>i</em>, which makes the rate Lorentz-invariant and identifies the moving coordinate explicitly as <em>x₄</em>, I supplied through subsequent formalization, with Minkowski's <em>x₄ = ict</em> supplying the structural connection. My 2008 FQXi essays make this explicit: <em>dx₄/dt = ic</em> is the differential of Minkowski's 1908 manuscript, with the dynamical content made explicit.</p>
+
+<p>The 1998 Appendix B already articulates many of the structural features that the subsequent chain of theorems systematically develops. Wave-particle duality is identified as a consequence of relative motion between dimensions: "Wave-particle duality and quantum mechanical probabilistic behavior can be accounted for by the relative motion between the dimensions, which both particles and waves exist in. Feynman's many-path integrals, reflecting the notion that a particle travels all paths, can be accounted for by the fact that until it interacts with matter, a particle has a chance of existing as a pure wave, completely independent of the spatial dimensions." Time dilation is identified as rotation into the time dimension: "As an entity gains velocity, it is rotated into the moving time dimension, and it in a sense catches up with the dimension." Length contraction is identified as probability rotation into the time dimension: "As an object gains velocity its probability is rotated into the time dimension, and thus it appears shorter from the perspective of the three spatial dimensions." The photon is identified as matter fully rotated into the time dimension, with <em>E = mc²</em> following because radiative energy is matter rotated fully into the time dimension. The closing dictum of the 1998 Appendix B states the framework's foundational claim: "The underlying fabric of all reality, the dimensions themselves, are moving relative to one another."</p>
+
+<p>The dissertation establishes the priority date of the framework as 1998. The 2008 FQXi essays extend it. The chain of theorems built between 2008 and the present formalizes the consequences in both sectors. I am not, in this paper, doing new physics; I am writing down the QM–GR foundational unification that the chain of theorems on <em>dx₄/dt = ic</em> now makes possible to state cleanly in one place.</p>
+
+<h3>2.6 Wheeler's Commission: The Time Part of Schwarzschild by Poor-Man's Reasoning</h3>
+
+<p>Wheeler's specific commission to me, recorded in his recommendation for my graduate-school admission, was the original empirical test of the framework's reach: "I gave him as an independent task to figure out the time factor in the standard Schwarzschild expression around a spherically-symmetric center of attraction. … 'Can you, by poor-man's reasoning, derive what I never have, the time part?' He could and did, and wrote it all up in a beautifully clear account." The space part of the Schwarzschild metric Wheeler had derived geometrically in <em>A Journey Into Gravity and Space Time</em>; the time part — the gravitational time-dilation factor √(1 − 2GM/rc²) — the standard literature derives only through the formal field-equation machinery. My task was to derive the time part by elementary geometric reasoning, without invoking the field equations. The fact that this was possible, that the time part of Schwarzschild descends by elementary geometric reasoning from a physical principle simpler than the field equations themselves, was the first hint that the framework's reach extended beyond a single calculation into the full content of general relativity. The structural commitment Wheeler trained into the framework was: if a result of foundational physics cannot be derived by elementary geometric reasoning from a physical principle, then either the principle is wrong or the result has not yet been understood.</p>
+
+<h2>3. The McGucken Duality</h2>
+
+<p>The principle <em>dx₄/dt = ic</em> generates two structurally parallel consequences through a single mathematical operation. I call this the <em>McGucken Duality</em>, and it is the technical heart of the QM–GR unification.</p>
+
+<h3>3.1 Channel A: The Algebraic-Symmetry Reading</h3>
+
+<p>Channel A asks: <em>what transformations leave the principle invariant?</em> The principle states that <em>x₄</em> advances at the same rate from every spacetime event, in every spatial direction, at every time. The principle is therefore invariant under (i) translations along <em>x₄</em> itself — the rate is independent of <em>x₄</em>'s value, (ii) translations along <em>x₁, x₂, x₃</em> — the rate is independent of spatial location, (iii) translations along <em>t</em> — the rate is independent of time, and (iv) rotations of the spatial three-coordinates — the rate has no preferred spatial direction. Combining (ii) with (iv) yields the spatial isometry group ISO(3) = SO(3) ⋉ ℝ³ at the spatial-three-slice level. Combining all four with the Lorentz boost invariance that is automatic from the <em>i</em> in <em>dx₄/dt = ic</em> (since <em>x₄ = ict</em> makes the rate Lorentz-invariant) yields the Poincaré group ISO(1,3) at the four-dimensional level.</p>
+
+<p>Channel A is the invariance-group content of the principle. Through Noether's 1918 theorem, every continuous symmetry generates a conservation law. The conservation laws of physics are therefore the empirical signatures of the principle's invariance group:</p>
+
+<ul>
+<li>Energy conservation descends from temporal translation invariance.</li>
+<li>Momentum conservation descends from spatial translation invariance.</li>
+<li>Angular momentum conservation descends from rotational invariance.</li>
+<li>The canonical commutation relation [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em> descends from Lorentz invariance combined with the Compton-frequency advance of <em>x₄</em>.</li>
+<li>Stress-energy conservation ∇<sub>μ</sub><em>T<sup>μν</sup></em> = 0 descends from diffeomorphism invariance, which is the local form of the principle's general covariance.</li>
+<li>U(1) charge conservation descends from U(1) phase invariance of <em>x₄</em>'s advance.</li>
+</ul>
+
+<p>Channel A's physical meaning is that the universe's deepest regularities are those that survive transformation. A measurement in Berlin on Tuesday gives the same physics as a measurement in Tokyo on Thursday because the principle is the same in Berlin on Tuesday as in Tokyo on Thursday. The transformation from Berlin-Tuesday to Tokyo-Thursday is a member of the principle's invariance group. Channel A is the universe's self-similarity under transformation.</p>
+
+<h3>3.2 Channel B: The Geometric-Propagation Reading</h3>
+
+<p>Channel B asks: <em>what does the principle generate when applied at every spacetime event?</em> From every event <em>p₀ = (x₀, t₀)</em>, the principle states that <em>x₄</em> advances at rate <em>c</em> in a spherically symmetric manner. The locus of points reachable from <em>p₀</em> by light-speed propagation in the spatial three-slice is a sphere of radius <em>R(t) = c(t − t₀)</em> — what I call the <em>McGucken Sphere</em> — expanding monotonically as <em>t</em> increases. Every point of the McGucken Sphere is itself the source of a new McGucken Sphere by Huygens' Principle: the iterated structure of the wavefront is the geometric content of <em>x₄</em>'s expansion at every event.</p>
+
+<p>Channel B is the wavefront content of the principle. Its consequences include:</p>
+
+<ul>
+<li>The wave equation (1/<em>c²</em>) ∂²ψ/∂<em>t²</em> − ∇²ψ = 0 is the unique linear partial differential equation satisfied by all spherically symmetric wavefronts of speed <em>c</em>. It descends directly from <em>x₄</em>'s spherical expansion at every event.</li>
+<li>The Schrödinger wavefunction ψ(<em>x</em>, <em>t</em>) is the wavefront amplitude on the McGucken Sphere, with the squared modulus |ψ|² the Born-rule probability density on the spherical surface.</li>
+<li>The Feynman path integral is the sum over McGucken-Sphere geodesic paths between two spacetime events, with each path weighted by its <em>x₄</em>-advance phase.</li>
+<li>The geodesic hypothesis of general relativity is the statement that matter trajectories follow null geodesics on the McGucken Spheres of curved spacetime, with the spheres distorted by the gravitational mass distribution.</li>
+<li>The Schwarzschild metric is the radial McGucken-Sphere distortion around a spherically symmetric mass.</li>
+<li>The gravitational time-dilation factor √(1 − 2<em>GM</em>/<em>rc²</em>) is the reduced <em>x₄</em>-advance rate near mass.</li>
+</ul>
+
+<p>Channel B's physical meaning is that the universe's deepest dynamical content is wavefront propagation at speed <em>c</em> from every event. Light travels at <em>c</em> because <em>c</em> is the rate of <em>x₄</em>'s expansion. Causality is forward-directed because the McGucken Sphere expands monotonically. Locality holds at the level of spatial three-slices because each McGucken Sphere has a definite radius at each instant. Channel B is the universe's geometric flow forward in time.</p>
+
+<h3>3.3 Why I Was the First to See Both Channels in One Equation</h3>
+
+<p>Klein 1872, in the Erlangen Programme, established that a geometry is fully specified by a pair (<em>G</em>, <em>X</em>) where <em>G</em> is a group acting on a space <em>X</em>, and the geometric content is the <em>G</em>-invariant content of <em>X</em>. Klein's vision was an algebra-geometry correspondence at the level of pure mathematics. It established, mathematically, that every algebraic-symmetry content has a geometric realization and every geometric realization has an algebraic-symmetry content. But it left a deeper question unanswered for 153 years: <em>is there a single physical principle from which both contents descend as parallel sibling consequences?</em></p>
+
+<p>For 153 years, no candidate was proposed. Newton's laws supply Channel A (the Galilean group) but no Channel B (Newtonian gravitation is instantaneous action-at-a-distance, not wavefront propagation). Maxwell's equations supply both channels (Lorentz invariance and electromagnetic-wave propagation) but only at the matter-sector level, not as a foundational unification. Einstein's general relativity supplies a partial Channel A (diffeomorphism invariance) and an implicit Channel B (curvature propagation through the Bianchi identities), but the two are not articulated as parallel sibling consequences of a single principle. Quantum mechanics supplies a partial Channel A (the canonical commutation relation, Hilbert-space symmetries) and a partial Channel B (wavefunction propagation, the Feynman path integral), but again not as parallel sibling consequences of a single principle. The string-theoretic programs supply both channels at a higher-derivative level, but the multiplicity of vacua dilutes the foundational status of any single principle: there is no unique physical equation from which the algebraic and geometric contents both descend.</p>
+
+<p>The McGucken Principle is the first single physical equation in the history of foundational physics from which both Channel A and Channel B descend by direct geometric inspection, in both QM and GR, as parallel sibling consequences. The discovery was not the recognition that algebra and geometry are correlated — Klein had established that — but the identification of the specific physical equation from which both descend. The reason no one had identified this equation before is that for a hundred years the physics community had read <em>x₄ = ict</em> as a notational convenience, with the imaginary unit <em>i</em> treated as a coordinate-bookkeeping factor and the dynamical content of <em>x₄</em> systematically suppressed. To recover the dynamical content, one differentiates Minkowski's equation. The result is <em>dx₄/dt = ic</em>. The principle has been one differentiation away from the literature for a hundred years.</p>
+
+<h3>3.4 The Inseparability of the Two Channels</h3>
+
+<p>Channel A and Channel B are not independent of each other within any given derivation. Every theorem of the framework is jointly forced by both channels acting in concert. Channel A supplies the symmetry structure that constrains the form of the theorem; Channel B supplies the geometric realization that determines its empirical content.</p>
+
+<p>The Schrödinger equation is a clear example. Channel A supplies the Hamiltonian operator <em>Ĥ</em> generating time translation, and the canonical commutation relation [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em> from the principle's Lorentz-invariance combined with the Compton-frequency advance of <em>x₄</em>. Channel B supplies the wave-amplitude propagation ψ(<em>x</em>, <em>t</em>) on the McGucken Sphere from the principle's spherical expansion. The Schrödinger equation</p>
+
+<div class="ltd-eq"><em>i</em><em>ℏ</em> ∂<em>ψ</em>/∂<em>t</em> &nbsp;=&nbsp; <em>Ĥ</em> <em>ψ</em></div>
+
+<p>is the joint statement: the Channel A operator structure generates the time-evolution of the Channel B wavefront. Neither channel alone produces it. Both are required.</p>
+
+<p>The same joint forcing operates for the Einstein field equations. Channel A supplies diffeomorphism invariance, which forces the field equations to be tensorial in the metric and consistent with stress-energy conservation. Channel B supplies null-cone propagation on McGucken Spheres, which forces the metric to encode the causal structure of the spheres' propagation through spacetime. The Einstein field equations</p>
+
+<div class="ltd-eq"><em>G</em><sub>μν</sub> &nbsp;=&nbsp; (8π<em>G</em> / <em>c</em>⁴) <em>T</em><sub>μν</sub></div>
+
+<p>are the joint statement that the Channel A diffeomorphism-invariant tensor (the Einstein tensor) couples to the Channel B propagation-affecting source (the stress-energy tensor) through a coupling constant fixed by <em>c</em> and Newton's <em>G</em>. The Einstein equations are not a separate postulate of the framework; they are forced by the joint action of both channels of <em>dx₄/dt = ic</em> on the four-dimensional Lorentzian manifold.</p>
+
+<h2>4. The Gravitational Sector: General Relativity from dx₄/dt = ic</h2>
+
+<p>In this section I derive general relativity from the McGucken Principle as a chain of formal theorems. The development summarizes and presents the formal content of the GR Chain paper [1], in which the postulates of standard general relativity (Lorentzian manifold, Equivalence Principle, geodesic hypothesis, metric-compatibility of the connection, stress-energy conservation, Einstein field equations) are reduced to theorems of the single principle <em>d x₄ / d t = i c</em>. I bring the chain into the present paper directly because I want the reader to see, theorem by theorem, that the same single principle that forces every result here also forces every result of quantum mechanics in Section <a href="#sec:qm">sec:qm</a>. At each major theorem, I will pause to remark on this — the structural fact that the same equation <em>d x₄ / d t = i c</em> that just gave us this gravitational result is, simultaneously and by the same direct geometric inspection, giving us the entirety of quantum mechanics is, to my mind, the deepest empirical fact about foundational physics. The remark is not a footnote; it is the structural content of the unification.</p>
+
+<p>The chain begins with the master equation <em>u^μ u_μ = -c²</em> (Theorem 1), the four-velocity budget (Corollary 1.1), and the McGucken-Invariance Lemma (Theorem 2) which constrains gravitational distortion to the spatial slices, leaving <em>x₄</em>'s expansion rate gravitationally invariant. From these foundations descend the four versions of the Equivalence Principle (Theorems 3--6), the Geodesic Principle (Theorem 7), the Christoffel connection (Theorem 8), the Riemann curvature tensor and its consequences (Theorems 9--10), the stress-energy conservation law (Theorem 10.7), and the Einstein field equations (Theorem 11). The chain then proceeds to the canonical solutions and predictions: the Schwarzschild solution (Theorem 12), gravitational time dilation (Theorem 13), gravitational redshift (Theorem 14), the bending of light (Theorem 15), Mercury's perihelion precession (Theorem 16), the gravitational-wave equation (Theorem 17), the FLRW cosmology (Theorem 18), and the no-graviton theorem (Theorem 19). The chain closes with the semiclassical-gravity content: black-hole entropy (Theorem 20), the area law (Theorem 21), the Hawking temperature (Theorem 22), the Bekenstein-Hawking coefficient <em>η = 1/4</em> (Theorem 23), and the Generalized Second Law (Theorem 24). Each result is a formal theorem of <em>d x₄ / d t = i c</em>, with proof, plain-language explanation, and the running commentary on the QM connection.</p>
+
+<h3>Theorem 1: The Master Equation <em>u^μ u_μ = -c²</em></h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Master Equation.</span> Under the McGucken Principle <em>d x₄ / d t = i c</em>, the four-velocity <em>u^μ = d x^μ / d τ</em> of any particle satisfies the master equation <em>u^μ u_μ = -c²</em> in Minkowski signature <em>(-, +, +, +)</em>.</div>
+
+<p><strong>Proof.</strong> Let <em>τ</em> be the proper time along the worldline of a particle, defined by <em>d τ² = -(1/c²)  g<sub>μν</sub>  d x^μ  d x^ν</em>. Working in the standard chart <em>(x⁰, x¹, x², x³)</em> with <em>x⁰ = c t</em>, the four-velocity <em>u^μ = d x^μ / d τ</em> has components
+<div class="ltd-eq">u⁰ = c γ,        u<sup>j</sup> = v<sup>j</sup> γ     (j = 1, 2, 3),</div>
+with <em>γ = 1/√1 - v²/c²</em> and <em>v<sup>j</sup> = d x<sup>j</sup> / d t</em>. Computing <em>u^μ u_μ</em> in the Minkowski metric:
+<div class="ltd-eq">u^μ u_μ = -(cγ)² + (vγ)² = -c² γ² (1 - v²/c²) = -c².</div>
+Therefore <em>u^μ u_μ = -c²</em> for any particle, regardless of its state of motion. The McGucken Principle's role is to identify the timelike component <em>d x⁰ / d τ = c γ</em> (equivalently <em>d x₄ / d τ = i c γ</em>) as the projection onto <em>x₀</em> of a four-velocity whose magnitude is fixed at <em>c</em> by the principle's assertion that <em>x₄</em> advances at rate <em>i c</em> at every event. The Master Equation is therefore the proper-time-parametrized statement of the McGucken Principle. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Every particle, no matter how fast or slow, has a four-velocity with total magnitude exactly <em>c</em>. This isn't an assumption: it falls directly out of the McGucken Principle. A particle at rest in space puts all of its motion into the fourth dimension; a photon puts all of its motion into the three spatial dimensions; everything in between trades budget between the two.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The Master Equation already shows the dual-channel content of <em>d x₄ / d t = i c</em> at the foundational level. Channel A (algebraic-symmetry) is the Lorentz-invariance of <em>u^μ u_μ = -c²</em> under boosts. Channel B (geometric-propagation) is the budget partition between <em>x₄</em>-advance and three-spatial motion. Channel A will return in the quantum sector as the canonical commutation relation <em>[q̂, p̂] = i ℏ</em> (Theorem 5.10); Channel B will return as the Schrödinger equation <em>i ℏ  ∂ ψ / ∂ t = Ĥ ψ</em> (Theorem 5.7). The same principle, the same dual-channel content, two sectors.</div>
+
+<h3>Corollary 1.1: The Four-Velocity Budget</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Four-Velocity Budget.</span> The squared magnitudes of the <em>x₄</em>-component and the spatial components of the four-velocity satisfy
+<div class="ltd-eq">| (d x₄)/(d τ) |² + | (d  x)/(d τ) |² = c².</div>
+Every particle has total four-speed magnitude <em>c</em> partitioned between <em>x₄</em>-advance and three-spatial motion.</div>
+
+<p><strong>Proof.</strong> From <em>u^μ u_μ = -c²</em> (Theorem 1) and the Minkowski metric, the timelike component has magnitude <em>|u₀| = c γ = |d x₄ / d τ|</em>, and the spatial components have magnitude <em>|u| = v γ = |d  x / d τ|</em>. The constraint <em>u^μ u_μ = -c²</em> gives <em>-|d x₄ / d τ|² + |d  x / d τ|² = -c²</em>, hence <em>|d x₄ / d τ|² + |d  x / d τ|² = c²</em>. <em>■</em></p>
+
+<p>The corollary is the formal statement of the four-fold ontology of the framework:
+<ol class="ltd-enum">
+<li><strong>Absolute rest in the spatial three-slice.</strong> A massive particle at spatial rest puts its full four-velocity budget into <em>x₄</em>-advance, with <em>d x₄ / d τ = i c</em> and <em>d  x / d τ = 0</em>.</li>
+<li><strong>Absolute rest in <em>x₄</em>.</strong> A photon at <em>v = c</em> puts its full four-velocity budget into spatial motion: <em>d  x / d τ = c hat n</em> and <em>d x₄ / d τ = 0</em>. The photon rides the McGucken-Sphere wavefront.</li>
+<li><strong>Absolute motion.</strong> The principle <em>d x₄ / d t = i c</em> itself, holding at every spacetime event.</li>
+<li><strong>The cosmic microwave background frame.</strong> The empirical signature of isotropic cosmological <em>x₄</em>-expansion.</li>
+</ol></p>
+
+<h3>Theorem 2: The McGucken-Invariance Lemma</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">McGucken-Invariance Lemma.</span> Under the McGucken Principle, the rate of <em>x₄</em>'s expansion is gravitationally invariant: <em>d x₄ / d t = i c</em> globally on the spacetime manifold <em>M</em>, regardless of the gravitational field. In particular, <em>∂ (d x₄ / d t) / ∂ g<sub>μν</sub> = 0</em> for all metric components. Only the spatial dimensions <em>x₁, x₂, x₃</em> curve, bend, and warp under mass-energy; <em>x₄</em>'s expansion rate is unaffected.</div>
+
+<p><strong>Proof.</strong> The McGucken Principle states <em>d x₄ / d t = i c</em> at every spacetime event, with <em>c</em> the universal velocity of light and <em>i</em> the imaginary unit encoding perpendicularity. The only quantities in this equation are <em>d x₄</em>, <em>d t</em>, <em>i</em>, and <em>c</em>. The constants <em>i</em> and <em>c</em> are not metric-dependent: they are constants of the framework. Therefore <em>d x₄ / d t = i c</em> depends on no metric component, and <em>∂ (d x₄ / d t) / ∂ g<sub>μν</sub> = 0</em> trivially.</p>
+
+<p>Equivalently, the principle is invariant under arbitrary smooth changes of the spatial metric <em>h<sub>ij</sub></em> on the leaves of the McGucken foliation: the spatial slices can curve in response to mass-energy, but the rate of <em>x₄</em>-advance under any observer is unaffected. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Gravity affects only the spatial dimensions, not the fourth dimension <em>x₄</em>. When mass-energy curves spacetime, it curves <em>x₁, x₂, x₃</em> — making distances and angles different from what they would be in flat space — but <em>x₄</em> keeps expanding at the speed of light, undisturbed. Three immediate consequences: (i) gravitational time dilation is a feature of how clocks move through curved spatial geometry, not a slowdown of time itself; (ii) gravitational redshift is the effect of light propagating through spatially curved regions, not a stretching of frequency by gravity directly; (iii) there is no graviton — gravity is the geometry of the spatial slices, not a force mediated by particles.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The McGucken-Invariance Lemma has a direct analog in the quantum sector. Just as <em>x₄</em>'s expansion rate is gravitationally invariant, the action quantum <em>ℏ</em> of the Compton-frequency advance of <em>x₄</em> is invariant under all transformations of the wavefunction's matter content: the same <em>ℏ</em> governs the Compton-frequency oscillation of an electron, a proton, and a uranium nucleus, with only the rate <em>omega<sub>C</sub> = m c² / ℏ</em> varying with mass. The principle <em>d x₄ / d t = i c</em> supplies a single invariant rate that is unchanged by both gravitational curvature (Theorem 2) and matter content (Theorem 5.4 below). This is the same invariance, twice projected.</div>
+
+<h3>Theorem 3: The Weak Equivalence Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Weak Equivalence Principle, WEP.</span> Under the McGucken Principle, the gravitational mass <em>m<sub>g</sub></em> and inertial mass <em>m<sub>i</sub></em> of any particle are equal: <em>m<sub>g</sub> = m<sub>i</sub></em>. All bodies in a given gravitational field accelerate at the same rate, independent of composition or mass.</div>
+
+<p><strong>Proof.</strong> By Theorem 1, every particle has four-velocity satisfying <em>u^μ u_μ = -c²</em>. By the four-velocity budget (Corollary 1.1), the four-velocity is partitioned between <em>x₄</em>-advance and three-spatial motion with the constraint that the squared sum equals <em>c²</em>. In a gravitational field, the spatial-slice metric <em>h<sub>ij</sub></em> is curved by the mass-energy distribution (Theorem 2), but <em>x₄</em>'s rate <em>i c</em> remains gravitationally invariant.</p>
+
+<p>Consider a particle of mass <em>m</em> moving in a gravitational field. Its worldline satisfies the geodesic equation
+<div class="ltd-eq">(d² x^λ)/(d τ²) + Γ^lambda<sub>μν</sub> (d x^μ)/(d τ) (d x^ν)/(d τ) = 0,</div>
+which has no <em>m</em>-dependent terms: the geodesic equation depends only on the spatial metric <em>h<sub>ij</sub></em> and not on the particle's mass. Therefore, two particles of different masses placed at the same spacetime event with the same initial four-velocity follow the same worldline. Their accelerations are equal because both follow the same geodesic. Gravitational and inertial mass are equal by construction. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Galileo's observation that all objects fall at the same rate (independent of mass) is a structural consequence of the four-velocity budget. Every particle has the same total four-speed <em>c</em>; gravity affects only the spatial geometry; therefore all particles couple to gravity in the same way, regardless of their mass.</div>
+
+<h3>Theorem 4: The Einstein Equivalence Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Einstein Equivalence Principle, EEP.</span> Under the McGucken Principle, the laws of non-gravitational physics in any sufficiently small freely falling laboratory are the laws of special relativity: locally, gravity can be transformed away by a suitable choice of inertial frame.</div>
+
+<p><strong>Proof.</strong> Let <em>p</em> be any spacetime event and let <em>Sigma<sub>t</sub></em> be the spatial slice through <em>p</em>. By the smoothness of the spatial metric <em>h<sub>ij</sub></em>, there exist Riemann normal coordinates around <em>p</em> in which <em>h<sub>ij</sub>(p) = delta<sub>ij</sub></em> and the first derivatives of <em>h<sub>ij</sub></em> vanish at <em>p</em>. In these coordinates, the spatial metric is locally Euclidean to first order; deviations from Euclidean geometry appear only at second order, scaling as the local Riemann curvature times the squared distance from <em>p</em>.</p>
+
+<p>By the McGucken-Invariance Lemma (Theorem 2), the timelike direction <em>x₄</em> advances at <em>i c</em> globally, including in the local Riemann normal frame at <em>p</em>. Therefore in a sufficiently small neighborhood of <em>p</em>, the four-dimensional geometry consists of locally Euclidean spatial slices and <em>x₄</em> advancing at <em>i c</em>. This is precisely the geometry of flat Minkowski spacetime in the McGucken Principle's reading. The laws of special relativity hold locally because the local geometry is locally that of special relativity. <em>■</em></p>
+
+<h3>Theorem 5: The Strong Equivalence Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Strong Equivalence Principle, SEP.</span> Under the McGucken Principle, all the laws of physics, including the gravitational interaction itself, take their special-relativistic form in any sufficiently small freely falling laboratory.</div>
+
+<p><strong>Proof.</strong> By Theorem 4, the local geometry around any point <em>p</em> is special-relativistic to first order. The gravitational field equations (Theorem 11 below) are the differential expression of “spatial slices curve in response to mass-energy”; they are local equations of motion for the spatial-metric components, written in tensor form. In a freely falling local frame, the gravitational field at <em>p</em> is transformed away to first order, and the gravitational equations reduce locally to the field equations of flat-spacetime general relativity — i.e., to the special-relativistic limit. <em>■</em></p>
+
+<h3>Theorem 6: The Massless-Lightspeed Equivalence</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Massless-Lightspeed Equivalence.</span> Under the McGucken Principle, three statements about a particle are equivalent: (a) the particle has zero rest mass, <em>m = 0</em>; (b) the particle propagates at the speed of light, <em>|d  x / d t| = c</em>; (c) the particle's <em>x₄</em>-component of four-velocity vanishes, <em>d x₄ / d τ = 0</em>.</div>
+
+<p><strong>Proof.</strong> By the four-velocity budget (Corollary 1.1), <em>|d x₄ / d τ|² + |d  x / d τ|² = c²</em>. The relationship between proper time and coordinate time is <em>d τ = d t · √1 - v²/c²</em> with <em>v = |d  x / d t|</em>. As <em>v → c</em>, <em>d τ → 0</em>; as <em>v < c</em>, <em>d τ > 0</em>; <em>v > c</em> is forbidden by the budget.</p>
+
+<p><strong>(a) <em>⇒</em> (b).</strong> A particle with <em>m = 0</em> has rest energy <em>E₀ = m c² = 0</em>. The energy-momentum relation <em>E² = (p c)² + (m c²)² = (p c)²</em> gives <em>E = p c</em>. The relativistic relationship <em>E = m c² γ</em> with <em>m = 0</em> is degenerate; it is satisfied only when <em>v = c</em> with finite <em>p</em>.</p>
+
+<p><strong>(b) <em>⇒</em> (c).</strong> If <em>v = c</em>, then <em>d τ → 0</em> and <em>d x₄ / d τ = i c γ</em> with <em>γ → ∞</em>. The product <em>i c γ · d τ = i c · d t</em> remains finite, but as a ratio per unit proper time, the particle does not advance in <em>x₄</em> at all per unit proper time — it is “frozen in <em>x₄</em>”, with all of its motion in the spatial dimensions. Equivalently, the four-momentum of a massless particle is null, <em>P^μ P_μ = 0</em>, with <em>P₄ = E/c</em> balanced exactly by spatial momentum <em>| P| = E/c</em>.</p>
+
+<p><strong>(c) <em>⇒</em> (a).</strong> If <em>d x₄ / d τ = 0</em>, the four-velocity has zero timelike component, so <em>u^μ u_μ = |d  x / d τ|²</em>. By Theorem 1 this must equal <em>-c²</em>, but with zero timelike component this requires <em>|d  x / d τ|² = -c²</em>, impossible for real spatial components. The resolution is that the particle is on a null worldline with zero invariant rest mass. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Why do photons move at exactly the speed of light? Three equivalent answers, all the same geometric fact: (a) because they have no rest mass; (b) because their spatial speed is <em>c</em>; (c) because they don't advance in <em>x₄</em> at all — their entire four-velocity budget is spent on spatial motion, leaving zero for <em>x₄</em>-advance. A massless particle has all of its motion in space, none in <em>x₄</em>. A massive particle at rest has all of its motion in <em>x₄</em>, none in space. Everything else is in between.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The Massless-Lightspeed Equivalence is the structural source of the wave-particle duality that I will derive in the quantum sector (Theorem 5.6). A photon at absolute rest in <em>x₄</em> is precisely the spherically symmetric wavefront of Theorem 5.1: its emission and absorption events are at the same place in <em>x₄</em>, and the spatial spread of the wavefront between them is the Channel B realization of <em>x₄</em>'s spherical expansion. The same equivalence that makes photons travel at <em>c</em> in GR makes them propagate as wavefronts in QM.</div>
+
+<h3>Theorem 7: The Geodesic Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Geodesic Principle.</span> Under the McGucken Principle, the worldline of a free particle (one subject to no non-gravitational forces) extremizes the proper-time <em>x₄</em>-arc-length <em>∫ |d x₄|_mathrmproper</em> between any two events on the worldline. The worldline satisfies the geodesic equation
+<div class="ltd-eq">(d² x^λ)/(d τ²) + Γ^lambda<sub>μν</sub> (d x^μ)/(d τ) (d x^ν)/(d τ) = 0.</div></div>
+
+<p><strong>Proof.</strong> The relativistic action of a free particle is <em>S = -m c ∫ |d x₄|_mathrmproper</em>, exactly proportional to the proper-time <em>x₄</em>-arc-length traveled along the worldline (the action-arc-length identity, [1, Theorem 7]). The Principle of Least Action requires <em>δ S = 0</em> with fixed endpoints, equivalent to extremizing <em>∫ |d x₄|_mathrmproper</em>.</p>
+
+<p>By the four-velocity budget (Corollary 1.1), the proper-time <em>x₄</em>-arc-length is maximized by the worldline that allocates as much of the fixed budget <em>c²</em> as possible to <em>x₄</em>-advance — i.e., that minimizes spatial detours. In flat spacetime, this is the unique straight worldline. In curved spacetime, the spatial slices are curved, and the worldline of maximum <em>x₄</em>-arc-length is the geodesic of the four-dimensional Lorentzian metric. The geodesic equation follows by standard variational calculus. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> A free particle isn't “choosing” to follow a geodesic. It's being carried by <em>x₄</em>'s expansion in whatever direction its four-velocity is pointing, and in the absence of forces, its four-velocity stays pointing in the same direction — which means it follows the geodesic of the local geometry by default.</div>
+
+<h3>Theorem 8: The Christoffel Connection</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Christoffel Connection.</span> Under the McGucken Principle, the natural connection on the spatial slices is the Levi-Civita connection of the spatial metric <em>h<sub>ij</sub></em>:
+<div class="ltd-eq">Γ<sup>k</sup><sub>ij</sub> = (1)/(2) h<sup>kl</sup> ( partial<sub>i</sub> h<sub>jl</sub> + partial<sub>j</sub> h<sub>il</sub> - partial<sub>l</sub> h<sub>ij</sub> ).</div>
+The connection is symmetric (torsion-free) and metric-compatible (<em>∇ h = 0</em>).</div>
+
+<p><strong>Proof.</strong> By Theorem 2 (McGucken-Invariance), the metric components in any chart adapted to the McGucken foliation satisfy <em>g<sub>x₄ x₄</sub> = -1</em>, <em>g<sub>x₄ x<sub>j</sub></sub> = 0</em>, and <em>g<sub>ij</sub> = h<sub>ij</sub></em> on the spatial slices. The four-dimensional metric tensor has block-diagonal structure with the timelike block constant and the spatial block carrying all the dynamical content.</p>
+
+<p>By the Fundamental Theorem of (pseudo-)Riemannian Geometry [Wald 1984, Theorem 3.1.1], the unique torsion-free metric-compatible connection on <em>(M, g)</em> is the Levi-Civita connection. Restricted to the spatial slices, this is the Levi-Civita connection of <em>h<sub>ij</sub></em> given by the standard formula above. <em>■</em></p>
+
+<h3>Theorem 9: The Riemann Curvature Tensor</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Riemann Curvature Tensor.</span> Under the McGucken Principle, the Riemann curvature tensor of the spatial metric <em>h<sub>ij</sub></em> is
+<div class="ltd-eq">R<sup>l</sup><sub>ijk</sub> = partial<sub>i</sub> Γ<sup>l</sup><sub>jk</sub> - partial<sub>j</sub> Γ<sup>l</sup><sub>ik</sub> + Γ<sup>l</sup><sub>im</sub> Γ<sup>m</sup><sub>jk</sub> - Γ<sup>l</sup><sub>jm</sub> Γ<sup>m</sup><sub>ik</sub>,</div>
+with the four-dimensional Riemann tensor <em>R^λ<sub>μνρ</sub></em> having nonzero components only in the spatial sector.</div>
+
+<p><strong>Proof.</strong> The Riemann tensor is constructed from the Christoffel connection (Theorem 8) by the standard formula. In the McGucken framework, the connection has nonzero spatial components only (the McGucken-Invariance Lemma forces <em>Γ^lambda<sub>x₄ x₄</sub> = 0</em> and <em>Γ<sup>x₄</sup><sub>ij</sub> = 0</em>), so the Riemann tensor inherits the same structure: nonzero components only in the spatial sector. <em>■</em></p>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Geodesic Deviation Equation.</span> Two nearby geodesics of the spatial metric satisfy the geodesic deviation equation
+<div class="ltd-eq">(D² ξ<sup>k</sup>)/(d τ²) = -R<sup>k</sup><sub>ijl</sub>  u<sup>i</sup> u<sup>j</sup> ξ<sup>l</sup>,</div>
+where <em>ξ<sup>l</sup></em> is the separation vector and <em>D/dτ</em> is the covariant proper-time derivative.</div>
+
+<p><strong>Proof.</strong> Standard derivation from the geodesic equation (Theorem 7) for two infinitesimally separated geodesics, with the connection terms expanded to first order in <em>ξ</em>. The result is the standard geodesic deviation equation. <em>■</em></p>
+
+<h3>Theorem 10: The Ricci Tensor and Bianchi Identities</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Ricci Tensor and Scalar Curvature.</span> The Ricci tensor and scalar curvature of the spatial metric are
+<div class="ltd-eq">R<sub>ij</sub> = R<sup>k</sup><sub>ikj</sub>,        R = h<sup>ij</sup> R<sub>ij</sub>.</div>
+The four-dimensional Ricci tensor <em>R<sub>μν</sub></em> coincides with <em>R<sub>ij</sub></em> on the spatial sector and vanishes on the timelike-cross components.</div>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Bianchi Identities.</span> The Riemann tensor satisfies the differential Bianchi identity <em>nabla<sub>l</sub> R<sub>ijmn</sub> + nabla<sub>m</sub> R<sub>ijnl</sub> + nabla<sub>n</sub> R<sub>ijlm</sub> = 0</em>, which contracts to <em>\nabla_μ G<sup>μν</sup> = 0</em> where <em>G<sub>μν</sub> = R<sub>μν</sub> - (1/2) R  g<sub>μν</sub></em> is the Einstein tensor.</div>
+
+<p><strong>Proof.</strong> Standard differential-geometric results following from the Christoffel connection (Theorem 8) and the symmetries of the Riemann tensor (Theorem 9). The contracted Bianchi identity <em>\nabla_μ G<sup>μν</sup> = 0</em> is the divergence-free property of the Einstein tensor, which is the structural prerequisite for the Einstein field equations. <em>■</em></p>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Stress-Energy Conservation.</span> The stress-energy tensor <em>T<sub>μν</sub></em> describing the matter content satisfies <em>\nabla_μ T<sup>μν</sup> = 0</em>.</div>
+
+<p><strong>Proof.</strong> The stress-energy tensor is defined by the variation of the matter action with respect to the metric: <em>T<sup>μν</sup> = (2/√-g)  δ(√-g  mathcalL_mathrmmatter) / δ g<sub>μν</sub></em>. Diffeomorphism invariance of the matter action — itself the Channel A content of <em>d x₄ / d t = i c</em>'s general covariance — combined with Noether's theorem applied to the four-dimensional translation group, forces <em>\nabla_μ T<sup>μν</sup> = 0</em>. The full development is in [1, Theorem 10.7]. <em>■</em></p>
+
+<h3>Theorem 11: The Einstein Field Equations</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Einstein Field Equations.</span> Under the McGucken Principle, the spatial-slice metric <em>h<sub>ij</sub></em> (and therefore the four-dimensional metric <em>g<sub>μν</sub></em> via the McGucken-Invariance Lemma) satisfies the Einstein field equations
+<div class="ltd-eq">G<sub>μν</sub> + Λ g<sub>μν</sub> = (8 π G)/(c⁴) T<sub>μν</sub>,</div>
+where <em>G<sub>μν</sub> = R<sub>μν</sub> - (1/2) R  g<sub>μν</sub></em> is the Einstein tensor, <em>Λ</em> is the cosmological constant, <em>G</em> is Newton's constant, and <em>T<sub>μν</sub></em> is the stress-energy tensor.</div>
+
+<p><strong>Proof (intrinsic route).</strong> Lovelock's 1971 uniqueness theorem [Lovelock1971] establishes that, in four spacetime dimensions, the unique tensor with the following four properties is the Einstein tensor (up to addition of <em>Λ g<sub>μν</sub></em>):
+<ol class="ltd-enum">
+<li>Symmetric, second-rank, with two indices.</li>
+<li>Constructed locally from the metric and its first two derivatives.</li>
+<li>Divergence-free: <em>\nabla_μ G<sup>μν</sup> = 0</em>.</li>
+<li>Linear in second derivatives of the metric.</li>
+</ol></p>
+
+<p>Conditions (1)--(4) are forced by the McGucken framework: (1) by the requirement that gravity couple to the symmetric stress-energy tensor (Theorem 10.7); (2) by locality of the principle (Section <a href="#sec:atom">sec:atom</a>); (3) by stress-energy conservation (Theorem 10.7), which forces the LHS to be divergence-free; (4) by the requirement that the field equations be of the same differential order as the matter equations of motion. The unique LHS is <em>G<sub>μν</sub> + Λ g<sub>μν</sub></em>. The RHS is <em>κ T<sub>μν</sub></em> with the coupling <em>κ = 8 π G / c⁴</em> fixed by the Newtonian limit. <em>■</em></p>
+
+<p><strong>Proof (parallel route, Schuller 2020).</strong> An independent derivation is available through Schuller's 2020 constructive-gravity programme [Schuller2020]. The matter principal polynomial <em>P(k) = η<sup>μν</sup> k_μ k_ν</em> is the universal kinematic structure of all matter equations of motion under hyperbolicity, predictivity, and diffeomorphism invariance. The Schuller construction lifts this matter kinematics to gravitational dynamics, producing the Einstein-Hilbert action and the Einstein field equations. The McGucken framework supplies the universal <em>P(k)</em> through the Master Equation <em>u^μ u_μ = -c²</em> (Theorem 1), with the Lorentz signature forced by the imaginary unit in <em>d x₄ / d t = i c</em>. The two routes converge on the same field equations. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> The Einstein field equations describe how mass-energy curves the spatial slices. The McGucken framework derives them through two independent routes: Lovelock's 1971 uniqueness theorem (the unique divergence-free tensorial relation in four dimensions) and Schuller's 2020 constructive-gravity programme (the unique gravitational dynamics consistent with universal matter kinematics). Both routes give the same equations. The structural-overdetermination of two independent routes converging on the same result is itself evidence that the principle is foundational.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The Einstein field equations are the joint Channel A + Channel B content of <em>d x₄ / d t = i c</em> at the macroscopic-curvature scale. Channel A supplies the diffeomorphism invariance that forces the LHS to be a divergence-free tensor; Channel B supplies the null-cone propagation on the McGucken Spheres that forces the metric to encode causal structure. The same dual-channel structure will, in the quantum sector, force the Schrödinger equation: Channel A supplies the Hamiltonian operator generating time translation; Channel B supplies the wave-amplitude propagation <em>ψ(x, t)</em> on the McGucken Sphere. The two equations occupy structurally analogous positions in their respective chains.</div>
+
+<h3>Theorem 12: The Schwarzschild Solution</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Schwarzschild Solution.</span> The unique spherically symmetric vacuum solution of the Einstein field equations (Theorem 11) outside a mass <em>M</em> is the Schwarzschild metric
+<div class="ltd-eq">d s² = -( 1 - (2 G M)/(r c²) ) c²  d t² + (d r²)/(1 - 2 G M / r c²) + r² (d θ² + \sin² θ  d φ²).</div></div>
+
+<p><strong>Proof.</strong> In vacuum, <em>T<sub>μν</sub> = 0</em> and the Einstein field equations reduce to <em>R<sub>μν</sub> = 0</em>. With spherical symmetry and time-independence, the most general metric ansatz is <em>d s² = -A(r) c² d t² + B(r) d r² + r² d Ω²</em>. Birkhoff's theorem [Birkhoff1923] establishes that the solution is unique. Solving <em>R<sub>μν</sub> = 0</em> with the asymptotic flatness condition <em>A(∞) = B(∞) = 1</em> gives <em>A(r) = 1 - 2 G M / r c²</em> and <em>B(r) = 1/A(r)</em>. <em>■</em></p>
+
+<p><strong>Wheeler's commission, fulfilled.</strong> The poor-man's-reasoning derivation of the time part of Schwarzschild that Wheeler commissioned me to produce in 1988 is the elementary geometric reasoning that the local <em>x₄</em>-advance rate near a mass <em>M</em> is reduced by the gravitational potential energy per unit mass <em>Φ = -G M / r</em>, with the reduction factor <em>√1 + 2 Φ / c² = √1 - 2 G M / r c²</em>. This is the geometric content of the Schwarzschild time component, derivable without the field-equation machinery. The full metric (including the radial component) then follows from the same elementary geometric reasoning applied to the radial McGucken Sphere distortion.</p>
+
+<h3>Theorem 13: Gravitational Time Dilation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Gravitational Time Dilation.</span> A clock at radius <em>r</em> in the Schwarzschild geometry runs slower than a clock at infinity by the factor
+<div class="ltd-eq">(d τ)/(d t) = √1 - (2 G M)/(r c²).</div></div>
+
+<p><strong>Proof.</strong> The proper time <em>d τ</em> at a point in the Schwarzschild geometry, for an observer at spatial rest, is <em>d τ² = -g<sub>tt</sub> d t² / c² = (1 - 2 G M / r c²) d t²</em>. Taking the square root gives the time-dilation factor. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> A clock near a massive body runs slower than a clock far away. This isn't a slowdown of <em>x₄</em>'s advance — <em>x₄</em> advances at the same rate <em>i c</em> everywhere by the McGucken-Invariance Lemma. It's that the clock near the mass is following a worldline through curved spatial geometry, and its proper-time rate (the rate of <em>x₄</em>-advance per unit coordinate time) is reduced by the geometry, not by any change in <em>x₄</em> itself.</div>
+
+<h3>Theorem 14: Gravitational Redshift</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Gravitational Redshift.</span> A photon emitted at radius <em>r₁</em> with frequency <em>\nu₁</em> and observed at radius <em>r₂</em> with frequency <em>\nu₂</em> satisfies
+<div class="ltd-eq">(\nu₂)/(\nu₁) = √(1 - 2 G M / r₁ c²)/(1 - 2 G M / r₂ c²).</div></div>
+
+<p><strong>Proof.</strong> The photon's frequency at any point is its energy divided by Planck's constant, <em>ν = E/h</em>. The energy is conserved along the photon's null geodesic in the time-independent Schwarzschild geometry: <em>E₁ g<sub>tt</sub>(r₁)<sup>-1/2</sup> = E₂ g<sub>tt</sub>(r₂)<sup>-1/2</sup></em>, where <em>g<sub>tt</sub>(r) = -(1 - 2 G M / r c²) c²</em>. This gives the frequency ratio above. <em>■</em></p>
+
+<h3>Theorem 15: Bending of Light and Shapiro Delay</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Bending of Light.</span> A light ray passing a mass <em>M</em> at impact parameter <em>b</em> is deflected by an angle
+<div class="ltd-eq">δ φ = (4 G M)/(b c²)</div>
+in the weak-field, small-angle limit.</div>
+
+<p><strong>Proof.</strong> The null geodesic equation in the Schwarzschild geometry, expanded to first order in <em>G M / r c²</em>, gives the deflection angle above. The factor of 4 (rather than 2, which is the Newtonian-corpuscular prediction) is the structural signature of general-relativistic light bending: light bends not just due to spatial curvature but also due to the Schwarzschild time-component contribution. Both contributions are consequences of the McGucken-Invariance Lemma applied to the McGucken Sphere geometry around mass. <em>■</em></p>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Shapiro Delay.</span> A radar signal sent past a mass <em>M</em> at impact parameter <em>b</em> is delayed by
+<div class="ltd-eq">Δ t = (4 G M)/(c³) ln ( (r₁ r₂)/(b²) )</div>
+relative to the flat-spacetime travel time.</div>
+
+<p><strong>Proof.</strong> Standard derivation from the Schwarzschild metric, integrating the time-component along the radar signal's null geodesic. The Shapiro delay was confirmed by the Cassini spacecraft measurement (2003) to better than <em>2 × 10<sup>-5</sup></em> precision, confirming the framework's prediction at the post-Newtonian level. <em>■</em></p>
+
+<h3>Theorem 16: Mercury's Perihelion Precession</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Mercury's Perihelion Precession.</span> The orbit of Mercury precesses due to general-relativistic effects at the rate
+<div class="ltd-eq">Δ \phi_mathrmGR = (6 π G M_odot)/(a (1 - e²) c²)</div>
+per orbital revolution, with <em>a</em> the semi-major axis and <em>e</em> the eccentricity. For Mercury, this is <em>43''</em> per century.</div>
+
+<p><strong>Proof.</strong> The geodesic equation in the Schwarzschild geometry, solved perturbatively to first post-Newtonian order, gives the precession rate above. The numerical value for Mercury matches the empirical anomaly measured by Le Verrier in 1859, which was the first empirical confirmation of general relativity in November 1915. <em>■</em></p>
+
+<h3>Theorem 17: The Gravitational-Wave Equation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Gravitational-Wave Equation.</span> Linearized perturbations <em>h<sub>μν</sub></em> of the spatial metric around a flat background satisfy the wave equation
+<div class="ltd-eq">□  h<sub>μν</sub> = -(16 π G)/(c⁴) T<sub>μν</sub>,</div>
+where <em>h<sub>μν</sub> = h<sub>μν</sub> - (1/2) eta<sub>μν</sub> h</em> is the trace-reversed perturbation. In vacuum, the wave equation <em>□  h<sub>μν</sub> = 0</em> admits transverse-traceless solutions propagating at speed <em>c</em> with two physical polarizations <em>(+, ×)</em>.</div>
+
+<p><strong>Proof.</strong> Linearizing the Einstein field equations (Theorem 11) to first order in <em>h<sub>μν</sub></em> and choosing the harmonic gauge <em>\partial_μ  h<sup>μν</sup> = 0</em> gives the wave equation above. The vacuum solutions are gravitational waves — macroscopic curvature perturbations propagating on the McGucken Sphere structure of the background. The 2015 LIGO detection of gravitational waves from a binary black-hole merger confirmed this prediction at the macroscopic-curvature level. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Gravitational waves are macroscopic curvature perturbations propagating at the speed of light. They travel at <em>c</em> because <em>c</em> is the rate of <em>x₄</em>'s expansion, which is the propagation speed of the McGucken Sphere on which the perturbation rides. LIGO's 2015 detection confirmed the prediction. Note that gravitational waves are not gravitons: they are classical curvature perturbations of the metric, with no quantum mediator. This will be the structural content of Theorem 19 (no graviton).</div>
+
+<h3>Theorem 18: The FLRW Cosmology</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">FLRW Cosmology.</span> The most general spatially homogeneous and isotropic spacetime in the McGucken framework is the Friedmann-Lemaître-Robertson-Walker (FLRW) metric
+<div class="ltd-eq">d s² = -c² d t² + a(t)² [ (d r²)/(1 - k r²) + r² (d θ² + \sin² θ  d φ²) ],</div>
+with <em>a(t)</em> the scale factor and <em>k</em> the spatial curvature constant. The scale factor satisfies the Friedmann equations
+<div class="ltd-eq">( (dot a)/(a) )² = (8 π G)/(3) ρ - (k c²)/(a²) + (Λ c²)/(3),</div>
+<div class="ltd-eq">(ddot a)/(a) = -(4 π G)/(3) ( ρ + (3 p)/(c²) ) + (Λ c²)/(3).</div></div>
+
+<p><strong>Proof.</strong> Substituting the FLRW metric into the Einstein field equations (Theorem 11) and contracting against the four-velocity of comoving matter gives the two Friedmann equations. The McGucken Principle's structural commitment is that the cosmological McGucken Sphere expands isotropically (the CMB frame of the four-fold ontology, item 4 of Corollary 1.1), with the spatial scale factor <em>a(t)</em> carrying the dynamical content. The Hubble expansion of the universe is the cosmological-scale realization of <em>d x₄ / d t = i c</em>. <em>■</em></p>
+
+<h3>Theorem 19: The No-Graviton Theorem</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">No-Graviton Theorem.</span> Under the McGucken Principle, gravity is the curvature of spatial slices induced by mass-energy, with <em>x₄</em>'s expansion remaining gravitationally invariant. There is no separate gravitational field to quantize, and no graviton exists as a quantum mediator of gravity.</div>
+
+<p><strong>Proof.</strong> By the McGucken-Invariance Lemma (Theorem 2), the timelike-sector metric perturbations <em>h<sub>x₄ x₄</sub></em> and <em>h<sub>x₄ x<sub>j</sub></sub></em> vanish identically. The dynamical content of gravity resides entirely in the spatial-sector perturbations <em>h<sub>ij</sub></em>, which are the macroscopic curvature perturbations of the spatial-slice geometry.</p>
+
+<p>The hypothetical graviton, in the standard quantum-gravity programme, is the quantum of the four-dimensional metric perturbation <em>h<sub>μν</sub>(x)</em>, promoted to a quantum operator. In the McGucken framework, the timelike components of <em>h<sub>μν</sub></em> are forced to zero, and the spatial components <em>h<sub>ij</sub></em> are macroscopic curvature perturbations rather than quantum excitations: gravitational waves are classical, not quantum. There is no quantum mediator of gravity because gravity is not a force on <em>x₄</em>; gravity is the geometry of <em>x₄</em>-propagation, and geometry does not have a quantum mediator. <em>■</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> The graviton is the postulated quantum of the gravitational field. Every quantum-gravity programme of the past seventy years has predicted it: string theory, Loop Quantum Gravity, asymptotic safety, Wheeler-DeWitt. The McGucken framework predicts that no graviton exists, ever, because gravity isn't a field to be quantized. This is the falsifiable structural content of the framework: if a graviton is detected, the framework is falsified. To date, no graviton has been detected, and none is on the horizon.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The no-graviton prediction is the structural difference between the McGucken framework and the quantum-gravity programmes of the past seventy years. It is also the structural reason that quantum gravity is not needed: quantum mechanics is not a separate framework that needs to be imposed on top of the gravitational dynamics; quantum mechanics is the same principle's content at the Compton-frequency scale, as I will derive in Section <a href="#sec:qm">sec:qm</a>. The unification is achieved not by quantizing gravity but by recognizing that the principle that generates both is more foundational than either.</div>
+
+<h3>Theorem 20: Black-Hole Entropy as <em>x₄</em>-Stationary Mode Counting</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Black-Hole Entropy.</span> The entropy of a black hole is the count of bosonic, <em>x₄</em>-stationary modes per Planck area on the horizon.</div>
+
+<p><strong>Proof.</strong> The black-hole horizon is the locus of events where the local <em>x₄</em>-advance rate reduces to zero. Inside the horizon, <em>x₄</em>-advance becomes spacelike — the temporal and radial components of the metric exchange signature. At the horizon itself, the four-velocity budget has its full content directed into spatial motion (cf. Theorem 6, the Massless-Lightspeed Equivalence applied at the horizon). The horizon is the surface where space-rest is impossible and matter is forced to move.</p>
+
+<p>The modes that are stationary in <em>x₄</em> at the horizon are precisely those that ride the horizon without advancing in <em>x₄</em>. These are bosonic by spin-statistics (the <em>x₄</em>-stationary content cannot carry the half-integer spinor periodicity of fermions, which requires <em>x₄</em>-rotation). Counting these modes per unit horizon area at the Planck-area scale gives the black-hole entropy. <em>■</em></p>
+
+<h3>Theorem 21: The Bekenstein-Hawking Area Law</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Area Law.</span> The black-hole entropy is proportional to the horizon area:
+<div class="ltd-eq">S_mathrmBH = (k<sub>B</sub> A)/(4 ell<sub>P</sub>²),</div>
+where <em>A</em> is the horizon area, <em>ell<sub>P</sub> = √ℏ G / c³</em> is the Planck length, and <em>k<sub>B</sub></em> is the Boltzmann constant.</div>
+
+<p><strong>Proof.</strong> The mode counting of Theorem 20 gives one <em>x₄</em>-stationary mode per Planck area, with the polarization counting fixed by the requirement that the modes are bosonic and stationary in <em>x₄</em>. The factor of <em>1/4</em> is the structural consequence of two polarizations per Planck cell, with the cell area <em>ell<sub>P</sub>²</em> and the geometric prefactor accounting for the bosonic statistics. The Boltzmann constant <em>k<sub>B</sub></em> enters through the projection of the Planck-cell structure onto thermodynamic observables. <em>■</em></p>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The Bekenstein-Hawking entropy is the structural meeting point of the gravitational and quantum sectors. The horizon area is gravitational; the Planck length <em>ell<sub>P</sub> = √ℏ G / c³</em> is quantum-gravitational, carrying both <em>ℏ</em> (from the Compton-frequency advance, Theorem 5.4) and <em>G</em> (from the Newtonian limit of the field equations, Theorem 11); the entropy <em>S</em> is thermodynamic. All three descend from the same single principle. This is why the Strominger-Vafa 1996 microstate count agrees with the Bekenstein-Hawking value: the microstate count is the algebraic-symmetry content of the principle at the horizon, the area-law factor is the geometric-propagation content of the principle at the horizon, and the agreement between them is the McGucken Duality at the horizon scale.</div>
+
+<h3>Theorem 22: The Hawking Temperature</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Hawking Temperature.</span> A black hole radiates at the Hawking temperature
+<div class="ltd-eq">T<sub>H</sub> = (ℏ κ)/(2 π c k<sub>B</sub>),</div>
+where <em>κ</em> is the surface gravity at the horizon.</div>
+
+<p><strong>Proof.</strong> The McGucken Wick rotation <em>t → -i τ</em> is the structural identity <em>τ = x₄ / c</em>: the Euclidean coordinate <em>τ</em> is not “imaginary time” but <em>x₄</em> itself, identified through <em>x₄ = i c t</em>. The Euclidean continuation of the Schwarzschild geometry near the horizon gives a smooth cigar geometry — a Riemannian manifold with a periodic Euclidean time direction. The period of the Euclidean time at the horizon is <em>β = 2 π / κ</em>, which corresponds to the inverse temperature <em>β = ℏ / (k<sub>B</sub> T)</em>. Solving for <em>T</em> gives the Hawking temperature above. <em>■</em></p>
+
+<h3>Theorem 23: The Bekenstein-Hawking Coefficient <em>η = 1/4</em></h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Bekenstein-Hawking Coefficient.</span> The proportionality coefficient between black-hole entropy and horizon area is exactly <em>1/4</em> (in Planck units):
+<div class="ltd-eq">S_mathrmBH = (1)/(4) (A)/(ell<sub>P</sub>²) k<sub>B</sub>.</div></div>
+
+<p><strong>Proof.</strong> Combining the area law (Theorem 21) with the Hawking temperature (Theorem 22) and the first law of black-hole mechanics, <em>d M = T<sub>H</sub> d S_mathrmBH</em>, gives the coefficient <em>η = 1/4</em> uniquely. The structural content is that each <em>x₄</em>-stationary mode at the horizon contributes <em>ℏ c / 4</em> to the entropy, with the factor of <em>1/4</em> traceable to the bosonic polarization counting at the Planck scale. <em>■</em></p>
+
+<h3>Theorem 24: The Generalized Second Law</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Generalized Second Law.</span> The total entropy — ordinary thermodynamic entropy plus black-hole horizon entropy — never decreases:
+<div class="ltd-eq">(d)/(d t) ( S_mathrmmatter + S_mathrmBH ) ≥ 0.</div></div>
+
+<p><strong>Proof.</strong> The Second Law of thermodynamics for matter, <em>d S_mathrmmatter / d t ≥ 0</em>, is the structural consequence of the <em>+ i c</em> orientation of <em>d x₄ / d t = i c</em>: the strict-monotonicity rate is forced by the geometric monotonicity of <em>x₄</em>'s expansion. The black-hole horizon entropy, <em>S_mathrmBH = k<sub>B</sub> A / (4 ell<sub>P</sub>²)</em> (Theorem 21), is itself monotonically non-decreasing (the Hawking area theorem, [Hawking1971]) under classical processes. When matter falls into a black hole, the matter entropy decreases but the horizon area increases by at least the Bekenstein bound, so the total is non-decreasing. <em>■</em></p>
+
+<h3>Synthesis of the Gravitational Sector</h3>
+
+<p>The chain just developed — Theorems 1 through 24, descending from <em>d x₄ / d t = i c</em> — supplies the full content of general relativity plus its semiclassical extension to black-hole thermodynamics. The Master Equation <em>u^μ u_μ = -c²</em> is the proper-time-parametrized statement of the principle. The four-velocity budget partitions every particle's motion between <em>x₄</em>-advance and three-spatial motion. The McGucken-Invariance Lemma constrains gravitational distortion to the spatial slices. The Equivalence Principle in its four forms, the Geodesic Principle, the Christoffel connection, the Riemann curvature tensor, the Bianchi identities, the stress-energy conservation, and the Einstein field equations all descend by direct mathematical derivation. The canonical solutions — Schwarzschild, gravitational time dilation, gravitational redshift, light bending, Mercury's perihelion precession, gravitational waves, FLRW cosmology, and the no-graviton theorem — all follow as theorems. The semiclassical extension — black-hole entropy, the area law, the Hawking temperature, and the Generalized Second Law — closes the chain at the horizon scale.</p>
+
+<p>What is remarkable, and what motivates the entire framework, is that <em>the same single principle that generated this entire chain also generates the entirety of quantum mechanics</em>, by direct derivation through the Compton-frequency factorization of the wavefunction. The constants <em>c</em> (the rate of <em>x₄</em>'s expansion) and <em>ℏ</em> (the action quantum of the Compton-frequency advance) are projections of the same principle onto the gravitational and quantum sectors respectively. The Einstein field equations of this section and the Schrödinger equation of the next occupy structurally analogous positions in their respective chains: each is the joint Channel A + Channel B content of the principle at the relevant scale. The Bekenstein-Hawking entropy is the meeting point at which both sectors coincide.</p>
+
+<p>In Section <a href="#sec:qm">sec:qm</a>, I derive the quantum sector. The reader will see that the structural form of the derivations is identical: a master equation that is the proper-time-parametrized statement of the principle, dual-channel content (algebraic-symmetry and geometric-propagation), and a chain of theorems descending by direct geometric inspection. The same principle, the same dual-channel content, two sectors.</p>
+
+<h2>5. The Quantum Sector: Quantum Mechanics from dx₄/dt = ic</h2>
+
+<p>In this section I derive quantum mechanics from the McGucken Principle as a chain of formal theorems. The development summarizes and presents the formal content of the QM Chain paper [2], in which the postulates of standard quantum mechanics (Hilbert-space states, self-adjoint operators, Born rule, unitary evolution, canonical commutation relation, tensor-product structure for composite systems) are reduced to theorems of the same single principle <em>d x₄ / d t = i c</em> that just generated the entirety of general relativity in Section <a href="#sec:gr">sec:gr</a>. As I work through the chain, I will continue the running commentary established there: the same equation <em>d x₄ / d t = i c</em> that forced the Einstein field equations, the Schwarzschild metric, the Bekenstein-Hawking entropy, and every other result of Section <a href="#sec:gr">sec:gr</a> is, simultaneously and by direct geometric inspection, forcing the Schrödinger equation, the Dirac equation, the canonical commutation relation, the Born rule, the Feynman path integral, and every other result of this section. To my mind this is the deepest empirical fact about foundational physics, and it is the structural justification for the framework's claim to be a unification rather than a coincidence.</p>
+
+<p>The chain begins with the wave equation as a direct consequence of <em>x₄</em>'s spherically symmetric expansion (Theorem <a href="#qm:wave">qm:wave</a>), proceeds through the de Broglie relation (Theorem <a href="#qm:dB">qm:dB</a>), the Planck-Einstein relation (Theorem <a href="#qm:PE">qm:PE</a>), the Compton coupling (Theorem <a href="#qm:Compton">qm:Compton</a>), the rest-mass phase factor (Theorem <a href="#qm:RestMass">qm:RestMass</a>), and wave-particle duality (Theorem <a href="#qm:WPD">qm:WPD</a>). It then develops the dynamical equations: the Schrödinger equation (Theorem <a href="#qm:Schrod">qm:Schrod</a>), the Klein-Gordon equation (Theorem <a href="#qm:KG">qm:KG</a>), the Dirac equation (Theorem <a href="#qm:Dirac">qm:Dirac</a>), and the canonical commutation relation derived through dual Hamiltonian and Lagrangian routes (Theorem <a href="#qm:CCR">qm:CCR</a>). The Born rule (Theorem <a href="#qm:Born">qm:Born</a>), the Heisenberg uncertainty principle (Theorem <a href="#qm:Heis">qm:Heis</a>), and the CHSH inequality with Tsirelson bound (Theorem <a href="#qm:CHSH">qm:CHSH</a>) follow. The four major dualities of quantum mechanics — Hamiltonian/Lagrangian, Heisenberg/Schrödinger, wave/particle, locality/nonlocality — are derived as parallel sibling consequences of the dual-channel content of the principle (Theorem <a href="#qm:Dualities">qm:Dualities</a>). The chain closes with the Feynman path integral (Theorem <a href="#qm:Feynman">qm:Feynman</a>), global-phase absorption (Theorem <a href="#qm:GP">qm:GP</a>), quantum nonlocality (Theorem <a href="#qm:Nonloc">qm:Nonloc</a>), entanglement (Theorem <a href="#qm:Ent">qm:Ent</a>), the measurement problem and Copenhagen interpretation (Theorem <a href="#qm:Meas">qm:Meas</a>), second quantization with the spin-statistics theorem and the Pauli exclusion principle (Theorem <a href="#qm:SecondQ">qm:SecondQ</a>), the matter-antimatter dichotomy (Theorem <a href="#qm:Antimatter">qm:Antimatter</a>), the Compton-coupling diffusion as the falsifiable empirical signature of matter--<em>x₄</em> coupling (Theorem <a href="#qm:Diffusion">qm:Diffusion</a>), and the Feynman-diagram apparatus of quantum field theory (Theorem <a href="#qm:FD">qm:FD</a>).</p>
+
+<p>Before beginning, I reset the theorem counter so that this section's theorems are numbered independently of Section <a href="#sec:gr">sec:gr</a>'s theorems, mirroring the structural fact that the two chains descend in parallel from the same foundation rather than as a single linear sequence.</p>
+
+<h3>Theorem 1: The Wave Equation from Huygens' Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Wave Equation.</span> The McGucken Principle <em>d x₄ / d t = i c</em> implies that any disturbance of the spatial cross-section of <em>x₄</em>-expansion satisfies the four-dimensional Laplace equation <em>□ ψ = 0</em>, equivalently the d'Alembert wave equation
+<div class="ltd-eq">-(1)/(c²) (∂² ψ)/(∂ t²) + ∇² ψ = 0,</div>
+with retarded Green's function corresponding to spherically symmetric outgoing wavefronts at speed <em>c</em>.</div>
+
+<p><strong>Proof.</strong> The four-dimensional Laplace operator in Convention 1.5.1 of [2] is
+<div class="ltd-eq">\Delta₄ = (∂²)/(∂ x₁²) + (∂²)/(∂ x₂²) + (∂²)/(∂ x₃²) + (∂²)/(∂ x₄²).</div>
+Substituting <em>x₄ = i c t</em> gives <em>∂² / ∂ x₄² = -(1/c²)  ∂² / ∂ t²</em>, so <em>\Delta₄</em> reduces to <em>-(1/c²)  ∂² / ∂ t² + ∇² = -□</em> in the <em>(-, +, +, +)</em> signature. The condition <em>□ ψ = 0</em> is the four-dimensional Laplace equation in McGucken-adapted coordinates, equivalently the d'Alembert wave equation in 3+1 form.</p>
+
+<p>The retarded Green's function of the wave equation is
+<div class="ltd-eq">G_mathrmret( x, t;  x', t') = (δ(t - t' - | x -  x'|/c))/(4 π | x -  x'|),</div>
+the spherically symmetric outgoing wavefront expanding at speed <em>c</em>. This is exactly the cross-section structure of the McGucken Sphere expanding from the source event <em>( x', t')</em>: every spacetime event emits a spherically symmetric outgoing wavefront in 3D space at speed <em>c</em>, which is the spatial-three-slice projection of the event's <em>x₄</em>-expansion. Huygens' Principle — that every point on a wavefront acts as a source of secondary wavelets, with the full wavefront the envelope of these — is the geometric statement that every point of the McGucken Sphere is itself a point from which a new McGucken Sphere expands. The wave equation is the differential form of this iterated Huygens content. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> The wave equation says: every disturbance spreads out in spherically symmetric waves at speed <em>c</em>. The McGucken Principle says: <em>x₄</em> expands in spherically symmetric waves at speed <em>c</em>. These are the same statement — the wave equation is the differential form of the McGucken Principle's geometric content.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> This is the first theorem of the QM chain, and it already shows the structural parallel with the GR chain. Just as the Einstein field equations of Section <a href="#sec:gr">sec:gr</a> are the joint Channel A + Channel B content of <em>d x₄ / d t = i c</em> at the macroscopic-curvature scale, the wave equation here is the Channel B content of the principle at the wavefront-amplitude scale — the geometric-propagation reading of <em>x₄</em>'s spherical expansion. The same single principle that generates one through curvature dynamics generates the other through wavefront propagation. The Schwarzschild metric's null cone (Theorem <a href="#sec:gr">sec:gr</a>.12) and the Schrödinger wavefunction's wavefront (Theorem <a href="#qm:Schrod">qm:Schrod</a>) propagate on the same McGucken Spheres.</div>
+
+<h3>Theorem 2: The de Broglie Relation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">de Broglie Relation.</span> A particle of momentum <em>p</em> has an associated wavelength <em>λ = h/p</em>. Equivalently, in wavevector form, <em>p = ℏ k</em>. The relation holds for both photons (<em>m = 0</em>) and massive particles (<em>m > 0</em>), and is forced by the spherically symmetric expansion of <em>x₄</em> combined with the Compton-coupling rest-frame phase oscillation.</div>
+
+<p><strong>Proof.</strong> The four-step derivation, expanded from [2, Theorem 2]:</p>
+
+<p><strong>Step 1.</strong> The spherically symmetric expansion of <em>x₄</em> at rate <em>c</em> from every spacetime event (Theorem <a href="#qm:wave">qm:wave</a>) produces, in every 3D rest frame, an outgoing wavefront whose temporal periodicity <em>ν</em> and spatial periodicity <em>λ</em> satisfy <em>c = λ ν</em> for a null wavefront.</p>
+
+<p><strong>Step 2.</strong> Each cycle of <em>x₄</em>'s expansion carries one quantum of action <em>ℏ</em> (Theorem <a href="#qm:PE">qm:PE</a> below). The energy of a wavefront of frequency <em>ν</em> is <em>E = ℏ ω = h ν</em> where <em>ω = 2 π ν</em>.</p>
+
+<p><strong>Step 3.</strong> For a photon, <em>E = p c</em> (massless energy-momentum relation). Combined with <em>E = h ν</em> and <em>c = λ ν</em> gives <em>p c = h ν = h c / λ</em>, hence <em>p = h / λ</em>.</p>
+
+<p><strong>Step 4.</strong> For a massive particle, the rest-frame wavefunction has the form <em>ψ ∼ exp(-i m c² τ / ℏ)</em> (Theorem <a href="#qm:RestMass">qm:RestMass</a>). Lorentz-transforming to an observer frame where the particle has momentum <em>p</em> gives a phase with both temporal and spatial periodicity. The four-wavevector <em>k^μ = p^μ / ℏ</em> encodes both: <em>k⁰ = E/(ℏ c)</em> (frequency over <em>c</em>) and <em>k =  p / ℏ</em> (spatial wavevector). The de Broglie wavelength is <em>\lambda_mathrmdB = 2 π / | k| = h / | p|</em>. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> De Broglie postulated <em>p = h/λ</em> for matter by analogy with photons in 1924 and got the Nobel Prize for being right empirically. The McGucken framework derives it as a geometric theorem: the wave is <em>x₄</em>'s spherical expansion seen from a 3D rest frame, and the wavelength is the spatial periodicity of that expansion. The same equation holds for photons, electrons, and (as confirmed experimentally) any matter.</div>
+
+<h3>Theorem 3: The Planck-Einstein Relation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Planck-Einstein Relation.</span> Each cycle of <em>x₄</em>'s spherical expansion carries one quantum of action <em>ℏ</em>. The energy of a wavefront of frequency <em>ν</em> is therefore
+<div class="ltd-eq">E = h ν = ℏ ω.</div></div>
+
+<p><strong>Proof.</strong> The McGucken Principle places <em>x₄</em> in advance at the rate <em>i c</em> from every spacetime event. The Planck-wavelength oscillation period of <em>x₄</em>'s advance is <em>t<sub>P</sub> = √ℏ G / c⁵</em>, with one cycle of advance corresponding to one quantum of action <em>ℏ</em>. The energy of a wave is the time-rate of action accumulation: <em>E = (mathrmaction) / (mathrmperiod) = h / T = h ν</em>, with <em>T = 1/ν</em> the period of the wave. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Planck and Einstein discovered <em>E = h ν</em> experimentally in 1900--1905 and called <em>ℏ</em> a "fundamental constant of nature" without explaining why it has the value it does. The McGucken framework says: <em>ℏ</em> is just the action that <em>x₄</em> carries through one Planck-period cycle of its expansion. The Planck-Einstein relation is therefore not a separate quantum postulate but a kinematic statement about how <em>x₄</em> advances.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The action quantum <em>ℏ</em> is the quantum-sector counterpart of the speed-of-light <em>c</em> of the gravitational sector. Both are projections of the same single principle <em>d x₄ / d t = i c</em>: <em>c</em> is the rate of <em>x₄</em>'s advance (Theorem <a href="#sec:gr">sec:gr</a>.1); <em>ℏ</em> is the action per Planck-period cycle of that advance (this theorem). The two constants that appear separately in Einstein's field equations and in the Schrödinger equation are the same principle's geometry and dynamics, factored into the two sectors.</div>
+
+<h3>Theorem 4: The Compton Coupling</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Compton Coupling.</span> Massive matter couples to <em>x₄</em>'s expansion through its Compton angular frequency
+<div class="ltd-eq">omega<sub>C</sub> = (m c²)/(ℏ).</div>
+The rest-frame wavefunction has the form
+<div class="ltd-eq">ψ( x, τ) = \psi₀( x) · exp(-i m c² τ / ℏ),</div>
+oscillating at the Compton rate in proper time.</div>
+
+<p><strong>Proof.</strong> The McGucken Principle <em>d x₄ / d t = i c</em> asserts that <em>x₄</em> advances at rate <em>i c</em> from every spacetime event, including the location of a massive particle at rest. The particle, as it is carried by this advance, accumulates a phase. The natural rest-frame oscillation rate is set by the only frequency the particle has at its disposal: <em>omega<sub>C</sub> = m c² / ℏ</em>, constructed from the rest mass <em>m</em>, the speed of light <em>c</em> (the rate of <em>x₄</em>'s advance), and the action quantum <em>ℏ</em> (the Compton-frequency phase per cycle). The phase factor <em>exp(-i omega<sub>C</sub> τ) = exp(-i m c² τ / ℏ)</em> is the structural response of matter to <em>x₄</em>'s advance, with the imaginary unit <em>i</em> traceable to the perpendicularity marker of <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<h3>Theorem 5: The Rest-Mass Phase Factor</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Rest-Mass Phase Factor.</span> The rest-frame wavefunction of a massive particle has the form
+<div class="ltd-eq">ψ( x, τ) = \psi₀( x) · exp(-i m c² τ / ℏ),</div>
+with <em>τ</em> the proper time. The Compton angular frequency <em>omega<sub>C</sub> = m c² / ℏ</em> is the natural oscillation rate of the wavefunction in the rest frame.</div>
+
+<p><strong>Proof.</strong> From Theorem <a href="#qm:Compton">qm:Compton</a> (Compton coupling), the particle oscillates at <em>omega<sub>C</sub></em> in its rest frame in response to <em>x₄</em>'s expansion. The rest-frame wavefunction is the spatial profile <em>\psi₀( x)</em> modulated by the universal time-oscillation factor <em>exp(-i omega<sub>C</sub> τ)</em>. The factor <em>i</em> in the exponent is the perpendicularity marker of <em>x₄</em>; the rest-mass phase factor traces directly to <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Every massive particle has, in its rest frame, a quantum oscillation at its Compton frequency. An electron oscillates <em>1.24 × 10²⁰</em> times per second; a proton oscillates about 1838 times faster than that. This oscillation is the particle physically responding to <em>x₄</em>'s expansion. The rest-mass phase factor <em>exp(-i m c² τ / ℏ)</em> is the mathematical statement of this oscillation, with the <em>i</em> tracing back to <em>x₄ = i c t</em>.</div>
+
+<h3>Theorem 6: Wave-Particle Duality</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Wave-Particle Duality.</span> A quantum entity is simultaneously a spherically symmetric wavefront (Channel B reading: 3D cross-section of its expanding McGucken Sphere) and a localizable particle (Channel A reading: eigenvalue event of position observable, source/detection event in spacetime). The two aspects are not in tension; they are simultaneous geometric consequences of the same <em>d x₄ / d t = i c</em> principle.</div>
+
+<p><strong>Proof.</strong></p>
+
+<p><strong>Channel B generates the wave aspect.</strong> The spherical symmetry of <em>x₄</em>'s expansion from every spacetime point is, by Theorem <a href="#qm:wave">qm:wave</a>, Huygens' principle: every spacetime point is the center of a secondary wavelet, and iterated Huygens composition (Theorem <a href="#qm:Feynman">qm:Feynman</a>) generates wavefront propagation through spacetime. The interference patterns observed in the double-slit experiment are the constructive and destructive superposition of these Huygens wavelets. The matter-wave wavelength <em>\lambda_mathrmdB = h/p</em> (Theorem <a href="#qm:dB">qm:dB</a>) is the <em>x₄</em>-phase accumulation rate per unit spatial motion. The wave aspect of quantum objects is entirely the Channel B reading of <em>d x₄ / d t = i c</em>.</p>
+
+<p><strong>Channel A generates the particle aspect.</strong> The invariance of <em>x₄</em>'s advance under spacetime translations is, by Theorem <a href="#qm:CCR">qm:CCR</a>, Stone's theorem applied to the translation group: the self-adjoint generators of those translations are the four-momentum operators <em>p̂^μ</em> whose eigenvalues are the localized four-momenta of particle states. The discrete detection events at specific pixels of the detector screen are eigenvalue events of the position observable <em>q̂</em>. The quantized energy and momentum exchanges in the photoelectric effect, Compton scattering, and every other "particle-like" process are the eigenvalue exchanges of Channel A's algebraic observables. The particle aspect of quantum objects is entirely the Channel A reading of <em>d x₄ / d t = i c</em>.</p>
+
+<p><strong>Both readings are simultaneous.</strong> A photon traveling through a double-slit apparatus does both simultaneously. Its Channel B content is the spherical Huygens wavelets emanating from every spacetime point the wavefront reaches, including both slits, producing the interference pattern. Its Channel A content is the localized detection event at a specific screen pixel. Both are real; both are simultaneous; both are consequences of the same <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Bohr said: light is sometimes a wave, sometimes a particle, depending on the experiment. The McGucken Principle says: light (and matter) is always a McGucken Sphere — an <em>x₄</em>-expanding spherical wavefront with localized source and detection events. The wave aspect is the wavefront cross-section in 3D (Channel B); the particle aspect is the source/detection event in 3D (Channel A). Both are always there; what changes between experiments is which aspect the measurement device reveals. Wave-particle duality is therefore a feature of measurement, not a feature of nature.</div>
+
+<h3>Theorem 7: The Schrödinger Equation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Schrödinger Equation.</span> The non-relativistic limit of the matter wavefunction in the McGucken framework satisfies
+<div class="ltd-eq">i ℏ (∂ ψ)/(∂ t) = Ĥ ψ,        Ĥ = -(ℏ²)/(2m) ∇² + V( x).</div>
+The factor <em>i</em> on the LHS is the perpendicularity marker of <em>d x₄ / d t = i c</em>.</div>
+
+<p><strong>Proof.</strong> Eight-step derivation, drawn from [2, Theorem 7] which itself imports the chain from [MG-HLA, \S V]:</p>
+
+<p><strong>Step 1: Klein-Gordon as starting point.</strong> From Theorem <a href="#qm:KG">qm:KG</a> below, the matter wavefunction satisfies <em>(□ - m² c² / ℏ²) ψ = 0</em>, expanded as
+<div class="ltd-eq">(1)/(c²) (∂² ψ)/(∂ t²) - ∇² ψ + (m² c²)/(ℏ²) ψ = 0.</div></p>
+
+<p><strong>Step 2: Compton-frequency factorization.</strong> From Theorem <a href="#qm:RestMass">qm:RestMass</a>, the rest-frame wavefunction has the form <em>ψ( x, t) = tilde ψ( x, t) exp(-i m c² t / ℏ)</em>, with <em>tilde ψ</em> the slowly varying envelope.</p>
+
+<p><strong>Step 3: First time derivative.</strong> 
+<div class="ltd-eq">i ℏ (∂ ψ)/(∂ t) = ( m c² tilde ψ + i ℏ (∂ tilde ψ)/(∂ t) ) exp(-i m c² t / ℏ).</div></p>
+
+<p><strong>Step 4: Second time derivative.</strong>
+<div class="ltd-eq">(∂² ψ)/(∂ t²) = ( -(m² c⁴)/(ℏ²) tilde ψ - (2 i m c²)/(ℏ) (∂ tilde ψ)/(∂ t) + (∂² tilde ψ)/(∂ t²) ) exp(-i m c² t / ℏ).</div></p>
+
+<p><strong>Step 5: Substitution into Klein-Gordon.</strong> Substituting Step 4 into Step 1 and simplifying, the rest-mass terms cancel, leaving
+<div class="ltd-eq">-(2 i m)/(ℏ) (∂ tilde ψ)/(∂ t) + (1)/(c²) (∂² tilde ψ)/(∂ t²) - ∇² tilde ψ = 0.</div></p>
+
+<p><strong>Step 6: Non-relativistic limit.</strong> The kinetic and potential energies are much smaller than <em>m c²</em>, so <em>∂² tilde ψ / ∂ t²</em> is negligible compared to <em>(m c² / ℏ)   ∂ tilde ψ / ∂ t</em>. The Klein-Gordon equation reduces to
+<div class="ltd-eq">-(2 i m)/(ℏ) (∂ tilde ψ)/(∂ t) = ∇² tilde ψ.</div>
+Multiplying by <em>-i ℏ / (2 m)</em>:
+<div class="ltd-eq">i ℏ (∂ tilde ψ)/(∂ t) = -(ℏ²)/(2 m) ∇² tilde ψ.</div></p>
+
+<p><strong>Step 7: External potential.</strong> Adding <em>V( x)</em> by minimal coupling:
+<div class="ltd-eq">i ℏ (∂ tilde ψ)/(∂ t) = ( -(ℏ²)/(2 m) ∇² + V( x) ) tilde ψ.</div></p>
+
+<p><strong>Step 8: Restoration of original wavefunction.</strong> The slowly varying envelope <em>tilde ψ</em> satisfies the Schrödinger equation. Absorbing the rest-mass phase into the wavefunction redefinition gives the standard form. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Schrödinger's equation has an <em>i</em> in it, and that <em>i</em> has puzzled physicists for a century. Why is quantum mechanics complex-valued? The standard answer: it just is. The McGucken answer: the <em>i</em> is the perpendicularity marker of <em>x₄</em>, the same <em>i</em> as in <em>x₄ = i c t</em>. Schrödinger's equation is the non-relativistic limit of a deeper equation (Klein-Gordon) which is itself a consequence of <em>x₄</em>'s spherical expansion.</div>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The Schrödinger equation is the structural analog of the Einstein field equations: each is the joint Channel A + Channel B content of <em>d x₄ / d t = i c</em> at its respective scale. Channel A supplies the Hamiltonian operator generating time translation (here) and the diffeomorphism-invariant Einstein tensor (in GR). Channel B supplies the wavefront propagation <em>ψ( x, t)</em> on the McGucken Sphere (here) and the null-cone geometry of Lorentzian curvature (in GR). The same dual-channel structure forces both equations.</div>
+
+<h3>Theorem 8: The Klein-Gordon Equation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Klein-Gordon Equation.</span> The matter wavefunction satisfies
+<div class="ltd-eq">( □ - (m² c²)/(ℏ²) ) ψ = 0</div>
+in the absence of external interactions.</div>
+
+<p><strong>Proof.</strong> From Theorem <a href="#qm:wave">qm:wave</a>, the wavefunction in the absence of mass satisfies <em>□ ψ = 0</em>. The Klein-Gordon equation extends this to include the rest-mass content: starting from the relativistic energy-momentum relation <em>E² = p² c² + m² c⁴</em> and applying the four-momentum operator <em>hat p_μ = i ℏ  ∂ / ∂ x^μ</em> (Theorem <a href="#qm:CCR">qm:CCR</a>) gives
+<div class="ltd-eq">-ℏ² (∂² ψ)/(∂ t²) = -ℏ² c² ∇² ψ + m² c⁴ ψ,</div>
+which rearranges to <em>(□ - m² c² / ℏ²) ψ = 0</em>. The rest-frame solution <em>ψ ∼ exp(-i m c² t / ℏ)</em> recovers Theorem <a href="#qm:RestMass">qm:RestMass</a>. <em>Q.E.D.</em></p>
+
+<h3>Theorem 9: The Dirac Equation, Spin-Half, and 4 Pi Periodicity</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Dirac Equation.</span> The first-order Lorentz-covariant wave equation for matter is
+<div class="ltd-eq">(i ℏ γ^μ \partial_μ - m c) ψ = 0,</div>
+with <em>γ^μ</em> the gamma matrices satisfying the Clifford algebra Cl(1,3) and <em>ψ</em> a four-component spinor field. The Dirac equation is forced by the matter orientation Condition (M) and the requirement of first-order Lorentz covariance; its solutions exhibit spin-1/2 with the 4<em>π</em>-periodicity that is the geometric signature of <em>x₄</em>-rotation.</div>
+
+<p><strong>Proof.</strong> Starting from the Klein-Gordon equation (Theorem <a href="#qm:KG">qm:KG</a>), Dirac sought a first-order Lorentz-covariant equation whose square would give Klein-Gordon: <em>(i γ^μ \partial_μ - m c / ℏ) ψ = 0</em> with <em>(γ^μ \partial_μ)² = □</em>.</p>
+
+<p><strong>Clifford algebra Cl(1,3).</strong> The condition <em>(γ^μ \partial_μ)² = □</em> requires <em>\γ^μ, γ^ν\ = 2 η<sup>μν</sup></em>, the defining anticommutation of the Clifford algebra with Minkowski signature. The minimal real Clifford algebra has dimension 16; its irreducible representation has dimension 4, so <em>ψ</em> is a four-component spinor.</p>
+
+<p><strong>Condition (M): Matter orientation.</strong> [2, Theorem 9] introduces Condition (M): matter is single-sidedly preserved under <em>x₄</em>-rotation. This carries the structural requirement that matter (unlike a scalar field) carries an internal orientation preserved by the McGucken Principle's <em>x₄</em>-advance. Under Condition (M), the first-order Lorentz-covariant matter equation is forced to be the Dirac equation.</p>
+
+<p><strong>Spin-1/2 and 4<em>π</em>-periodicity.</strong> The four-component spinor structure carries spin-1/2: solutions split into positive-energy/negative-energy (equivalently spin-up/spin-down) for each charge, with Lorentz transformations on spinor space generated by <em>γ<sup>μν</sup> = (i/2) [γ^μ, γ^ν]</em>. The 4<em>π</em>-periodicity of spinor rotation is the geometric signature of <em>x₄</em>-rotation: a 2<em>π</em> rotation in the spatial <em>x₁ x₂</em> plane corresponds to only half a 4<em>π</em> rotation of the <em>(x₁ x₂) ↔ (x₄)</em> double cover. This is not a peculiarity of Dirac's equation but a structural consequence of the perpendicularity marker <em>i</em> in <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Dirac wrote down the first-order relativistic wave equation in 1928 by demanding that its square be the Klein-Gordon equation. The required mathematical structure (Clifford algebra, gamma matrices, four-component spinors) automatically gave him spin-1/2 and predicted antimatter, both confirmed experimentally. The McGucken framework gives a geometric reason for the first-order requirement: the matter orientation condition forces the linearization, and the 4<em>π</em>-periodicity of the spinor rotation comes from <em>x₄</em>'s perpendicularity to the spatial directions. Dirac's spin-1/2 isn't an algebraic accident; it's the geometric signature of the fourth dimension.</div>
+
+<h3>Theorem 10: The Canonical Commutation Relation, Dual-Route Derivation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Canonical Commutation Relation.</span> The position and momentum operators on the quantum Hilbert space satisfy
+<div class="ltd-eq">[q̂, p̂] = i ℏ.</div>
+The relation is forced by <em>d x₄ / d t = i c</em> in two mathematically independent ways: the Hamiltonian (operator) route through Channel A, and the Lagrangian (path-integral) route through Channel B. The two routes share no intermediate machinery.</div>
+
+<p><strong>Proof.</strong></p>
+
+<p><strong>Hamiltonian route (Channel A), five propositions.</strong></p>
+
+<p><em>H.1 (Minkowski metric).</em> <em>x₄ = i c t</em> gives <em>d s² = d  x² - c² d t²</em>, the Minkowski metric of signature <em>(-, +, +, +)</em>. The metric supplies the spatial-translation group as a subgroup of the Poincaré group.</p>
+
+<p><em>H.2 (Stone's theorem).</em> The spatial-translation group acts on the quantum Hilbert space <em>mathcal H = L²(mathbb R³)</em> by unitary operators <em>U( a) = exp(-i  a · p̂ / ℏ)</em>, with <em>p̂</em> the momentum operator. Stone's theorem on one-parameter unitary groups forces the existence of <em>p̂</em> as the unique self-adjoint generator. The factor <em>i</em> in the exponent is the same <em>i</em> as in <em>x₄ = i c t</em>.</p>
+
+<p><em>H.3 (Configuration representation).</em> <em>U( a)</em> acts on wavefunctions by spatial translation: <em>(U( a) ψ)( x) = ψ( x -  a)</em>. Differentiating at <em>a = 0</em> gives <em>p̂ = -i ℏ ∇</em> in the configuration representation.</p>
+
+<p><em>H.4 (Direct commutator computation).</em> <em>q̂</em> acts by multiplication by <em>x</em>. Computing on a smooth test function:
+<div class="ltd-eq">[q̂, p̂] ψ( x) = x · (-i ℏ  ∂ ψ / ∂ x) - (-i ℏ)  ∂ / ∂ x (x ψ) = i ℏ ψ.</div>
+Therefore <em>[q̂, p̂] = i ℏ</em>.</p>
+
+<p><em>H.5 (Stone-von Neumann uniqueness).</em> Any irreducible unitary representation of <em>[q̂, p̂] = i ℏ</em> on a separable Hilbert space is unitarily equivalent to the Schrödinger representation. The Hamiltonian route closes uniquely.</p>
+
+<p><strong>Lagrangian route (Channel B), six propositions.</strong></p>
+
+<p><em>L.1 (Huygens' principle).</em> The McGucken Sphere of every spacetime event expands at rate <em>c</em>, with secondary wavelets generated at every point. This is the Channel B content of <em>d x₄ / d t = i c</em> (Theorem <a href="#qm:wave">qm:wave</a>).</p>
+
+<p><em>L.2 (Iterated Huygens).</em> Composing many infinitesimal Huygens steps produces a sum over all paths from source to detection, each path weighted by its accumulated <em>x₄</em>-phase.</p>
+
+<p><em>L.3 (Accumulated phase).</em> The <em>x₄</em>-phase along a path is <em>e<sup>i S / ℏ</sup></em>, where <em>S = ∫ L  d t</em> is the classical action and the factor <em>i / ℏ</em> traces to the perpendicularity marker of <em>d x₄ / d t = i c</em> and the action quantum of Theorem <a href="#qm:PE">qm:PE</a>.</p>
+
+<p><em>L.4 (Feynman path integral).</em> The amplitude from <em>( x<sub>i</sub>, t<sub>i</sub>)</em> to <em>( x<sub>f</sub>, t<sub>f</sub>)</em> is <em>⟨ x<sub>f</sub> | x<sub>i</sub> ⟩ = ∫ mathcal D x  e<sup>i S / ℏ</sup></em> (Theorem <a href="#qm:Feynman">qm:Feynman</a>).</p>
+
+<p><em>L.5 (Schrödinger via Gaussian integration.)</em> Expanding the path integral to first order in <em>d t</em> and performing the Gaussian integration over momentum recovers the Schrödinger equation.</p>
+
+<p><em>L.6 (Identification of momentum.)</em> The kinetic term in the Lagrangian identifies the canonical momentum as <em>p = m dot x</em>, which under Legendre transformation becomes the operator <em>p̂</em> satisfying <em>[q̂, p̂] = i ℏ</em> by direct calculation from the path-integral kernel.</p>
+
+<p>The two routes converge on the same result. The structural overdetermination is the central evidence that <em>d x₄ / d t = i c</em> is a genuine physical foundation rather than a reformulation of standard quantum mechanics. <em>Q.E.D.</em></p>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> The dual-route derivation of <em>[q̂, p̂] = i ℏ</em> here is the structural analog of the dual-route derivation of the Einstein field equations <em>G<sub>μν</sub> = (8 π G / c⁴) T<sub>μν</sub></em> (Theorem <a href="#sec:gr">sec:gr</a>.11), which converges through Lovelock 1971 (intrinsic) and Schuller 2020 (parallel) routes. Both sectors exhibit structural overdetermination at their master-equation level: the Einstein equations and the canonical commutation relation each derivable through two mathematically independent chains from the same single principle. This is what makes the unification a unification.</div>
+
+<h3>Theorem 11: The Born Rule</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Born Rule.</span> The probability density of detecting a particle at position <em>x</em> is
+<div class="ltd-eq">P( x) = |ψ( x, t)|².</div></div>
+
+<p><strong>Proof.</strong> The wavefunction <em>ψ( x, t)</em> is the wave-amplitude on the McGucken Sphere from the particle's emission event (Theorem <a href="#qm:wave">qm:wave</a>, Theorem <a href="#qm:WPD">qm:WPD</a>). The squared modulus <em>|ψ|²</em> is the surface density of detection probability on the Sphere; the integral <em>∫ |ψ|² d³ x = 1</em> is the total-probability normalization. The Born rule is structurally Peebles's 1988 statement to me ("the photon has an equal chance of being detected anywhere defined by the area of a sphere's surface, which is expanding at <em>c</em>"), generalized from the photon to massive matter through the Compton coupling (Theorem <a href="#qm:Compton">qm:Compton</a>).</p>
+
+<p>The detailed structural argument, imported from [2, Theorem 11] which in turn imports [MG-Bohmian, \S VII], runs through three pieces: (i) the complex character of <em>ψ</em> from <em>i</em> as the perpendicularity marker of <em>x₄</em>; (ii) the quadratic exponent <em>|ψ|²</em> (rather than <em>|ψ|¹</em>, <em>|ψ|³</em>, or any other power) from elimination by Lorentz covariance and probability normalization; (iii) the SO(3) Haar-measure shape from the spherical isotropy of <em>x₄</em>'s expansion. <em>Q.E.D.</em></p>
+
+<h3>Theorem 12: The Heisenberg Uncertainty Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Heisenberg Uncertainty Principle.</span> For any quantum state, the standard deviations of position and momentum satisfy
+<div class="ltd-eq">Δ q · Δ p ≥ (ℏ)/(2).</div></div>
+
+<p><strong>Proof.</strong> The canonical commutation relation <em>[q̂, p̂] = i ℏ</em> (Theorem <a href="#qm:CCR">qm:CCR</a>) is the algebraic-symmetry content. The uncertainty principle follows by the standard Robertson-Schrödinger inequality applied to non-commuting Hermitian operators: <em>Δ A · Δ B ≥ (1/2) |⟨ [A, B] ⟩|</em>, with <em>[q̂, p̂] = i ℏ</em> giving <em>Δ q · Δ p ≥ ℏ / 2</em>.</p>
+
+<p>The geometric-propagation reading: the Compton-frequency wavefront amplitude on the McGucken Sphere has finite spatial spread, with the position-momentum spread satisfying the spread-bandwidth uncertainty of any Fourier-conjugate pair. The factor <em>ℏ</em> is the action quantum of <em>x₄</em>'s Compton-frequency advance. <em>Q.E.D.</em></p>
+
+<h3>Theorem 13: The CHSH Inequality and Tsirelson Bound</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">CHSH Inequality and Tsirelson Bound.</span> For any local hidden-variable theory, correlations between spacelike-separated measurements satisfy the CHSH inequality <em>|S| ≤ 2</em>. Quantum mechanics violates this bound, with the maximum quantum-mechanical violation given by the Tsirelson bound <em>|S|_mathrmmax = 2 √ 2</em>.</div>
+
+<p><strong>Proof.</strong> The Tsirelson bound <em>2 √ 2</em> descends from the SO(3) Haar measure on the two-photon system's combined polarization state. The dual-channel reading developed in [2, Theorem 13]: Channel A supplies the Hilbert-space tensor product structure that gives the upper bound <em>2 √ 2</em>; Channel B supplies the geometric content of the photons' shared <em>x₄</em>-stationarity (Theorem <a href="#qm:Nonloc">qm:Nonloc</a> below) that physically realizes the bound. <em>Q.E.D.</em></p>
+
+<h3>Theorem 14: The Four Major Dualities of Quantum Mechanics</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Four Dualities.</span> The four major dualities of quantum mechanics — Hamiltonian/Lagrangian, Heisenberg/Schrödinger, wave/particle, and locality/nonlocality — are parallel sibling consequences of the dual-channel content of <em>d x₄ / d t = i c</em>, with each duality reading the principle through its Channel A (algebraic-symmetry) and Channel B (geometric-propagation) contents.</div>
+
+<p><strong>Proof sketch.</strong> Each duality is the Channel A versus Channel B reading of a specific physical content of the principle:</p>
+
+<p><strong>Hamiltonian/Lagrangian.</strong> The Hamiltonian formulation is Channel A (operators on Hilbert space, generated by Stone's theorem). The Lagrangian formulation is Channel B (Feynman path integral over wavefronts). The two formulations are equivalent (Theorem <a href="#qm:CCR">qm:CCR</a>'s dual-route derivation) because they are dual readings of the same principle.</p>
+
+<p><strong>Heisenberg/Schrödinger.</strong> The Heisenberg picture is Channel A (operators evolve, states fixed). The Schrödinger picture is Channel B (states evolve, operators fixed). Both pictures give the same expectation values because they are dual readings.</p>
+
+<p><strong>Wave/particle.</strong> Already developed in Theorem <a href="#qm:WPD">qm:WPD</a>: Channel B gives the wave aspect, Channel A gives the particle aspect.</p>
+
+<p><strong>Locality/nonlocality.</strong> The locality of the Schrödinger equation is Channel B (local wavefront propagation). The nonlocality of Bell-violation is Channel A (algebraic correlations between spacelike-separated systems sharing <em>x₄</em>-rest, Theorem <a href="#qm:Nonloc">qm:Nonloc</a>). Both descend from the same single principle.</p>
+
+<p>The four dualities are not four separate phenomena but four readings of the same dual-channel structure of <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<h3>Theorem 15: The Feynman Path Integral</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Feynman Path Integral.</span> The amplitude from <em>( x<sub>i</sub>, t<sub>i</sub>)</em> to <em>( x<sub>f</sub>, t<sub>f</sub>)</em> is the sum over all paths weighted by the accumulated <em>x₄</em>-phase:
+<div class="ltd-eq">⟨  x<sub>f</sub>, t<sub>f</sub> |  x<sub>i</sub>, t<sub>i</sub> ⟩ = ∫ mathcal D x(t)  e<sup>i S[x(t)] / ℏ</sup>.</div></div>
+
+<p><strong>Proof.</strong> From the iterated Huygens content (L.1, L.2 of Theorem <a href="#qm:CCR">qm:CCR</a>), the wavefront amplitude at the detection event is the sum over all McGucken-Sphere paths from the source event, with each path weighted by its accumulated <em>x₄</em>-phase <em>e<sup>i S / ℏ</sup></em>. The action <em>S = ∫ L  d t</em> is the integral of the Lagrangian along the path, and the factor <em>i/ℏ</em> is structurally <em>d x₄ / d t = i c</em> translated into the action-quantum scale: the <em>i</em> is the imaginary unit of <em>x₄</em>'s advance; the <em>ℏ</em> is the action quantum of the Compton-frequency advance. The classical Euler-Lagrange equations follow as the <em>ℏ → 0</em> saddle-point approximation. <em>Q.E.D.</em></p>
+
+<h3>Theorem 16: Global-Phase Absorption and Gauge Invariance</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Global-Phase Absorption.</span> The wavefunction is defined up to a global phase <em>ψ → e<sup>i θ</sup> ψ</em> without affecting any observable. Equivalently, <em>x₄</em>'s phase origin is freely choosable, and physical predictions depend only on phase differences.</div>
+
+<p><strong>Proof.</strong> The Born rule (Theorem <a href="#qm:Born">qm:Born</a>) gives <em>P = |ψ|² = |e<sup>i θ</sup> ψ|²</em>, invariant under global phase transformations. The principle <em>d x₄ / d t = i c</em> specifies the rate of <em>x₄</em>'s advance but not its absolute phase origin; the phase origin is a gauge degree of freedom. Local phase invariance (gauge invariance for <em>ψ → e<sup>i θ(x)</sup> ψ</em> with <em>θ</em> position-dependent) requires the introduction of a gauge field <em>A_μ</em>, giving rise to electromagnetism via minimal coupling. The U(1) gauge invariance of QED is therefore the local form of <em>x₄</em>'s phase origin freedom. <em>Q.E.D.</em></p>
+
+<h3>Theorem 17: Quantum Nonlocality</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Quantum Nonlocality.</span> Bell-violation experiments demonstrate spacelike-separated quantum correlations that exceed the bound for any local hidden-variable theory. In the McGucken framework, these correlations are the geometric content of two photons (or two matter particles) sharing the same place in <em>x₄</em> while spatially separated.</div>
+
+<p><strong>Proof.</strong> Two photons emitted from a common source are at the same place in <em>x₄</em> at emission (both at <em>x₄</em>-rest by the Massless-Lightspeed Equivalence, Theorem <a href="#sec:gr">sec:gr</a>.6). They remain at the same place in <em>x₄</em> throughout their spatial separation, because their separation in <em>x₄</em> is zero throughout the experiment. Their quantum correlation is therefore preserved across the spatial distance, because the spatial distance is irrelevant to their separation in <em>x₄</em>.</p>
+
+<p>Bell-violation experiments measure these correlations and find that they violate the CHSH inequality, saturating the Tsirelson bound <em>2 √ 2</em> (Theorem <a href="#qm:CHSH">qm:CHSH</a>). The McGucken framework treats this not as faster-than-light spatial signaling but as <em>x₄</em>-mediated correlation: the spacelike separation of the spatial cross-sections leaves the <em>x₄</em>-coupled state coherent. <em>Q.E.D.</em></p>
+
+<div class="ltd-plain"><strong>In plain language.</strong> Schrödinger said in 1935 that entanglement is the characteristic trait of quantum mechanics. In 1988, Joseph Taylor told me to figure out the source of entanglement and I'd figure out the source of the quantum. The Princeton synthesis showed that entanglement is the geometric content of two photons sharing the same place in <em>x₄</em> while spatially separated. Bell-violation experiments measure this geometry. The "spooky action at a distance" that disturbed Einstein is just two systems being at the same place in <em>x₄</em>, regardless of how far apart they are in space.</div>
+
+<h3>Theorem 18: Entanglement</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Entanglement.</span> Two quantum systems are entangled if and only if they share <em>x₄</em>-coupling. The shared <em>x₄</em>-coupling preserves quantum correlations across arbitrary spatial separation, as long as no measurement breaks the coupling.</div>
+
+<p><strong>Proof.</strong> An entangled state <em>|Ψ⟩ = sum<sub>i</sub> c<sub>i</sub> |a<sub>i</sub>⟩ |b<sub>i</sub>⟩</em> (in non-product form) has Schmidt coefficients <em>c<sub>i</sub></em> that encode the cross-system correlation. In the McGucken framework, the cross-system correlation is the structural content of the two systems sharing the same <em>x₄</em>-frame: their joint wavefront amplitude is a single McGucken Sphere expanding from the common source event, with the spatial cross-section of the joint sphere encoding the entanglement structure. Spatial separation of the two systems does not separate them in <em>x₄</em>; the <em>x₄</em>-coupling persists. Measurement of one system projects the joint state, breaking the <em>x₄</em>-coupling and collapsing the correlation. <em>Q.E.D.</em></p>
+
+<h3>Theorem 19: The Measurement Problem and Copenhagen Interpretation</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Measurement and Copenhagen.</span> The "collapse of the wavefunction" upon measurement is the structural consequence of the McGucken-Sphere wavefront's intersection with a localized matter-detector interaction. The wavefunction does not collapse in any physical sense; the wavefront amplitude continues to propagate, but the detection event has selected a specific spatial-three-slice location for the matter-detector interaction.</div>
+
+<p><strong>Proof.</strong> The wavefunction <em>ψ( x, t)</em> is well-defined at every spacetime event (Theorem <a href="#qm:wave">qm:wave</a>, Theorem <a href="#qm:Born">qm:Born</a>). The detection event is the spatial-three-slice intersection of the McGucken-Sphere wavefront with the detector. The post-detection wavefront amplitude evolves from the detection location forward, with the prior wavefront amplitude unchanged (it continues to propagate) but no longer relevant to the post-detection observer. The "projection postulate" of standard quantum mechanics is the structural statement that the observer's accessible wavefunction is now the post-detection one. <em>Q.E.D.</em></p>
+
+<h3>Theorem 20: Second Quantization and the Pauli Exclusion Principle</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Second Quantization.</span> The Hilbert space of identical particles is constructed as the symmetric (bosons) or antisymmetric (fermions) tensor power of the single-particle Hilbert space. The spin-statistics theorem forces bosons to have integer spin and fermions to have half-integer spin. The Pauli exclusion principle for fermions (no two identical fermions can occupy the same state) follows from antisymmetrization.</div>
+
+<p><strong>Proof.</strong> The 4<em>π</em>-periodicity of fermion rotation (Theorem <a href="#qm:Dirac">qm:Dirac</a>) is the geometric signature of <em>x₄</em>-rotation: a 2<em>π</em> rotation of a fermion wavefunction in space corresponds to only half a 4<em>π</em> rotation in the <em>(x₁ x₂) ↔ (x₄)</em> double cover. Two identical fermions exchanged in space therefore acquire a relative phase of <em>-1</em>, forcing antisymmetrization. The antisymmetrization automatically forces no two fermions in the same state (the Pauli exclusion principle, since <em>ψ(a, a) = -ψ(a, a) = 0</em>). Bosons (integer spin, 2<em>π</em>-periodic rotation) acquire phase <em>+1</em> on exchange, forcing symmetrization. <em>Q.E.D.</em></p>
+
+<h3>Theorem 21: The Matter-Antimatter Dichotomy</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Matter-Antimatter Dichotomy.</span> For every species of matter, there exists an antimatter partner with opposite charge but identical mass. The matter-antimatter dichotomy is the <em>± i c</em> orientation choice of the McGucken Principle: matter advances at <em>+i c</em> along <em>x₄</em>, antimatter at <em>-i c</em>.</div>
+
+<p><strong>Proof.</strong> The Dirac equation (Theorem <a href="#qm:Dirac">qm:Dirac</a>) has positive-energy and negative-energy solutions. The Dirac sea/hole interpretation, made formal by Feynman-Stueckelberg, identifies negative-energy solutions running backward in time as positive-energy antimatter solutions running forward. In the McGucken framework, this reinterpretation is the structural identification: matter is <em>+i c</em>-advancing, antimatter is <em>-i c</em>-advancing. The CPT theorem of quantum field theory follows: charge conjugation flips the sign of <em>x₄</em>-advance, parity flips the sign of spatial coordinates, and time reversal flips the sign of time, with the combined CPT transformation leaving the principle <em>d x₄ / d t = i c</em> invariant up to relabeling. <em>Q.E.D.</em></p>
+
+<h3>Theorem 22: The Compton-Coupling Diffusion</h3>
+
+<div class="ltd-thm"><span class="ltd-thm-label">Compton-Coupling Diffusion.</span> Massive matter coupled to <em>x₄</em>'s expansion exhibits a residual zero-temperature spatial diffusion
+<div class="ltd-eq">D<sub>x</sub> = (ε² c² Ω)/(2 γ²),</div>
+with <em>ε</em> the dimensionless Compton-coupling strength, <em>Ω</em> the modulation frequency (Planck-scale), and <em>γ</em> a damping factor. The diffusion is mass-independent (universal across particle species) and constitutes a falsifiable empirical signature of the framework.
+\end{theorem>
+
+<p><strong>Proof.</strong> The McGucken-Compton coupling (Theorem <a href="#qm:Compton">qm:Compton</a>) modulates the rest-frame wavefunction as <em>ψ ∼ exp(-i m c² τ / ℏ) [1 + ε cos(Ω τ)]</em>. The modulation produces a stochastic spatial drift on the wavefront amplitude. Over many Compton cycles, this drift averages to a Gaussian diffusion with the mean-squared displacement growing linearly in time at rate <em>D<sub>x</sub> = ε² c² Ω / (2 γ²)</em> [2, Theorem 22; MG-Compton, \S 3-4]. The diffusion is mass-independent because the <em>ε</em> and <em>Ω</em> parameters are properties of the McGucken-Compton coupling, not of the particle's mass. <em>Q.E.D.</em></p>
+
+<div class="ltd-remark"><strong>Remark on the McGucken Duality.</strong> Theorem <a href="#qm:Diffusion">qm:Diffusion</a> is the falsifiable empirical signature of the framework at the matter-coupling level. Standard quantum field theory predicts no such diffusion; the McGucken framework predicts <em>D<sub>x</sub> = ε² c² Ω / (2 γ²)</em> with <em>ε lesssim 10<sup>-20</sup></em> at Planck modulation frequency <em>Ω = c / ell<sub>P</sub></em>. Cross-species comparison (electron in solid, ion in Penning trap, neutral atom in optical lattice) under identical environmental conditions should produce identical residual diffusion if the Compton coupling is the dominant residual mechanism. If a future experiment finds residual diffusion that scales with mass, the specific Compton-coupling ansatz fails (but the underlying McGucken Principle survives, requiring a different matter-coupling specification).</div>
+
+<h3>Theorem 23: The Feynman-Diagram Apparatus</h3>
+
+<p>\begin{theorem}[Feynman Diagrams]
+The full Feynman-diagram apparatus of quantum field theory — propagators, vertices, the Dyson expansion, Wick's theorem, loop integrals, the <em>i ε</em> prescription, and the Wick rotation — is the iterated-Huygens-with-interaction structure of <em>x₄</em>'s expansion under matter coupling.</div></p>
+
+<p><strong>Proof sketch.</strong> Each piece of the apparatus has a structural source in <em>d x₄ / d t = i c</em>:</p>
+
+<p><strong>Propagators.</strong> The free propagator <em>G(x - y) = ∫ e<sup>-i k (x - y)</sup> / (k² - m² + i ε) d⁴ k</em> is the Fourier transform of the Klein-Gordon Green's function, which is the McGucken Sphere wavefront from <em>y</em> reaching <em>x</em> (Theorem <a href="#qm:KG">qm:KG</a>, Theorem <a href="#qm:wave">qm:wave</a>).</p>
+
+<p><strong>Vertices.</strong> Interaction vertices are the loci where matter wavefronts couple to gauge fields via minimal coupling (Theorem <a href="#qm:GP">qm:GP</a>); each vertex carries an <em>i</em> factor traceable to <em>d x₄ / d t = i c</em>.</p>
+
+<p><strong>Dyson expansion.</strong> The time-ordered exponential <em>T exp(-i ∫ H_mathrmint d t / ℏ)</em> is the iterated Huygens composition of interaction events along the matter wavefronts.</p>
+
+<p><strong>Wick's theorem.</strong> The reduction of time-ordered products to normal-ordered products is the structural fact that the vacuum state of the McGucken framework has zero <em>x₄</em>-amplitude at every event, so vacuum expectation values of normal-ordered products vanish.</p>
+
+<p><strong>Loop integrals.</strong> Closed loops in Feynman diagrams correspond to virtual particle pairs created and annihilated within the McGucken Sphere geometry; they are not divergences to be regulated but real quantum-fluctuation amplitudes.</p>
+
+<p><strong>The <em>i ε</em> prescription.</strong> The <em>+ i ε</em> in the propagator denominator selects the retarded (forward-in-<em>x₄</em>) Green's function, which is the Channel B physical content of <em>x₄</em>'s <em>+ i c</em> orientation (Theorem <a href="#sec:gr">sec:gr</a>.20's <em>+ i c</em> arrow of time).</p>
+
+<p><strong>The Wick rotation.</strong> The Wick rotation <em>t → -i τ</em> is the structural identity <em>τ = x₄ / c</em>: the Euclidean coordinate <em>τ</em> is not "imaginary time" but <em>x₄</em> itself. The Euclidean path integral with weights <em>e<sup>-S<sub>E</sub> / ℏ</sup></em> (real, positive) is the Euclidean continuation of the Lorentzian path integral <em>e<sup>i S<sub>L</sub> / ℏ</sup></em>, connected by analytic continuation through the perpendicularity marker <em>i</em> of <em>d x₄ / d t = i c</em>. <em>Q.E.D.</em></p>
+
+<h3>Synthesis of the Quantum Sector</h3>
+
+<p>The chain just developed — Theorems <a href="#qm:wave">qm:wave</a> through <a href="#qm:FD">qm:FD</a>, descending from <em>d x₄ / d t = i c</em> — supplies the full content of quantum mechanics, from the wave equation through quantum nonlocality to the full Feynman-diagram apparatus of quantum field theory. The wave equation is the differential form of <em>x₄</em>'s spherical expansion. The de Broglie relation, the Planck-Einstein relation, the Compton coupling, and the rest-mass phase factor describe how matter responds to that expansion. Wave-particle duality is the simultaneous Channel A + Channel B reading of the wavefront. The Schrödinger equation, the Klein-Gordon equation, the Dirac equation, and the canonical commutation relation are the dynamical equations forced by the dual-channel content. The Born rule, the uncertainty principle, the CHSH inequality, and the four major dualities of quantum mechanics are structural readings of the same dual-channel content. The path integral, gauge invariance, quantum nonlocality, entanglement, the measurement problem, second quantization, the matter-antimatter dichotomy, the Compton-coupling diffusion, and the Feynman-diagram apparatus close the chain.</p>
+
+<p>What is remarkable, and what justifies the framework's claim to unification, is that <em>the same single principle that generated the entirety of general relativity in Section <a href="#sec:gr</em> just generated the entirety of quantum mechanics in this section">sec:gr</em> just generated the entirety of quantum mechanics in this section</a>. The two sectors do not have separate foundations; they have the same foundation, factored differently. Section <a href="#sec:gr">sec:gr</a>'s Master Equation <em>u^μ u_μ = -c²</em> and this section's canonical commutation relation <em>[q̂, p̂] = i ℏ</em> are dual readings of <em>d x₄ / d t = i c</em> at their respective scales. Section <a href="#sec:gr">sec:gr</a>'s Einstein field equations <em>G<sub>μν</sub> = (8 π G / c⁴) T<sub>μν</sub></em> and this section's Schrödinger equation <em>i ℏ  ∂ ψ / ∂ t = Ĥ ψ</em> occupy structurally analogous positions in their chains: each is the joint Channel A + Channel B content of the principle, with each constant (<em>c</em>, <em>ℏ</em>) a projection of the principle onto its sector.</p>
+
+<p>The closing of the foundational-derivation gap is structural. With the physical interpretation of <em>d x₄ / d t = i c</em> as a foundational physical invariant — the assertion that <em>x₄</em> is expanding in a spherically symmetric manner from every spacetime event — the gap between general relativity and quantum mechanics is not papered over with quantization machinery; it is dissolved by the recognition that the two theories are projections of the same single equation onto different physical regimes. As I argued in Section <a href="#sec:atom">sec:atom</a>, every atom of spacetime — every McGucken Sphere expanding at <em>d x₄ / d t = i c</em> from every event — contains the action, symmetries, and spacetime structure for all of known physics.</p>
+
+<h2>6. Where the Two Sectors Meet</h2>
+
+<p>The gravitational and quantum sectors of the framework are not two separate constructions; they are two projections of the same principle onto different scales of physical organization. In this section I identify the structural points where they meet.</p>
+
+<h3>6.1 The Master-Equation Pair</h3>
+
+<p>The two sectors are governed by master equations of the same structural form:</p>
+
+<ul>
+<li><strong>Gravity:</strong> <em>u<sup>μ</sup>u<sub>μ</sub> = −c²</em>. The four-velocity normalization, with the budget partition between <em>x₄</em>-advance and spatial motion. Channel A content: the Lorentz-invariant scalar identity. Channel B content: the budget partition between <em>x₄</em>-advance and three-spatial motion.</li>
+<li><strong>Quantum:</strong> [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em>. The canonical commutation relation, with the action quantum of the Compton-frequency advance of <em>x₄</em>. Channel A content: the algebraic-symmetry statement of canonical conjugacy. Channel B content: the geometric-propagation statement of the Heisenberg uncertainty principle.</li>
+</ul>
+
+<p>Each master equation has the same structural form: a differential or commutator operator on the left, a foundational physical content (<em>c</em>, <em>ℏ</em>) on the right, with both sides constants of the framework. The constants <em>c</em> and <em>ℏ</em> are not two independent dimensional inputs but two projections of <em>dx₄/dt = ic</em> onto the two sectors:</p>
+
+<ul>
+<li><em>c</em> is the rate at which <em>x₄</em> advances. Direct: <em>dx₄/dt = ic</em>, so |<em>dx₄/dt</em>| = <em>c</em>. The velocity of light is the rate of the fourth dimension's expansion in the spatial three-slice projection.</li>
+<li><em>ℏ</em> is the action quantum of the Compton-frequency advance of <em>x₄</em>. The Planck-wavelength oscillation period of <em>x₄</em>'s advance is <em>t<sub>P</sub></em> = √(ℏ<em>G/c⁵</em>), and the Planck wavelength is <em>ℓ<sub>P</sub></em> = √(ℏ<em>G/c³</em>). The action accumulated by a free-particle worldline during one Planck-period oscillation is exactly <em>ℏ</em>. The numerical value of <em>ℏ</em> is fixed by <em>x₄</em>'s Planck-period oscillation rate.</li>
+</ul>
+
+<p>The pair of master equations (<em>c</em> in gravity, <em>ℏ</em> in quantum) is therefore not a coincidence but a structural payoff of the principle. The two constants have a common origin in <em>dx₄/dt = ic</em>, with <em>c</em> the rate of expansion and <em>ℏ</em> the action quantum of the Planck-period oscillation. The third constant of the framework, Newton's <em>G</em>, enters through the Bekenstein–Hawking horizon construction and the Planck-scale identifications, and is fixed by the requirement that the macroscopic gravitational content of the field equations matches the empirical content of Newtonian gravitation in the weak-field limit.</p>
+
+<h3>6.2 The Bekenstein–Hawking Entropy as the Meeting Point</h3>
+
+<p>The Bekenstein–Hawking horizon entropy</p>
+
+<div class="ltd-eq"><em>S</em><sub>BH</sub> &nbsp;=&nbsp; <em>k</em><sub>B</sub> <em>A</em> / ( 4 <em>ℓ</em><sub>P</sub>² ),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>ℓ</em><sub>P</sub> &nbsp;=&nbsp; √( <em>ℏG</em> / <em>c</em>³ )</div>
+
+<p>is structurally the place where the gravitational and quantum sectors of the framework meet. The horizon area <em>A</em> is gravitational — a Channel B content of the McGucken Sphere at the horizon. The Planck length <em>ℓ<sub>P</sub></em> is quantum-gravitational — it carries both <em>ℏ</em> and <em>G</em>, with the Planck-period oscillation of <em>x₄</em> supplying <em>ℏ</em> and the macroscopic gravitational content of the field equations supplying <em>G</em>. The factor 1/4 is geometric — it descends from the polarization counting of <em>x₄</em>-stationary modes per unit horizon area. The Boltzmann constant <em>k<sub>B</sub></em> is thermodynamic — it enters through the projection of the principle's Planck-cell structure onto thermodynamic observables.</p>
+
+<p>All four of these are projections of the same single principle. The Bekenstein–Hawking entropy is therefore the structural confirmation that the gravitational and quantum sectors are not two separate theories but two readings of <em>dx₄/dt = ic</em> at the horizon scale. This is why the Strominger–Vafa 1996 calculation of the entropy of certain extremal black holes from the D-brane microstate count agrees with the Bekenstein–Hawking value: the microstate count is the algebraic-symmetry content of the principle at the horizon, the area-law factor is the geometric-propagation content of the principle at the horizon, and the agreement between them is the McGucken Duality at the horizon scale. (I am, in separate work, deriving the Strominger–Vafa coefficient <em>c = 6Q₁Q₅</em> from <em>dx₄/dt = ic</em> directly, by pinning the bosonic polarization count of <em>x₄</em>-stationary modes on the null 1+1 strip; the polarization count is fixed by the Compton-coupling structure rather than imported from the string-theoretic anomaly cancellation.)</p>
+
+<h3>6.3 Why Quantum Gravity Is Not Needed</h3>
+
+<p>The standard reading of the QM–GR foundational gap holds that gravity must be quantized to make it consistent with quantum mechanics. The quantum-gravity programs of the past seventy years — canonical quantization, Loop Quantum Gravity, the various string theories, asymptotic safety, causal-set theory, Wheeler–DeWitt — are all attempts to apply the quantum-mechanical formalism to the gravitational field, with the metric <em>g<sub>μν</sub>(x)</em> treated as a quantum operator and the Einstein–Hilbert action treated as a quantum field theory.</p>
+
+<p>The McGucken framework predicts that this approach cannot work. Gravity is not a force on <em>x₄</em>; gravity is the geometry of <em>x₄</em>-propagation. There is no separate gravitational field to quantize. The gravitational dynamics is the local distortion of the McGucken Sphere by the local mass-energy distribution, and that distortion is fully captured by the curved Lorentzian metric. Quantum mechanics is not a separate framework that needs to be imposed on top of the gravitational dynamics; quantum mechanics is the same principle's content at the Compton-frequency scale.</p>
+
+<p>The structural content of quantum gravity, in this picture, is not an additional theory to be constructed but a recognition that the existing dichotomy is artificial. There are not two theories to unify; there is one principle, with two scale-projections. The QM–GR foundational gap is closed not by quantizing gravity but by recognizing that the principle that generates both is more foundational than either, and that both are theorems of the principle. This is why the framework predicts no graviton (Section 8 below): the graviton is the postulated quantum of the gravitational field, but if gravity is not a field to be quantized, the graviton does not exist.</p>
+
+<h3>6.4 The McGucken Sphere as the Atom of Spacetime: Every Point Contains All of Physics</h3>
+
+<p>The fact that the physical invariant <em>dx₄/dt = ic</em> contains all the mathematics and physics from which both general relativity and quantum mechanics descend as chains of theorems immediately reveals a deeper structural truth, beyond what the master-equation pair of Section 6.1 establishes. The pair shows that the two sectors share a common foundation. The deeper truth is that the two sectors share a common foundation <em>at every point</em>.</p>
+
+<p>Every point of the spacetime metric</p>
+
+<div class="ltd-eq">
+<em>ds</em>² &nbsp;=&nbsp; <em>dx</em>₁² + <em>dx</em>₂² + <em>dx</em>₃² + <em>dx</em>₄²
+</div>
+
+<p>contains the invariant symmetry and action <em>dx₄/dt = ic</em>. Each event <em>p</em>₀ = (<em>x</em>₀, <em>t</em>₀) of the metric is a locus from which <em>x</em>₄ is advancing at rate <em>ic</em>; each event therefore carries with it the full algebraic-symmetry content (Channel A) and the full geometric-propagation content (Channel B) of the principle. Because every point of the metric carries the principle, every point of the metric carries the mechanism that generates all of quantum mechanics — the imaginary unit <em>i</em> that becomes the <em>i</em> of the Schrödinger equation, the rate <em>c</em> that becomes the propagation speed of the wavefront, the action quantum <em>ℏ</em> that emerges from <em>x</em>₄'s Planck-period oscillation, the McGucken-Sphere geometry that becomes the support of the wavefunction <em>ψ</em>(<em>x</em>, <em>t</em>), and the Born-rule probability density |<em>ψ</em>|² that is the surface density on that sphere. The metric is not a passive backdrop on which quantum mechanics happens; the metric is itself constituted, at every point, by the dynamical advance that quantum mechanics describes.</p>
+
+<p>The reciprocal statement is also true. Every point on the surface of the McGucken Sphere on which the wavefunction <em>ψ</em> propagates as a wave-amplitude contains the invariant symmetry and action <em>dx₄/dt = ic</em>. Each point of the wavefront carries the same principle that generates the spacetime metric — the four-velocity budget <em>u<sup>μ</sup>u<sub>μ</sub></em> = −<em>c</em>², the four-fold ontology of absolute rest in space versus absolute rest in <em>x</em>₄, the Equivalence Principle, the geodesic hypothesis, and the Einstein field equations. The wavefunction is not a quantum object that lives <em>on</em> a separately-given spacetime; the wavefunction's own carrier — the McGucken Sphere expanding from its source event — is itself constituted, at every point, by the geometric advance that general relativity describes.</p>
+
+<p>The two statements together identify the McGucken Sphere as the atomic unit of spacetime. Every atom of spacetime, defined as the McGucken Sphere of expansion at <em>dx₄/dt = ic</em> from every event, contains within itself the action [<a href="#ref3">3</a>], the symmetries [<a href="#ref4">4</a>], and the spacetime structure [<a href="#ref5">5</a>] of all known physics. There is no separation of scales: at the macroscopic-curvature scale, the McGucken Sphere is the local null cone of general relativity; at the Compton-frequency scale, the McGucken Sphere is the wavefront amplitude of quantum mechanics; at the horizon scale, the McGucken Sphere is the modal substrate of the Bekenstein–Hawking entropy. All three scales are the same geometric object, the same single principle acting at different physical regimes.</p>
+
+<p>This identification has three structural consequences worth stating explicitly.</p>
+
+<p><strong>First, the principle is local.</strong> <em>dx₄/dt = ic</em> holds at every spacetime event, not as a global cosmological statement but as the local content of every infinitesimal neighborhood. The locality of the principle is what allows the chain of theorems in both sectors to descend from it: the field equations of general relativity are local equations (forced by the principle's local validity at every event), and the Schrödinger equation is a local equation (forced by the principle's local validity at every event). Both chains descend from a principle that is foundationally local.</p>
+
+<p><strong>Second, the principle is universal.</strong> The same equation holds at every event in the universe, with the same rate <em>ic</em>, with the same imaginary unit, with the same Compton-frequency oscillation rate for any given matter species. There is no event in the universe at which <em>dx₄/dt</em> ≠ <em>ic</em>; there is no region in which a different principle takes over. The universality of the principle is what allows it to be foundational: a principle that held only sometimes would not be a principle.</p>
+
+<p><strong>Third, the principle is informationally complete.</strong> Every atom of spacetime — every McGucken Sphere expanding from every event — carries the full structural information of physics: the metric, the field equations, the wavefunction, the commutation relations, the Born rule, the path integral, the Equivalence Principle, the four-fold ontology, the four-velocity budget. Nothing additional is needed, and nothing additional is possible. The principle is informationally maximal in the sense that no further structural input is required to derive any theorem of either sector, and informationally minimal in the sense that no smaller principle could carry both sectors.</p>
+
+<p>This is the structural sense in which <em>dx₄/dt = ic</em> is the foundational principle of physics. Not in the weak sense that the chains of theorems happen to descend from it, which they do; but in the strong sense that every point of spacetime, every wavefront, every event, every measurement, every interaction, and every conservation law in the universe is a local realization of the same single equation. The atom of spacetime contains all of physics because the atom of spacetime <em>is</em> the principle, made local.</p>
+
+<h2>7. The Ten Structural Features of the Principle in QM and GR</h2>
+
+<p>I list here the ten structural features of <em>dx₄/dt = ic</em> that jointly characterize its grand-unification reach across QM and GR.</p>
+
+<p><strong>(1) Geometric simplicity.</strong> The principle is a single equation: <em>dx₄/dt = ic</em>. One differential operator, one imaginary-rate constant. There is no smaller geometric statement that carries non-trivial empirical content.</p>
+
+<p><strong>(2) The dual-channel content.</strong> The principle generates simultaneously an algebraic-symmetry content (Channel A) and a geometric-propagation content (Channel B) as parallel sibling consequences in both QM and GR. This is the McGucken Duality.</p>
+
+<p><strong>(3) Lorentz covariance.</strong> The rate <em>dx₄/dt = ic</em> is invariant under Lorentz transformations: the imaginary unit <em>i</em> is what makes the rate Lorentz-invariant, with <em>x₄ = ict</em> as the Minkowski-signature identification. The principle therefore extends naturally to special relativity and general relativity.</p>
+
+<p><strong>(4) The +ic orientation: the arrow of time.</strong> The principle specifies the direction of <em>x₄</em>'s advance: +<em>ic</em>, not −<em>ic</em>. This is what supplies the strict monotonicity of the entropy and the forward-directed causal structure of the McGucken Sphere, and it is what distinguishes future from past at the foundational level. The arrow of time is built into the dimensional structure of the principle, not added as a separate empirical postulate.</p>
+
+<p><strong>(5) The McGucken Sphere as universal geometric object.</strong> From every spacetime event, the principle generates a sphere of radius <em>R(t) = c(t − t₀)</em> expanding at speed <em>c</em> in a spherically symmetric manner. The McGucken Sphere is the kinematic substrate in both sectors: gravitational wavefront propagation in GR, Schrödinger wavefunction propagation in QM, and the geodesic structure of both.</p>
+
+<p><strong>(6) The Compton coupling.</strong> The natural connection between matter and <em>x₄</em> is the Compton frequency <em>ω<sub>C</sub> = mc²/ℏ</em>. Each Compton oscillation is one cycle of the particle's quantum phase as it advances along <em>x₄</em>. The Compton coupling supplies <em>ℏ</em> as the action quantum of the framework.</p>
+
+<p><strong>(7) The McGucken Wick rotation.</strong> The standard quantum-field-theory Wick rotation <em>t → −iτ</em> is reinterpreted as a structural identity: the Euclidean coordinate <em>τ</em> is not "imaginary time" but <em>x₄</em> itself, identified through <em>x₄ = ict ↔ τ = x₄/c</em>. This is what makes the Bekenstein–Hawking entropy and the Hawking temperature derivable from the principle through the Euclidean cigar geometry.</p>
+
+<p><strong>(8) Dimensional accounting: time as scalar measure, not as dimension.</strong> The framework recognizes four dimensions: <em>x₁, x₂, x₃, x₄</em>. Time <em>t</em> is not a dimension but a scalar measure inherited from clocks, with the relation <em>t = x₄/(ic)</em> identifying <em>t</em> as the scalar measure of <em>x₄</em>'s expansion. This dimensional accounting differs from the Kaluza-Klein (<em>x₁, x₂, x₃, t, x₅</em>) picture and resolves the Kaluza-Klein extra-dimensional confusion: the additional geometric dimension is <em>x₄</em>, dynamic and Lorentz-invariant, not a separate compactified <em>x₅</em>.</p>
+
+<p><strong>(9) The master-equation pair.</strong> The gravitational sector is governed by <em>u<sup>μ</sup>u<sub>μ</sub> = −c²</em>; the quantum sector is governed by [<em>q̂</em>, <em>p̂</em>] = <em>iℏ</em>. Both are structural projections of <em>dx₄/dt = ic</em> onto their respective sectors. The constants <em>c</em> and <em>ℏ</em> are projections of the principle: <em>c</em> is the rate of <em>x₄</em>'s expansion, <em>ℏ</em> is the action quantum of the Compton-frequency advance.</p>
+
+<p><strong>(10) The no-graviton prediction.</strong> Gravity is not a force on <em>x₄</em>; gravity is the geometry of <em>x₄</em>-propagation. There is no separate gravitational field to quantize, and no graviton to detect. This is the structural empirical content of the framework that distinguishes it from every quantum-gravity program of the past seventy years.</p>
+
+<h2>8. The No-Graviton Prediction</h2>
+
+<p>The most striking falsifiable empirical content of the framework is the no-graviton prediction. Every quantum-gravity program of the past seventy years has predicted the graviton: a massless spin-2 boson that mediates the gravitational interaction at the quantum level. String theory predicts the graviton as the lowest closed-string excitation. Loop Quantum Gravity predicts it as the perturbative excitation of the spin-network. Asymptotic safety predicts it as the asymptotically free propagator at the UV fixed point. Wheeler–DeWitt predicts it as the linear-perturbation content of the wave function of the universe. The graviton is the structural commitment of every program that quantizes gravity.</p>
+
+<p>The McGucken framework predicts no graviton. The reasoning is structural. Gravity, in the framework, is the local distortion of the McGucken Sphere by the local mass-energy distribution. The Einstein field equations are the joint Channel A + Channel B content of <em>dx₄/dt = ic</em> at the macroscopic-curvature scale. There is no separate gravitational field to quantize: the metric is the geometric content of <em>x₄</em>'s expansion, not a dynamical field with its own propagating excitations. The propagating excitations of the metric, in the linearized theory, are the gravitational waves — but gravitational waves are macroscopic curvature perturbations, not quantum excitations. They have no graviton content.</p>
+
+<p>The empirical test of the no-graviton prediction is the search for graviton-mediated quantum effects, which the framework predicts will not be found. The 2015 LIGO detection of gravitational waves confirmed the macroscopic-curvature content of the framework, as it confirmed the same content of standard general relativity. What it did not confirm, and what no experiment to date has confirmed, is the existence of the graviton as a quantum particle. The framework predicts that no experiment will confirm this, ever, because the graviton does not exist. The quantum-gravity programs that have predicted the graviton for seventy years have predicted a particle that the framework predicts does not exist.</p>
+
+<p>This is a falsifiable prediction. If a graviton is detected — through a Bose–Einstein-like coherence experiment that requires graviton-mediated quantum coupling, through a single-graviton detection event in a sufficiently sensitive interferometer, through any other structurally graviton-specific empirical signature — the framework is falsified. To date, no such detection has been made or is on the horizon. The framework's prediction is consistent with the empirical record.</p>
+
+<h2>9. Conclusion</h2>
+
+<p>The hundred-year QM–GR foundational gap is closed by recognizing that the two theories are projections of the same single geometric principle. <em>dx₄/dt = ic</em> is the differential of Minkowski's 1908 <em>x₄ = ict</em>, with the dynamical content made explicit. The principle generates Channel A (algebraic-symmetry) and Channel B (geometric-propagation) as parallel sibling consequences in both sectors. The Einstein field equations and the Schrödinger equation occupy structurally analogous positions in their respective chains of theorems, with both equations the joint Channel A + Channel B content of the principle at their respective scales. The constants <em>c</em> and <em>ℏ</em> are projections of the principle: <em>c</em> is the rate of <em>x₄</em>'s expansion, <em>ℏ</em> is the action quantum of the Compton-frequency advance. The Bekenstein–Hawking entropy is the structural meeting point where both sectors coincide at the horizon scale.</p>
+
+<p>The framework predicts no graviton. Gravity is not a force on <em>x₄</em>; gravity is the geometry of <em>x₄</em>-propagation. There is no separate gravitational field to quantize, and the graviton does not exist. This is the structural empirical content that distinguishes the framework from every quantum-gravity program of the past seventy years.</p>
+
+<p>I close with the structural content of what Wheeler said to me in 1988, which has been the guiding commitment of this framework for four decades. The deepest physics is the simplest physics. The deepest principle is the principle that, once stated, makes everything else look like a theorem of it. The principle that closes the QM–GR gap is the principle that one of the four spacetime coordinates is dynamic, advancing at the universal invariant rate <em>c</em>, with the imaginary unit <em>i</em> carrying the orientation. <em>dx₄/dt = ic</em>. One differential operator, one imaginary-rate constant. The simplicity is the content. As Wheeler said: "Behind it all is surely an idea so simple, so beautiful, that when we grasp it — in a decade, a century, or a millennium — we will all say to each other, how could it have been otherwise?"</p>
+
+<hr>
+
+<h2>References</h2>
+
+<ol class="ltd-refs">
+<li id="ref1">E. McGucken. <em>General Relativity Derived from the McGucken Principle: A Unique, Simple, and Complete Derivation of General Relativity as a Chain of Theorems of the McGucken Principle of a Fourth Expanding Dimension dx₄/dt = ic — A Formal Derivation from First Geometric Principle dx₄/dt = ic to the Einstein Field Equations and Their Canonical Solutions, with the Postulates of General Relativity Reduced to Theorems and the Equivalence Principle, Geodesic Hypothesis, Christoffel Connection, Stress-Energy Conservation, and No-Graviton Conclusion All Generated as Parallel Sibling Consequences of a Single Geometric Principle.</em> Light, Time, Dimension Theory, April 2026 (Revised Edition). <a href="https://elliotmcguckenphysics.com/2026/04/26/general-relativity-derived-from-the-mcgucken-principle-a-unique-simple-and-complete-derivation-of-general-relativity-as-a-chain-of-theorems-of-the-mcgucken-principle-of-a-fourth-expanding-dimension/">https://elliotmcguckenphysics.com/2026/04/26/general-relativity-derived-from-the-mcgucken-principle-a-unique-simple-and-complete-derivation-of-general-relativity-as-a-chain-of-theorems-of-the-mcgucken-principle-of-a-fourth-expanding-dimension/</a></li>
+
+<li id="ref2">E. McGucken. <em>Quantum Mechanics Derived from the McGucken Principle: A Unique, Simple, and Complete Derivation of Quantum Mechanics as a Chain of Theorems of the McGucken Principle of a Fourth Expanding Dimension dx₄/dt = ic — A Formal Derivation from First Geometric Principle dx₄/dt = ic to the Schrödinger and Dirac Equations, the Born Rule, Quantum Nonlocality, and the Full Feynman-Diagram Apparatus, with the Postulates of Quantum Mechanics Reduced to Theorems and the Hamiltonian–Lagrangian, Heisenberg–Schrödinger, Wave–Particle, and Locality–Nonlocality Dualities Generated as Parallel Sibling Consequences of a Single Geometric Principle.</em> Light, Time, Dimension Theory, April 2026 (Revised Edition). <a href="https://elliotmcguckenphysics.com/2026/04/26/quantum-mechanics-derived-from-the-mcgucken-principle-a-unique-simple-and-complete-derivation-of-quantum-mechanics-as-a-chain-of-theorems-of-the-mcgucken-principle-of-a-fourth-expanding-dimension-d/">https://elliotmcguckenphysics.com/2026/04/26/quantum-mechanics-derived-from-the-mcgucken-principle-a-unique-simple-and-complete-derivation-of-quantum-mechanics-as-a-chain-of-theorems-of-the-mcgucken-principle-of-a-fourth-expanding-dimension-d/</a></li>
+
+<li id="ref3">E. McGucken. <em>The Unique McGucken Lagrangian: All Four Sectors — Free-Particle Kinetic, Dirac Matter, Yang-Mills Gauge, Einstein-Hilbert Gravitational — Forced by the McGucken Principle dx₄/dt = ic: A Derivation of the Least-Action Functional for Physics from the Single Geometric Principle dx₄/dt = ic, with a History of Lagrangian Methods from Maupertuis to Witten and a Formal Uniqueness Proof.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/23/the-unique-mcgucken-lagrangian-all-four-sectors-free-particle-kinetic-dirac-matter-yang-mills-gauge-einstein-hilbert-gravitational-forced-by-the-mcgucken-principle-dx%e2%82%84-2/">https://elliotmcguckenphysics.com/2026/04/23/the-unique-mcgucken-lagrangian-all-four-sectors-free-particle-kinetic-dirac-matter-yang-mills-gauge-einstein-hilbert-gravitational-forced-by-the-mcgucken-principle-dx₄/</a></li>
+
+<li id="ref4">E. McGucken. <em>The McGucken Symmetry dx₄/dt = ic — The Father Symmetry of Physics — Completing Klein's 1872 Erlangen Programme while Deriving Lorentz, Poincaré, Noether, Wigner, Gauge, Quantum-Unitary, CPT, Diffeomorphism, Supersymmetry, and the Standard String-Theoretic Dualities and Symmetries as Theorems of the McGucken Principle.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/28/the-mcgucken-symmetry-the-father-symmetry-of-physics-completing-kleins-1872-erlangen-programme/">https://elliotmcguckenphysics.com/2026/04/28/the-mcgucken-symmetry-the-father-symmetry-of-physics/</a></li>
+
+<li id="ref5">E. McGucken. <em>The McGucken Sphere as Spacetime's Foundational Atom: Deriving Arkani-Hamed's Amplituhedron and Penrose's Twistors as Theorems of the McGucken Principle dx₄/dt = ic.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/27/the-mcgucken-sphere-as-spacetimes-foundational-atom-deriving-arkani-hameds-amplituhedron-and-penroses-twistors-as-theorems-of-the-mcgucken-principle-dx4-dtic/">https://elliotmcguckenphysics.com/2026/04/27/the-mcgucken-sphere-as-spacetimes-foundational-atom/</a></li>
+
+<li id="ref6">E. McGucken. <em>How the McGucken Principle of a Fourth Expanding Dimension Generates and Unifies the Dual A-B Channel Structure of Physics: (A: Hamiltonian Operator Formulation &amp; B: Lagrangian Path Integral) and (A: Noether Conservation Laws &amp; B: Second Law of Thermodynamics) and (A: Heisenberg Picture &amp; B: Schrödinger Picture) and (A: Particle Aspect &amp; B: Wave Aspect) and (A: Local Microcausality &amp; B: Nonlocal Bell Correlations) and (A: Rest Mass &amp; B: Energy of Spatial Motion) and (A: Time &amp; B: Space) via dx₄/dt = ic.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/24/how-the-mcgucken-principle-of-a-fourth-expanding-dimension-generates-and-unifies-the-dual-a-b-channel-structure-of-physics-a-hamiltonian-operator-formulation-b-lagrangian-path-integral-and/">https://elliotmcguckenphysics.com/2026/04/24/how-the-mcgucken-principle-generates-and-unifies-the-dual-a-b-channel-structure-of-physics/</a></li>
+
+<li id="ref7">E. McGucken. <em>The Deeper Foundations of Quantum Mechanics: How the McGucken Principle Uniquely Generates the Hamiltonian and Lagrangian Formulations of Quantum Mechanics, Wave/Particle Duality, the Schrödinger and Heisenberg Pictures, and Locality and Nonlocality all from dx₄/dt = ic.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/23/the-deeper-foundations-of-quantum-mechanics-how-the-mcgucken-principle-uniquely-generates-the-hamiltonian-and-lagrangian-formulations-of-quantum-mechanics-wave-particle-duality-the-schrodinger-and/">https://elliotmcguckenphysics.com/2026/04/23/the-deeper-foundations-of-quantum-mechanics/</a></li>
+
+<li id="ref8">E. McGucken. <em>The McGucken Principle dx₄/dt = ic as the Common Foundation of the Conservation Laws and the Second Law of Thermodynamics: A Remarkable and Counter-Intuitive Unification.</em> Light, Time, Dimension Theory, April 2026. <a href="https://elliotmcguckenphysics.com/2026/04/23/the-mcgucken-principle-as-the-common-foundation-of-the-conservation-laws-and-the-second-law-of-thermodynamics-a-remarkable-and-counter-intuitive-unification/">https://elliotmcguckenphysics.com/2026/04/23/the-mcgucken-principle-as-the-common-foundation-of-the-conservation-laws-and-the-second-law-of-thermodynamics/</a></li>
+
+<li id="ref9">E. McGucken. <em>Novel Reciprocal-Generation McGucken Category McG built on dx₄/dt = ic: Three Theorems on the Source-Pair (ℳ<sub>G</sub>, D<sub>M</sub>) — Mutual Containment, Reciprocal Generation, and the Containment-Generation Equivalence, Establishing a New Categorical Foundation for Mathematical Physics which Completes the Erlangen Programme.</em> Light, Time, Dimension Theory, May 2026. <a href="https://elliotmcguckenphysics.com/2026/05/02/novel-reciprocal-generation-mcgucken-category-mcg-built-on-dx%e2%82%84-dt-ic-three-theorems-on-the-source-pair-%e2%84%b3_g-d_m-mutual-containment-reciprocal-generation-and-the-contai/">https://elliotmcguckenphysics.com/2026/05/02/novel-reciprocal-generation-mcgucken-category-mcg-built-on-dx₄-dt-ic/</a></li>
+</ol>
+
+<hr>
+
+<p style="text-align:center;font-style:italic;font-size:0.95em;">Light, Time, Dimension Theory — elliotmcguckenphysics.com<br>Manuscript prepared May 2026.</p>
+
+</div>
+
+<!-- =================== END POST CONTENT =================== -->
