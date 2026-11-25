@@ -1,0 +1,988 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{authblk}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\title{The Dual-Channel Structure of $dx_4/dt = ic$:\\
+A Unified Derivation of Mass/Energy, Space/Time, Quantum Mechanics, Wave/Particle Duality, Locality and Nonlocality, and the Conservation Laws and the Second Law of Thermodynamics as Parallel Consequences of a Single Geometric Postulate}
+
+\author{Elliot McGucken}
+\affil{Light Time Dimension Theory\\\texttt{elliotmcguckenphysics.com}}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The McGucken Principle $dx_4/dt = ic$ --- the physical postulate that the fourth dimension advances at the velocity of light, spherically symmetrically from every spacetime point --- generates, as parallel and independent theorems through two logically distinct channels of a single geometric principle: (i) the mass/energy duality $E^2 = (pc)^2 + (mc^2)^2$ joining rest mass (Channel A, four-velocity budget in $x_4$) with kinetic energy (Channel B, budget in three-space), with $E = mc^2$ the Channel A limit at spatial rest; (ii) the space/time duality of the Minkowski interval $ds^2 = d\mathbf{x}^2 - c^2 dt^2$ joining time (Channel A, symmetry parameter) with space (Channel B, propagation domain of $x_4$); (iii) both the Hamiltonian and Lagrangian formulations of quantum mechanics; (iv) both the Heisenberg and Schr\"odinger pictures; (v) both the wave and particle aspects of quantum objects; (vi) both the local operator algebra of axiomatic quantum field theory and the nonlocal Bell correlations confirmed by Aspect (1982), Zeilinger (1998), and Hensen (loophole-free, 2015); and (vii) both the time-symmetric Noether conservation laws and the time-asymmetric Second Law of Thermodynamics with its five arrows of time. None of these seven dualities derives from any of the others; all seven descend from $dx_4/dt = ic$ as sibling consequences of the same dual-channel structure. Channel A is the algebraic-symmetry content of $dx_4/dt = ic$: temporal uniformity, spatial homogeneity, spherical isotropy as static symmetry, Lorentz covariance, U(1) phase invariance, Clifford-algebraic extensions to $\mathrm{SU}(2)$ and $\mathrm{SU}(3)$, and diffeomorphism covariance. Channel B is the geometric-propagation content: spherical expansion at rate $c$ from every point, Huygens' secondary wavelets, and monotonic one-way advance. The \emph{McGucken Equivalence} identifies quantum nonlocality as the three-dimensional shadow of four-dimensional $x_4$-coincidence on the light cone: photons at $|\mathbf{v}| = c$ satisfy $dx_4/d\tau = 0$, so two photons co-emitted at a common event share the $x_4$-coordinate forever regardless of spatial separation, making Bell correlations $E(\mathbf{a}, \mathbf{b}) = -\cos\theta_{ab}$ a geometric consequence rather than ``spooky action.'' Wave/particle duality, which the physics community has accepted since Bohr's 1927 Como lecture as the standard form of dual-structure reading in physics, serves as the rhetorical precedent that licenses the same logical move at the other six levels. At the thermodynamic level the dual-channel structure dissolves the Loschmidt reversibility objection of 1876 and the Penrose Past Hypothesis as theorems rather than boundary conditions. A Compton-frequency coupling predicts a species-independent temperature-persistent diffusion $D_x^{(\text{McG})} = \epsilon^2 c^2 \Omega / (2\gamma^2)$ as a laboratory-testable signature.
+\end{abstract}
+
+\section*{Foreword: The Common Thread}
+\addcontentsline{toc}{section}{Foreword: The Common Thread}
+
+The three major bodies of work the author has pursued across a professional lifetime --- the artificial retinal prosthesis developed during the 1998 NSF-funded doctoral dissertation at UNC Chapel Hill, which converts incident photons into neural signals to help blind patients see; quantum mechanics, which began with Planck's 1900 blackbody radiation law and Einstein's 1905 photoelectric effect paper and took its modern form around the behavior of the photon; and relativity, whose foundational postulate is the invariance of the speed of light for all inertial observers --- share a single subject. That subject is light.
+
+The McGucken Principle $dx_4/dt = ic$, which the present paper develops as the geometric foundation underlying the dual-channel structure of physics, places the speed of light at the center of spacetime itself: the fourth dimension advances at precisely the rate at which photons propagate, and the two facts are not independent but identical. Photons are matter riding the $x_4$-expansion; the $x_4$-expansion is the geometric substrate from which photon propagation emerges. The retinal prosthesis work is engineering that converts the same photons into the substrate of sight. The thirty-five-year theoretical program developed across the 1998 dissertation appendix, the 2008--2013 FQXi essays, the 2016--2017 45EPIC Press book series, and the ongoing derivation program at elliotmcguckenphysics.com is the same subject approached from the foundational direction. The retinal prosthesis and the physics program are not separate projects. They are one lifetime's work on light --- what it is, what it does, and what we can do once we understand it.
+
+The reader is asked to keep this framing in mind through the technical development that follows. The paper derives mass/energy, space/time, both formulations of quantum mechanics, wave/particle duality, locality and nonlocality, the conservation laws and the Second Law of Thermodynamics as parallel consequences of a single geometric postulate. The postulate is a statement about light. The consequences are statements about everything light makes possible.
+
+\section{Introduction}
+
+\subsection{The Structural Precedent: Wave/Particle Duality}
+
+Since Bohr's 1927 Como lecture~\cite{bohr1928} quantum mechanics has operated on a structural foundation that admits two logically distinct readings of a single physical object. A photon propagating through a double-slit apparatus exhibits wave-like interference when the apparatus is configured to detect the pattern on the screen, and exhibits particle-like localization when the apparatus is configured to record which slit the photon traversed. The physical photon is one thing; the two descriptions are two readings of it, selected by experimental context. No contradiction arises because the readings are not competing descriptions of a single measurement outcome but simultaneous structural features of the object that can be independently queried.
+
+This structural move --- single physical object, dual structural reading, experimental context selects which reading is foregrounded --- has been standard physics for ninety-nine years. Copenhagen accepts it. Many-worlds accepts it. Bohmian mechanics accepts it. QBism accepts it. The interpretations disagree about what the readings ontologically mean but agree that the dual structure is there. Referees of quantum mechanics papers do not reject submissions on the grounds that a single equation admitting two structurally different readings constitutes a logical contradiction; if they did, the field would have stalled in 1927.
+
+The present paper takes wave/particle duality as the precedent that licenses a broader claim: the dual-reading structure is not confined to the ontological level of quantum objects but is a general feature of physics, generated by the geometric structure of the underlying principle from which physics descends. That principle is $dx_4/dt = ic$, the McGucken Principle~\cite{mcguckenfqxi,mcguckenbook}: the fourth dimension advances at the velocity of light, spherically symmetrically from every spacetime point.
+
+\subsection{The Dual-Channel Content of $dx_4/dt = ic$}
+
+The principle $dx_4/dt = ic$ carries two logically distinct informational contents in a single geometric statement:
+
+\begin{equation}
+\frac{dx_4}{dt} = ic \;\;\longrightarrow\;\; \begin{cases} \textbf{Channel A (algebraic-symmetry):} & \text{uniform rate, invariant under spacetime isometries} \\ \textbf{Channel B (geometric-propagation):} & \text{spherical expansion at rate } c \text{ from every point} \end{cases}
+\label{eq:dualchannel}
+\end{equation}
+
+The two channels unpack two distinct aspects of the same statement. Channel A extracts the uniformity and invariance features --- the rate $ic$ is independent of time, position, direction, and choice of inertial frame, and has no preferred phase origin on the complex coordinate $x_4 = ict$. These features generate the spacetime symmetry groups (Poincar\'e, gauge, diffeomorphism) whose Noether currents are the conservation laws of physics. Channel B extracts the propagation features --- $x_4$ advances in a spherically symmetric wavefront from every spacetime point, the resulting McGucken Sphere grows monotonically, and the advance is one-way at $+ic$ rather than $-ic$. These features generate Huygens' secondary-wavelet structure, the path-integral sum over paths, the isotropic spatial random walk producing Brownian motion, and the monotonic entropy increase of the Second Law.
+
+\subsection{Five Levels of Dual-Channel Duality}
+
+The dual-channel structure of equation~\eqref{eq:dualchannel} generates structurally parallel dualities at seven levels of physical description. Table~\ref{tab:sevenlevels} summarizes:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\hline
+\textbf{Level} & \textbf{Channel A output} & \textbf{Channel B output} \\
+\hline
+1. Mass/energy & Rest mass $m$ ($u^\mu u_\mu$ budget in $x_4$) & Energy of spatial motion ($u^\mu u_\mu$ budget in $\mathbf{x}$) \\
+2. Space/time & Time $t$ (symmetry parameter) & Space $\mathbf{x}$ (propagation domain of $x_4$) \\
+3. Foundational QM & Hamiltonian operator formulation & Lagrangian path integral \\
+4. Dynamical QM & Heisenberg picture & Schr\"odinger picture \\
+5. Ontological QM & Particle aspect & Wave aspect \\
+6. Causal/correlational QM & Local microcausality & Nonlocal Bell correlations \\
+7. Thermodynamic & Noether conservation laws & Second Law + arrows of time \\
+\hline
+\end{tabular}
+\caption{The dual-channel structure of $dx_4/dt = ic$ across seven levels of physics. None of these dualities derives from any of the others; all descend from the postulate as parallel sibling consequences. Levels 1 and 2 are the mass/energy and space/time dualities: $E = mc^2$ is the Channel A limit (particle at spatial rest, full four-velocity budget into $x_4$) and the Minkowski interval $ds^2 = d\mathbf{x}^2 - c^2 dt^2$ is the joint space/time object. Levels 3--6 lie within quantum mechanics. Level 7 extends the structure to thermodynamics and pairs a time-symmetric feature (conservation laws) with a time-asymmetric feature (Second Law).}
+\label{tab:sevenlevels}
+\end{table}
+
+Levels 1 and 2 are the kinematic dualities (mass/energy, space/time); Levels 3 through 6 pair two time-symmetric features within quantum mechanics; Level 7 extends the structure to thermodynamics and pairs a time-symmetric category (conservation laws) with a time-asymmetric category (Second Law). Level 7 is the first level at which the dual-channel structure extends outside quantum mechanics, and it is where the structure resolves the 150-year-old Loschmidt reversibility problem.
+
+The present paper develops the dual-channel framework across all seven levels, with Level 5 (wave/particle duality) serving as the structural precedent that the physics community already accepts. The thesis is not that dual-channel structure is new to physics --- it has been in the textbooks for a century --- but that $dx_4/dt = ic$ is its geometric source, and that recognizing this source extends the structure to levels where it resolves open problems including the Loschmidt objection and the Past Hypothesis.
+
+\subsection{Structure of the Paper}
+
+Section~\ref{sec:wpd} develops the structural precedent: wave/particle duality as the Level 5 duality derived from $dx_4/dt = ic$ through Channels A and B. Section~\ref{sec:foundational} develops the Level 3 duality: the Hamiltonian and Lagrangian formulations of quantum mechanics, deriving $[\hat{q}, \hat{p}] = i\hbar$ through two disjoint chains. Section~\ref{sec:dynamical} develops the Level 4 duality (Heisenberg and Schr\"odinger pictures) and Section~\ref{sec:causal} develops the Level 6 duality (local operator algebra and nonlocal Bell correlations). Section~\ref{sec:thermo} develops the Level 7 extension to thermodynamics: the Noether catalog via Channel A, the Second Law via Channel B, and the Loschmidt resolution via the dual-channel structure itself. Section~\ref{sec:predictions} develops the quantitative predictions of the framework, including the Compton-coupling diffusion $D_x^{(\text{McG})}$. Section~\ref{sec:novelty} states the novelty and priority of the framework. Section~\ref{sec:conclusion} concludes.
+
+\section{The Kinematic Dualities: Mass/Energy and Space/Time (Levels 1 and 2)}
+\label{sec:kinematic}
+
+We begin with the two dualities that Einstein's 1905 framework first identified as distinct objects joined by a single geometric identity: mass/energy ($E = mc^2$) and space/time (Minkowski interval). Both descend from $dx_4/dt = ic$ through the dual-channel structure, and in each case the Channel A and Channel B readings are joined by a Pythagorean relation.
+
+\subsection{Mass/energy as Channel A and Channel B (Level 1)}
+
+The McGucken Principle $dx_4/dt = ic$ gives rise to the master equation $u^\mu u_\mu = -c^2$ directly. We derive it first, then use it to establish the mass/energy duality.
+
+\begin{proposition}[Master equation from $dx_4/dt = ic$]
+\label{prop:master}
+The McGucken Principle $dx_4/dt = ic$, combined with the proper-time parametrization $d\tau^2 = dt^2 - d\mathbf{x}^2/c^2$ of a worldline, forces the four-velocity $u^\mu = dx^\mu/d\tau$ to satisfy
+\begin{equation}
+\boxed{u^\mu u_\mu = -c^2}
+\label{eq:master}
+\end{equation}
+for every massive or massless particle.
+\end{proposition}
+
+\begin{proof}
+The McGucken Principle asserts $dx_4/dt = ic$ in coordinate time $t$. Expressed in proper time $\tau$ along a worldline with three-velocity $\mathbf{v} = d\mathbf{x}/dt$ and Lorentz factor $\gamma = (1 - v^2/c^2)^{-1/2}$:
+\begin{equation}
+\frac{dx_4}{d\tau} = \frac{dx_4}{dt}\frac{dt}{d\tau} = ic\gamma.
+\end{equation}
+The spatial components of four-velocity are $u^i = dx^i/d\tau = \gamma v^i$. The four-velocity is
+\begin{equation}
+u^\mu = (\gamma v^1, \gamma v^2, \gamma v^3, ic\gamma).
+\end{equation}
+Its squared norm in Minkowski signature (with $x_4 = ict$ giving $u^4 u_4 = (ic\gamma)^2 = -c^2\gamma^2$):
+\begin{equation}
+u^\mu u_\mu = \gamma^2 v^2 - c^2\gamma^2 = \gamma^2 (v^2 - c^2) = \gamma^2 \cdot (-c^2)(1 - v^2/c^2) = \gamma^2 \cdot (-c^2) \cdot \gamma^{-2} = -c^2.
+\end{equation}
+For a photon at $v = c$, the limit is taken via the photon's null four-velocity $k^\mu k_\mu = 0$, which is consistent with the master equation in the massless limit where $u^\mu$ is replaced by the null tangent vector.
+\end{proof}
+
+\begin{corollary}[Four-velocity budget]
+\label{cor:budget}
+The master equation~\eqref{eq:master} apportions the four-velocity budget $c$ between advance into $x_4$ and advance through three-space:
+\begin{equation}
+\left(\frac{dx_4}{d\tau}\right)^2 + \left(\frac{d\mathbf{x}}{d\tau}\right)^2 = c^2.
+\label{eq:budget}
+\end{equation}
+The Channel A limit is a particle at spatial rest, whose entire budget is spent on $x_4$-advance at rate $ic$. The Channel B limit is a photon at $|\mathbf{v}| = c$, whose entire budget is spent on spatial motion with $dx_4/d\tau = 0$.
+\end{corollary}
+
+The master equation~\eqref{eq:master} is therefore a direct theorem of the McGucken Principle, not an independent postulate. Every consequence drawn from the master equation in the remainder of the paper is ultimately a consequence of $dx_4/dt = ic$. The two readings of $dx_4/dt = ic$ correspond to the two limits of the four-velocity budget:
+
+\begin{proposition}[Channel A reading: rest mass]
+\label{prop:massA}
+At spatial rest ($d\mathbf{x}/d\tau = 0$), the entire four-velocity budget is spent on advance into $x_4$: $dx_4/d\tau = ic$. The four-momentum is
+\begin{equation}
+p^\mu = m u^\mu = (m c, \mathbf{0})\text{ at rest, with rest energy } E_0 = mc^2.
+\end{equation}
+Rest mass is the quantity carried by a particle whose four-velocity points entirely into the $x_4$ direction. The algebraic-symmetry content (Channel A) reads $dx_4/dt = ic$ as the time-translation generator whose Noether charge is energy, and identifies rest energy as the Channel A reading of the particle's motion.
+\end{proposition}
+
+\begin{proposition}[Channel B reading: energy of spatial motion]
+\label{prop:massB}
+At the photon limit ($|\mathbf{v}| = c$), the entire four-velocity budget is spent on advance through three-space: $d\mathbf{x}/d\tau = \mathbf{c}$, $dx_4/d\tau = 0$ (Proposition~\ref{prop:photonx4}). The energy is entirely kinetic: $E = pc$ with zero rest mass. For intermediate velocities $0 < |\mathbf{v}| < c$, the four-velocity has components in both $x_4$ and three-space, and the energy is apportioned between rest and kinetic contributions. The geometric-propagation content (Channel B) reads $dx_4/dt = ic$ as the spherical expansion generating Huygens' secondary wavelets, and identifies kinetic energy as the Channel B reading of the particle's spatial propagation.
+\end{proposition}
+
+\begin{theorem}[Mass/energy Pythagorean joint]
+\label{thm:emc2}
+Combining Propositions~\ref{prop:massA} and~\ref{prop:massB} via the four-velocity budget~\eqref{eq:budget}:
+\begin{equation}
+\boxed{E^2 = (pc)^2 + (mc^2)^2}
+\label{eq:energymass}
+\end{equation}
+The Channel A limit ($\mathbf{p} = 0$) gives $E = mc^2$; the Channel B limit ($m = 0$) gives $E = pc$. Einstein's 1905 $E = mc^2$ is the Channel A reading of $dx_4/dt = ic$ at spatial rest; the de Broglie/photon relation $E = pc$ is the Channel B reading at $|\mathbf{v}| = c$.
+\end{theorem}
+
+This is the Level 1 duality. Mass and energy are not two distinct quantities joined by a conversion factor $c^2$; they are Channel A and Channel B readings of the same four-velocity budget~\eqref{eq:budget} forced by $dx_4/dt = ic$ via the master equation $u^\mu u_\mu = -c^2$.
+
+\subsection{Space/time as Channel A and Channel B (Level 2)}
+
+The Minkowski interval
+\begin{equation}
+ds^2 = dx_1^2 + dx_2^2 + dx_3^2 - c^2 dt^2
+\end{equation}
+joins the three spatial coordinates and time into a single four-dimensional geometric object. Under $dx_4/dt = ic$ with $x_4 = ict$ the interval becomes Euclidean in four dimensions,
+\begin{equation}
+ds^2 = dx_1^2 + dx_2^2 + dx_3^2 + dx_4^2,
+\end{equation}
+with the minus sign on $c^2 dt^2$ recovered as the algebraic shadow of $i^2 = -1$ (Proposition~\ref{prop:H1}). The two readings:
+
+\begin{proposition}[Channel A reading: time as symmetry parameter]
+\label{prop:timeA}
+The algebraic-symmetry content of $dx_4/dt = ic$ --- the temporal uniformity of the rate, the invariance of the action under $t \to t + \epsilon$ --- produces time-translation invariance as a symmetry of the action. Time $t$ appears in this reading as the parameter under which conserved quantities (energy, momentum, charge, etc.) are held constant by Noether's theorem. Channel A reads $t$ as a symmetry parameter: the coordinate along which $dx_4/dt$ is uniform.
+\end{proposition}
+
+\begin{proposition}[Channel B reading: space as propagation domain]
+\label{prop:spaceB}
+The geometric-propagation content of $dx_4/dt = ic$ --- the spherical expansion from every spacetime point at rate $c$ --- produces three-dimensional space as the domain through which $x_4$'s expansion propagates. Each McGucken Sphere $\Sigma_+(p_0)$ of radius $c(t - t_0)$ is a spatial surface in $\mathbb{R}^3$; the spatial coordinates $\mathbf{x}$ appear in this reading as the positions on which wavefronts propagate and secondary Huygens wavelets emanate. Channel B reads $\mathbf{x}$ as the propagation domain: the coordinates through which $x_4$'s spherical expansion extends.
+\end{proposition}
+
+\begin{theorem}[Space/time Pythagorean joint]
+\label{thm:spacetime}
+Combining Propositions~\ref{prop:timeA} and~\ref{prop:spaceB} via the Euclidean four-interval with $x_4 = ict$:
+\begin{equation}
+\boxed{ds^2 = d\mathbf{x}^2 - c^2 dt^2 = d\mathbf{x}^2 + dx_4^2}
+\label{eq:spacetime}
+\end{equation}
+The Minkowski interval is the Pythagorean joint of the Channel A and Channel B readings of the four coordinates. Space and time are not two distinct quantities joined by a conversion factor $c$; they are Channel A and Channel B readings of the same four-dimensional geometry forced by $dx_4/dt = ic$.
+\end{theorem}
+
+\subsection{The kinematic dualities set the pattern}
+
+Levels 1 and 2 establish that the dual-channel structure operates already at the kinematic level of physics, before any quantum mechanics enters. Mass and energy are Channel A / Channel B readings of the four-velocity budget; space and time are Channel A / Channel B readings of the four-dimensional interval. The same structure then appears at the quantum level (Levels 3--6, wave/particle and Hamiltonian/Lagrangian and Heisenberg/Schr\"odinger and local/nonlocal) and at the thermodynamic level (Level 7, conservation laws / Second Law). All seven levels descend from $dx_4/dt = ic$ as parallel sibling consequences of the same dual-channel structure.
+
+Einstein's 1905 \emph{Annus Mirabilis} identified two of these: $E = mc^2$ (Level 1) and the Minkowski interval's precursor via Lorentz covariance (Level 2). Einstein did not identify the deeper geometric source common to both. The McGucken Principle supplies that source: a single geometric statement about the physical expansion of $x_4$ at rate $c$, whose algebraic-symmetry and geometric-propagation contents are the two channels through which the seven dualities descend.
+
+\section{Wave/Particle Duality as the Structural Precedent (Level 5)}
+\label{sec:wpd}
+
+We begin with Level 3 because it is the level the physics community has accepted for ninety-nine years. Establishing that wave/particle duality is a Channel-A/Channel-B reading of $dx_4/dt = ic$ licenses the dual-channel framework at every other level.
+
+\subsection{Channel B generates the wave aspect}
+
+The spherical symmetry of $x_4$'s expansion from every spacetime point is Huygens' principle. Every event $p_0$ is the center of a McGucken Sphere $\Sigma_+(p_0)$ of radius $c(t - t_0)$ at observer time $t$, which is geometrically identical to Huygens' secondary wavelet emanating from $p_0$. The retarded Green's function of the wave equation is supported exactly on this forward light cone:
+\begin{equation}
+G_+(x - x', t - t') = \frac{\delta(t - t' - |x - x'|/c)}{4\pi |x - x'|}.
+\end{equation}
+Iterated Huygens expansion generates wavefront propagation through spacetime. The interference patterns of the double-slit experiment are the constructive and destructive superposition of McGucken Spheres from the two slits. The diffraction patterns of single-slit geometries are the same spheres expanded from each point of the aperture. The de Broglie wavelength $\lambda_{\text{dB}} = h/p$ observed in Davisson--Germer (1927), Thomson (1928), and every subsequent matter-wave experiment is the $x_4$-phase accumulation rate per unit of spatial motion, derived as a theorem of $dx_4/dt = ic$ through the Compton-frequency coupling.
+
+The wave aspect of quantum objects is the Channel B reading of $dx_4/dt = ic$: propagating wavefronts produced by iterated spherical expansion of $x_4$ from every spacetime point.
+
+\subsection{Channel A generates the particle aspect}
+
+The invariance of $x_4$'s advance under spacetime translations is, by Stone's theorem, the generator content of a strongly continuous unitary group $U(a) = \exp(-ia\hat{p}/\hbar)$ on the Hilbert space of quantum states. The self-adjoint generators of spatial translation are the four-momentum operators $\hat{p}^\mu$, whose eigenvalues are the sharp four-momenta of particle states. Localized detection events at specific pixels of a detector screen are eigenvalue events of the position observable $\hat{q}$. Quantized energy and momentum exchanges in photoelectric emission (Einstein 1905), Compton scattering (Compton 1923), and every other ``particle-like'' process are the eigenvalue exchanges of Channel A's algebraic observables.
+
+The particle aspect of quantum objects is the Channel A reading of $dx_4/dt = ic$: localized eigenvalue structure generated by the algebraic-symmetry content of $x_4$'s advance.
+
+\subsection{Both readings are simultaneous, both are real}
+
+A photon traversing a double-slit apparatus has both readings simultaneously. Its Channel B content is the spherical Huygens wavelets emanating from every spacetime point the wavefront reaches, producing the interference pattern. Its Channel A content is the localized detection event at a specific screen pixel, producing the discrete particle click. Both are present throughout the apparatus. The experimental question asked at the detector selects which reading is foregrounded: which-path measurement foregrounds Channel A and suppresses the Channel B interference; open-slit interference observation foregrounds Channel B. No contradiction arises because the readings are not competing descriptions of a single measurement outcome; they are structural features of the object that can be independently queried.
+
+This is the structural precedent the physics community has accepted since 1927. The dual-channel framework extends the same logical pattern to four other levels.
+
+\section{The Foundational Duality: Hamiltonian and Lagrangian Formulations (Level 3)}
+\label{sec:foundational}
+
+The Hamiltonian operator formulation of quantum mechanics (Heisenberg 1925, Born--Jordan--Dirac 1925--1927, von Neumann 1932) and the Lagrangian path-integral formulation (Dirac 1933, Feynman 1948) have coexisted for ninety-eight years as mathematically equivalent but structurally distinct presentations of the same physics. Their equivalence is established by Feynman's 1948 derivation of the Schr\"odinger equation from the path integral, and by the Stone--von Neumann theorem's uniqueness of the Schr\"odinger representation. Their \emph{common origin} --- whether both formulations descend from a single deeper physical principle --- has been open through the subsequent nine decades.
+
+Under the McGucken Principle, both formulations descend as independent theorems through disjoint intermediate chains. The Hamiltonian route uses Channel A; the Lagrangian route uses Channel B.
+
+\subsection{The Hamiltonian route (Channel A, five propositions)}
+
+\begin{proposition}[Minkowski metric]
+\label{prop:H1}
+The integrated form $x_4 = ict$ of the McGucken Principle evaluated in the four-dimensional Euclidean line element $d\ell^2 = dx_1^2 + dx_2^2 + dx_3^2 + dx_4^2$ with $dx_4 = ic\,dt$ produces the Minkowski interval
+\begin{equation}
+ds^2 = dx_1^2 + dx_2^2 + dx_3^2 - c^2\,dt^2.
+\end{equation}
+The minus sign on $c^2 dt^2$ is the algebraic shadow of $i^2 = -1$, which is the marker of $x_4$'s perpendicularity to the three spatial dimensions.
+\end{proposition}
+
+\begin{proposition}[Momentum operator as translation generator]
+\label{prop:H2}
+On the Hilbert space $\mathcal{H}$ of quantum states, spatial translations are represented by a strongly continuous one-parameter unitary group $U(a) = \exp(-ia\hat{p}/\hbar)$ by Stone's theorem, with self-adjoint generator $\hat{p}$. The factor $i$ in the exponent inherits directly from the perpendicularity marker of $x_4$ in Proposition~\ref{prop:H1}. The factor $\hbar$ inherits from the action per $x_4$-cycle at the Planck frequency.
+\end{proposition}
+
+\begin{proposition}[Momentum operator in configuration representation]
+\label{prop:H3}
+In the Schr\"odinger representation on $L^2(\mathbb{R})$, with position $\hat{q}$ acting by multiplication and $(U(a)\psi)(q) = \psi(q-a)$, differentiating $U(a) = \exp(-ia\hat{p}/\hbar)$ at $a=0$ yields
+\begin{equation}
+\hat{p} = -i\hbar\,\frac{\partial}{\partial q}.
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[Canonical commutation relation]
+\label{prop:H4}
+For any test function $f(q)$ in the common domain of $\hat{q}$ and $\hat{p}$:
+\begin{align}
+[\hat{q}, \hat{p}] f(q) &= q \cdot (-i\hbar \partial_q f) - (-i\hbar \partial_q)(q f) \\
+&= -i\hbar\, q\, \partial_q f + i\hbar\, f + i\hbar\, q\, \partial_q f \\
+&= i\hbar\, f(q).
+\end{align}
+Therefore $[\hat{q}, \hat{p}] = i\hbar \mathbb{1}$.
+\end{proposition}
+
+\begin{proposition}[Stone--von Neumann uniqueness]
+\label{prop:H5}
+The commutation relation of Proposition~\ref{prop:H4} together with irreducibility forces the Schr\"odinger representation to be essentially unique up to unitary equivalence (Stone 1932, von Neumann 1931). The Hamiltonian route closes.
+\end{proposition}
+
+\subsection{The Lagrangian route (Channel B, six propositions)}
+
+\begin{proposition}[Huygens' principle from $x_4$-spherical expansion]
+\label{prop:L1}
+The McGucken Principle asserts that $x_4$ advances spherically symmetrically from every spacetime point at rate $c$. The three-dimensional cross-section at observer time $t$ from emission event $p_0$ is the McGucken Sphere $\Sigma_+(p_0)$ of radius $c(t-t_0)$ centered at $x_0$. This is geometrically the forward light cone and structurally Huygens' secondary wavelet. Huygens' principle is a theorem of $dx_4/dt = ic$.
+\end{proposition}
+
+\begin{proposition}[Iterated Huygens generates all paths]
+\label{prop:L2}
+Dividing $[t_i, t_f]$ into $N$ intervals of duration $\epsilon$ and applying Huygens' principle at each step produces a continuous chain of intermediate positions. In the limit $N \to \infty$, the set of all such chains is the set of all continuous paths from $q_i$ to $q_f$. The Feynman sum over paths is geometrically the sum over chains of McGucken Spheres.
+\end{proposition}
+
+\begin{proposition}[Accumulated $x_4$-phase gives the Feynman weight]
+\label{prop:L3}
+For a particle in motion with three-velocity $v$, the four-speed budget $u^\mu u_\mu = -c^2$ gives the $x_4$-advance rate $dx_4/dt = ic/\gamma$. The $x_4$-oscillation at the Compton frequency $\omega_C = mc^2/\hbar$ produces an accumulated phase per interval $\epsilon$ of $\exp(i mc^2\gamma^{-1} \epsilon/\hbar)$. In the non-relativistic limit $v/c \ll 1$,
+\begin{equation}
+mc^2\gamma^{-1} \approx mc^2\left(1 - \frac{v^2}{2c^2}\right) = mc^2 - \tfrac{1}{2}mv^2.
+\end{equation}
+The first term is a global phase absorbed by rephasing; the second is $-T$ where $T = \tfrac{1}{2}mv^2$ is the kinetic energy. Adding a potential $V(q)$ by minimal coupling yields the short-interval phase $\exp((i\epsilon/\hbar)(T-V)) = \exp((i\epsilon/\hbar) L_{\text{classical}})$. Integrated over the path:
+\begin{equation}
+\text{phase(path)} = \exp\left(\frac{i}{\hbar} \int L_{\text{classical}}\,dt\right) = \exp(iS[\text{path}]/\hbar).
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[Feynman path integral as continuum limit]
+\label{prop:L4}
+Composing the iterated Huygens propagation of Proposition~\ref{prop:L2} with the accumulated phase of Proposition~\ref{prop:L3} and taking $N \to \infty$ yields
+\begin{equation}
+K(q_f, t_f; q_i, t_i) = \int \mathcal{D}x(t)\, \exp(iS[x(t)]/\hbar).
+\end{equation}
+The Feynman path integral is a theorem of $dx_4/dt = ic$, not a postulate.
+\end{proposition}
+
+\begin{proposition}[Schr\"odinger equation from short-time kernel]
+\label{prop:L5}
+Expanding $K_\epsilon(q', q) = (m/2\pi i\hbar\epsilon)^{1/2} \exp\{(i\epsilon/\hbar)[\tfrac{1}{2}m((q'-q)/\epsilon)^2 - V(q)]\}$ and evaluating $\psi(q, t+\epsilon) = \int K_\epsilon(q, q')\psi(q', t)\,dq'$ to first order in $\epsilon$ by Gaussian integration yields
+\begin{equation}
+i\hbar\,\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\,\frac{\partial^2 \psi}{\partial q^2} + V(q)\psi.
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[Canonical commutation relation via Schr\"odinger kinetic term]
+\label{prop:L6}
+Identifying the kinetic term $-(\hbar^2/2m) \partial^2/\partial q^2$ with $\hat{p}^2/(2m)$ forces $\hat{p} = -i\hbar \partial/\partial q$. Direct computation yields $[\hat{q}, \hat{p}] = i\hbar$. The Lagrangian route closes at the same algebraic identity as the Hamiltonian route, through disjoint intermediate structures.
+\end{proposition}
+
+\subsection{Structural comparison of the two routes}
+
+The two routes share the starting principle $dx_4/dt = ic$ and the final identity $[\hat{q}, \hat{p}] = i\hbar$. Every intermediate structure is disjoint: Minkowski metric versus Huygens' principle; Stone's theorem versus iterated spherical expansion; direct commutator computation versus Gaussian integration of Feynman kernels; Stone--von Neumann versus Schr\"odinger-equation extraction. The factor $i$ traces on both routes to $x_4$'s perpendicularity marker; the factor $\hbar$ traces on both routes to the action per $x_4$-cycle at the Planck frequency. The two proofs of the same theorem through disjoint methods are the structural signature of a correct geometric foundation.
+
+\section{The Dynamical Duality: Heisenberg and Schr\"odinger Pictures (Level 4)}
+\label{sec:dynamical}
+
+Within the Hamiltonian formulation the dynamics admits two pictures, equivalent by unitary transformation. The Heisenberg picture places the time evolution on the operators: $\hat{A}(t) = U^\dagger(t) \hat{A}(0) U(t)$ with $U(t) = \exp(-i\hat{H}t/\hbar)$. The Schr\"odinger picture places the time evolution on the states: $|\psi(t)\rangle = U(t)|\psi(0)\rangle$. The two pictures give identical expectation values $\langle \hat{A}(t) \rangle_\psi = \langle \psi(t) | \hat{A} | \psi(t) \rangle$ and are selected by computational convenience.
+
+Under the dual-channel reading, the Heisenberg picture is the Channel A reading of $x_4$'s advance (operator-algebraic, symmetry-generator content of the unitary evolution), and the Schr\"odinger picture is the Channel B reading (state-propagation, wavefront-evolution content). The Hamiltonian $\hat{H}$ in both pictures is the generator of time translation and inherits its factor of $i/\hbar$ from the perpendicularity marker of $x_4$ through the same chain that produces $\hat{p}$.
+
+\section{The Causal/Correlational Duality: Locality and Nonlocality (Level 6)}
+\label{sec:causal}
+
+The fourth level of the dual-channel structure is the coexistence of local microcausality and nonlocal Bell correlations in quantum mechanics --- the feature Einstein identified in 1935 as ``spooky action at a distance''~\cite{EPR1935} and Bell sharpened in 1964 into the experimentally decisive inequality~\cite{bell1964} whose violation has now been confirmed to high significance by Aspect (1982)~\cite{aspect1982}, Zeilinger (1998)~\cite{zeilinger1998}, Hensen (loophole-free, 2015)~\cite{hensen2015}, and the 2022 Nobel-recognized program of Clauser, Aspect, and Zeilinger.
+
+The experimental facts are: (i) quantum field operators at spacelike-separated events commute, preserving local microcausality; (ii) entangled particles exhibit correlations whose magnitude $|E(\mathbf{a}, \mathbf{b})| = |\cos\theta_{ab}|$ exceeds any local-hidden-variable bound. These two facts are in tension under any account that treats locality and nonlocality as competing metaphysical theses about the same underlying reality. Under the dual-channel framework they are not in tension: they are Channel A and Channel B readings of the same geometric fact, just as the wave and particle aspects of Level 5 are not in tension.
+
+\subsection{Channel A: local microcausality}
+
+\begin{proposition}[Local operator algebra from Channel A]
+\label{prop:microcausality}
+The algebraic-symmetry content of $dx_4/dt = ic$ --- the Lorentz covariance of the rate, the Minkowski metric derived in Proposition~\ref{prop:H1}, and the spatial-translation invariance of Proposition~\ref{prop:H2} --- generates the local operator structure of relativistic quantum field theory. Field operators $\hat\phi(x)$ are constructed as Lorentz-covariant objects on the Minkowski manifold, and the requirement that causal influence propagates only within the forward light cone forces the microcausality condition
+\begin{equation}
+[\hat\phi(x), \hat\phi(y)] = 0 \quad \text{for spacelike-separated } x, y.
+\end{equation}
+Local gauge invariance, derived from the absence of a preferred phase origin on $x_4 = ict$ (Proposition~\ref{prop:internal}), forces the Yang--Mills structure with local commutation relations on the gauge connections.
+\end{proposition}
+
+This is the standard content of axiomatic quantum field theory (Wightman axioms, Haag--Kastler algebras), and it descends from Channel A of the McGucken Principle through the same chain that produces Poincar\'e symmetry and the conservation laws at Level 7. Channel A is the \emph{local} reading of $dx_4/dt = ic$: what is invariant at each spacetime point, what commutes at spacelike separation, what transforms covariantly under the local Lorentz group.
+
+\subsection{Channel B: nonlocal correlations via the McGucken Equivalence}
+
+The Channel B reading of $dx_4/dt = ic$ produces a structurally distinct fact about two or more particles created at a common spacetime event.
+
+\begin{proposition}[Photon $x_4$-stationarity]
+\label{prop:photonx4}
+A photon at $|\mathbf{v}| = c$ satisfies $u^\mu u_\mu = -c^2$ with the entire four-speed budget carried by spatial motion. Therefore
+\begin{equation}
+\frac{dx_4}{d\tau}\Big|_{\text{photon}} = 0.
+\end{equation}
+A photon does not advance in $x_4$. It rides the McGucken Sphere of radius $R = ct$ expanding from its emission event at $x_4 = ict_0$, and the photon's $x_4$-coordinate remains fixed at $ict_0$ throughout its worldline (in coordinate time, the photon's own proper time is zero).
+\end{proposition}
+
+\begin{proposition}[$x_4$-coincidence of co-emitted photons]
+\label{prop:coincidence}
+Two photons $A$ and $B$ created at a common spacetime event $p_0 = (\mathbf{x}_0, t_0)$ satisfy, by Proposition~\ref{prop:photonx4},
+\begin{equation}
+x_4^{(A)}(\tau) = x_4^{(B)}(\tau) = ict_0 \quad \text{for all } \tau.
+\end{equation}
+Regardless of how far apart the two photons travel in the three spatial dimensions, their $x_4$-coordinates remain identical at every subsequent moment. The four-dimensional interval between them,
+\begin{equation}
+ds_{AB}^2 = (\Delta \mathbf{x}_{AB})^2 - c^2 (\Delta t_{AB})^2 + (\Delta x_4)^2 = (\Delta \mathbf{x}_{AB})^2 - c^2 (\Delta t_{AB})^2,
+\end{equation}
+remains null because $\Delta x_4 = 0$ and the photons' spatial separation equals $c$ times their temporal separation along the light cone. The two photons are therefore in four-dimensional coincidence along $x_4$, even when three-dimensional observers perceive them as arbitrarily far apart.
+\end{proposition}
+
+\begin{proposition}[The McGucken Equivalence]
+\label{prop:McGEquiv}
+Quantum nonlocality, as measured by the Bell correlation function $E(\mathbf{a}, \mathbf{b}) = -\cos\theta_{ab}$ for entangled photon pairs, is the three-dimensional shadow of four-dimensional $x_4$-coincidence on the light cone. The ``spooky action at a distance'' of Einstein--Podolsky--Rosen is not action at a distance at all; it is coincidence in a dimension the three-dimensional observer does not see.
+\end{proposition}
+
+This is the McGucken Equivalence~\cite{mcguckennonloc}. It resolves the structural tension Einstein identified in 1935: there is no superluminal signal, no hidden-variable violation, no retrocausal influence. The two photons are, from the perspective of four-dimensional geometry, at the same $x_4$-coordinate throughout their existence. What appears to three-dimensional observers as instantaneous correlation at spacelike separation is, in four dimensions, the persistence of a geometric fact established at their common origin: they share $x_4$.
+
+\subsection{Dual-channel coexistence, not competition}
+
+Channel A (microcausality) and Channel B (nonlocal correlations) do not compete. They are simultaneous readings of $dx_4/dt = ic$ through its algebraic-symmetry and geometric-propagation contents.
+
+\begin{itemize}
+\item Channel A reads the principle's \emph{local} content at each spacetime point: Lorentz covariance, spacelike-commuting operators, local gauge structure. This reading is the content of axiomatic QFT.
+\item Channel B reads the principle's \emph{global} content along light cones: two worldlines originating at a common event and traveling at $c$ share $x_4$ forever because neither advances in $x_4$. This reading is the content of the McGucken Equivalence.
+\end{itemize}
+
+The same structural precedent from Level 5 applies. A photon through a double-slit apparatus has both wave-aspect and particle-aspect content simultaneously; nothing is ``really'' either. An entangled photon pair has both local-microcausal and nonlocal-correlational content simultaneously; nothing is ``really'' either. The Bell experiments confirm the correlational (Channel B) reading when the apparatus measures correlated polarizations; standard QFT confirms the microcausal (Channel A) reading when the apparatus measures commutators of spacelike-separated field operators. No contradiction arises because the two readings query two different structural aspects of the same geometric fact.
+
+\subsection{The Two McGucken Laws of Nonlocality}
+
+The Channel B content of nonlocality is stated as two formal laws, each with a precise mathematical content.
+
+\begin{theorem}[First McGucken Law of Nonlocality: $x_4$-coincidence persistence]
+\label{law:first}
+Let $A$ and $B$ be two worldlines originating at a common spacetime event $p_0 = (\mathbf{x}_0, t_0)$ and propagating at $|\mathbf{v}| = c$. Then for all proper times $\tau > 0$ along each worldline,
+\begin{equation}
+\boxed{x_4^{(A)}(\tau) = x_4^{(B)}(\tau) = ict_0}
+\label{eq:firstlaw}
+\end{equation}
+independent of the three-dimensional spatial separation $|\mathbf{x}_A(\tau) - \mathbf{x}_B(\tau)|$. The four-dimensional interval between $A$ and $B$ at every subsequent moment is
+\begin{equation}
+ds_{AB}^2 = |\Delta \mathbf{x}_{AB}|^2 - c^2 (\Delta t_{AB})^2 + (\Delta x_4)^2 = 0,
+\end{equation}
+because $\Delta x_4 = 0$ and the spatial-temporal terms cancel along the light cone. Three-dimensional spatial separation does not produce $x_4$-separation for objects traveling at $c$.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:photonx4}, $dx_4/d\tau = 0$ along every worldline at $|\mathbf{v}| = c$. Integrating from the common origin $p_0$ with initial condition $x_4(0) = ict_0$ yields $x_4(\tau) = ict_0$ for all $\tau$, identically for both $A$ and $B$. The spatial-temporal cancellation $|\Delta \mathbf{x}_{AB}|^2 = c^2 (\Delta t_{AB})^2$ holds because both worldlines travel at $c$ from the common event. Therefore $ds_{AB}^2 = 0$.
+\end{proof}
+
+\begin{theorem}[Second McGucken Law of Nonlocality: Bell correlations as $x_4$-shadow]
+\label{law:second}
+The measurable three-dimensional correlations between observables on two worldlines satisfying the First Law are the three-dimensional projections of their four-dimensional $x_4$-coincidence. For entangled photon pairs measured at polarization settings $\mathbf{a}$ and $\mathbf{b}$, the correlation function is
+\begin{equation}
+\boxed{E(\mathbf{a}, \mathbf{b}) = -\cos\theta_{ab}}
+\label{eq:secondlaw}
+\end{equation}
+where $\theta_{ab}$ is the angle between $\mathbf{a}$ and $\mathbf{b}$. This correlation function saturates the quantum bound (Tsirelson's bound $2\sqrt{2}$ in the CHSH inequality) and exceeds every local-hidden-variable bound (Bell's inequality $|S| \leq 2$), confirmed experimentally by Aspect (1982), Zeilinger (1998), and the loophole-free test of Hensen (2015). The correlation is not reducible to any local-hidden-variable model because the two observables are, in four dimensions, at the same $x_4$-coordinate --- a geometric identity rather than a causal link.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The standard quantum-mechanical derivation of $E(\mathbf{a}, \mathbf{b}) = -\cos\theta_{ab}$ from the singlet state $|\psi\rangle = (|HV\rangle - |VH\rangle)/\sqrt{2}$ is well established. The McGucken Equivalence supplies the geometric content that makes this derivation physically natural rather than mysterious: the two photons, being at the same $x_4$-coordinate by the First Law (Theorem~\ref{law:first}), are geometrically one object in the four-dimensional picture; their polarization observables are therefore correlated not through causal transmission across spatial distance but through their shared $x_4$-location. Bell's theorem excludes local hidden variables precisely because the correlation is not local in the three-dimensional projection --- it is local in the four-dimensional manifold, at the $x_4$-coincidence.
+\end{proof}
+
+\begin{corollary}[No superluminal signal]
+\label{cor:nosignal}
+The First Law (Theorem~\ref{law:first}) does not permit superluminal signaling because $x_4$-coincidence is a geometric identity of four-dimensional coordinates, not a causal influence propagating through spacetime. The measurement outcomes at $A$ and $B$ are correlated statistics over repeated experimental runs, not controllable signals. Operationally, the correlations satisfy the no-signaling condition: marginal distributions at $A$ are independent of measurement choices at $B$. The McGucken Equivalence is therefore consistent with relativistic causality while violating Bell's local-hidden-variable bound.
+\end{corollary}
+
+\subsection{Structural placement of the Laws}
+
+The Two Laws stand alongside the other derived structures of the dual-channel framework:
+
+\begin{itemize}
+\item Level 3: $[\hat{q}, \hat{p}] = i\hbar$ (Propositions~\ref{prop:H4} and~\ref{prop:L6}, two routes).
+\item Level 5: wave and particle aspects (Section~\ref{sec:wpd}).
+\item Level 6: \textbf{First and Second McGucken Laws of Nonlocality} (Theorems~\ref{law:first} and~\ref{law:second}).
+\item Level 7: $dS/dt = 3k_B/(2t) > 0$ strict (Proposition~\ref{prop:bgentropy}); Noether catalog (Propositions~\ref{prop:poincare}--\ref{prop:diffeo}).
+\end{itemize}
+
+Each is a derived theorem of $dx_4/dt = ic$. The Laws of Nonlocality are the Level 6 members of this set.
+
+\section{The Thermodynamic Extension: Conservation Laws and the Second Law (Level 7)}
+\label{sec:thermo}
+
+The seven-level structure extends beyond quantum mechanics at Level 7. Levels 3 through 6 pair two time-symmetric features of quantum mechanics. Level 7 pairs a time-symmetric feature (the Noether conservation laws) with a time-asymmetric feature (the Second Law and the five arrows of time) --- and in doing so resolves the 150-year-old Loschmidt reversibility objection.
+
+\subsection{Channel A: the Noether catalog}
+
+Each continuous symmetry of $dx_4/dt = ic$ produces a conserved Noether current. The derivational chain is:
+\begin{center}
+Postulate $\to$ geometric symmetry of $x_4$'s advance $\to$ symmetry of action $\to$ Noether $\to$ conservation law.
+\end{center}
+
+\begin{proposition}[The ten Poincar\'e charges]
+\label{prop:poincare}
+Temporal uniformity of $dx_4/dt$ (the rate is independent of $t$) implies time-translation invariance of the action, implying energy conservation $dE/dt = 0$. Spatial homogeneity (the rate is identical at every $\mathbf{x}$) implies spatial-translation invariance, implying $d\mathbf{P}/dt = 0$. Spherical isotropy (no preferred spatial direction) implies rotational invariance, implying $dJ^{ij}/dt = 0$. Lorentz covariance ($|dx_4/dt|$ is preserved under boosts) implies Lorentz-boost invariance, implying $dK^i/dt = 0$ on shell.
+\end{proposition}
+
+\begin{proposition}[The internal symmetries]
+\label{prop:internal}
+Absence of a preferred phase origin on $x_4 = ict$ is global U(1) phase invariance, gauged to local U(1) on the $x_4$-orientation bundle, generating Maxwell's equations and electric charge conservation $dQ_{\text{EM}}/dt = 0$. The non-Abelian Clifford structure of $\mathrm{Cl}(1,3)$ extends $x_4$-orientation to transverse-and-spatial rotation sectors generating $\mathrm{SU}(2)_L$ and $\mathrm{SU}(3)_c$ gauge invariances, with conserved weak isospin and color charges.
+\end{proposition}
+
+\begin{proposition}[Diffeomorphism invariance]
+\label{prop:diffeo}
+Coordinate-independence of $x_4$'s advance on the smooth four-manifold implies diffeomorphism invariance of the action, implying covariant energy-momentum conservation $\nabla_\mu T^{\mu\nu} = 0$ by Noether's second theorem.
+\end{proposition}
+
+The full Noether catalog --- ten Poincar\'e charges, three internal-gauge charges, and the covariant stress-energy conservation --- descends from $dx_4/dt = ic$ through Channel A. Each conservation law is time-symmetric.
+
+\subsection{Channel B: the Second Law}
+
+The same principle through Channel B produces the time-asymmetric Second Law.
+
+\begin{proposition}[Spherical isotropic random walk from $x_4$'s expansion]
+\label{prop:random walk}
+The spherical symmetry of $x_4$'s expansion contains no preferred spatial direction. The spatial projection of each particle's $x_4$-driven displacement over a short interval $\Delta t$ is therefore a vector of magnitude $r = c\Delta t/\gamma$ in a direction uniformly distributed over $S^2$. Iterated over $N$ intervals this generates an isotropic random walk on $\mathbb{R}^3$ with mean-squared displacement $\langle |\mathbf{x}_N - \mathbf{x}_0|^2 \rangle = N r^2 = Dt$, where $D = c^2 \Delta t/\gamma^2$ and $t = N\Delta t$.
+\end{proposition}
+
+\begin{proposition}[Boltzmann--Gibbs entropy growth]
+\label{prop:bgentropy}
+The central limit theorem yields a Gaussian distribution for $\mathbf{x}_N$ at large $N$ with variance $Dt$ per dimension. The Boltzmann--Gibbs entropy is
+\begin{equation}
+S(t) = \tfrac{3}{2} k_B \ln(4\pi e D t) + \text{const},
+\end{equation}
+with entropy rate
+\begin{equation}
+\frac{dS}{dt} = \frac{3k_B}{2t} > 0
+\end{equation}
+\emph{strictly} for all $t > 0$. Not on average, not statistically --- absolutely. Entropy cannot decrease because $x_4$ cannot retreat.
+\end{proposition}
+
+\begin{proposition}[Shannon entropy on the McGucken Sphere]
+\label{prop:photonentropy}
+For a photon emitted isotropically from $p_0$ at $t_0$, the photon rides the McGucken Sphere of radius $R = c(t-t_0)$ with uniform distribution. The Shannon entropy is
+\begin{equation}
+S(t) = k_B \ln(4\pi (ct)^2) + \text{const}, \qquad \frac{dS}{dt} = \frac{2 k_B}{t} > 0.
+\end{equation}
+The entropy grows because the sphere grows; the sphere grows because $x_4$ advances at rate $c$.
+\end{proposition}
+
+\subsection{The five arrows of time}
+
+The five classical arrows all trace to the single geometric fact that $x_4$ advances monotonically at rate $c$:
+
+\begin{enumerate}
+\item \textbf{Thermodynamic arrow:} direction of $dS/dt > 0$ (Proposition~\ref{prop:bgentropy}, \ref{prop:photonentropy}).
+\item \textbf{Radiative arrow:} direction of outgoing retarded Green's function; advanced solutions are not physically realized because they would require a contracting McGucken Sphere, i.e.\ $x_4$ retreat.
+\item \textbf{Causal arrow:} direction of propagation of causal influence into the forward light cone, which is the expanding McGucken Sphere.
+\item \textbf{Cosmological arrow:} direction of cosmological expansion, macroscopic expression of every particle's forced advance through $x_4$ at rate $c$.
+\item \textbf{Psychological arrow:} memory encodes events in the past light cone; this is the causal arrow instantiated in neural systems.
+\end{enumerate}
+
+All five arrows point forward because $x_4$ advances forward. Reichenbach (1956) unified the thermodynamic and causal arrows; Penrose (1989) grounded the thermodynamic arrow in cosmological boundary conditions but not in a dynamical principle; the McGucken Principle unifies all five as consequences of a single equation.
+
+\subsection{Resolution of the Loschmidt objection}
+
+Loschmidt (1876) observed that if the microscopic dynamics are time-reversal symmetric, the strict $H$-theorem cannot follow rigorously --- any entropy-increasing trajectory is matched by a time-reversed entropy-decreasing trajectory of equal statistical weight. Boltzmann's 1877 response, that entropy-decreasing trajectories are improbable, resolves the tension statistically but not absolutely, and requires the Past Hypothesis as auxiliary input.
+
+The tension presupposes that the time-symmetric conservation laws and the time-asymmetric Second Law have a common origin that must itself be either time-symmetric or time-asymmetric. Under the McGucken framework, they have a common origin --- the principle $dx_4/dt = ic$ --- but they descend through two logically distinct channels. Channel A reads the principle through its algebraic-symmetry content, which is time-symmetric (the Poincar\'e group includes $T$), producing time-symmetric conservation laws. Channel B reads the same principle through its geometric-propagation content, which is time-asymmetric ($x_4$ advances at $+ic$ monotonically), producing the time-asymmetric Second Law.
+
+This is the same structural move wave/particle duality makes. The photon through the double-slit is not ``really'' a wave or ``really'' a particle; it has both Channel A (particle) and Channel B (wave) content simultaneously. The dynamics of the universe is not ``really'' time-symmetric or ``really'' time-asymmetric; it has both Channel A (symmetric) and Channel B (asymmetric) content simultaneously. A referee who accepts wave/particle duality without objection cannot consistently reject the conservation-law/Second-Law duality on ``which reading is privileged'' grounds: the structural logic is identical.
+
+\subsection{Dissolution of the Past Hypothesis}
+
+For a system whose entropy increases through Channel B, the lowest-entropy moment is by construction the moment when $x_4$'s expansion begins from the initial configuration. For the universe as a whole, this moment is the origin of cosmological $x_4$-expansion --- identified with the hot Big Bang. The universe began in a low-entropy state not as a fine-tuned boundary condition but as the geometric starting point of $x_4$'s expansion.
+
+Penrose's 1989 figure of $10^{-10^{123}}$ for the improbability of the initial state assumes a uniform prior over microstates consistent with the macroscopic initial conditions. Under the McGucken framework the prior is not uniform --- the geometric structure of $x_4$'s expansion selects the lowest-entropy moment as its starting point, by the same logic that makes $t = 0$ the moment before any expansion has occurred. The Past Hypothesis is not disproved; it is derived.
+
+\section{Quantitative Predictions}
+\label{sec:predictions}
+
+The framework makes a testable prediction at the thermodynamic level: the Compton-coupling diffusion.
+
+\begin{proposition}[Compton-coupling diffusion]
+\label{prop:compton diffusion}
+Modeling $x_4$'s advance as carrying a small oscillatory modulation of amplitude $\epsilon \ll 1$ and frequency $\Omega$ superimposed on the monotonic rate,
+\begin{equation}
+x_4(t) = ict + i\epsilon c\, \sin(\Omega t), \qquad \frac{dx_4}{dt} = ic\,[1 + \epsilon \cos(\Omega t)].
+\end{equation}
+Every massive particle couples to this modulation through its Compton frequency $f_C = mc^2/h$. The effective stochastic force in the Langevin equation has variance $\propto m^2$, and the $m^2$ in the noise variance cancels the $m^2$ in the Langevin response $1/m^2$, yielding a diffusion constant
+\begin{equation}
+\boxed{D_x^{(\text{McG})} = \frac{\epsilon^2 c^2 \Omega}{2\gamma^2}}
+\end{equation}
+that is \emph{mass-independent} and \emph{temperature-persistent} --- the diffusion does not vanish as $T \to 0$, in contrast to ordinary thermal diffusion.
+\end{proposition}
+
+The species-independence and temperature-persistence together constitute a sharp laboratory signature. Cold-atom experiments (JILA, NIST, MIT), trapped-ion experiments, ultracold-neutron storage, and precision atomic clocks all operate in regimes where ordinary thermal diffusion is highly suppressed and an additional temperature-independent species-universal contribution would be detectable or bounded. The specific magnitude under plausible values of $\epsilon$ and $\Omega$ is the subject of experimental follow-up work.
+
+\section{Novelty and Priority: What This Paper Does That Prior Work Does Not}
+\label{sec:novelty}
+
+This section documents novelty by listing prior work in equation form and identifying the specific gap at each level of the dual-channel structure. The prior-art survey is drawn from searches of the published physics and philosophy-of-physics literature covering the candidate foundations of quantum mechanics, the candidate foundations of the Second Law, and the candidate resolutions of the Loschmidt reversibility objection. No prior paper in the surveyed record proposes the postulate $dx_4/dt = ic$ as a physical dynamical statement, and no prior paper derives the dual-channel seven-level duality from a single geometric postulate.
+
+\subsection{Priority on the postulate}
+
+Priority in physics is established by the dated publication record. The record on $dx_4/dt = ic$ is documented below with direct links to archived primary sources. Each dated entry is independently verifiable by direct URL fetch.
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+\textbf{Equation} & \textbf{Author, year (dated publication)} \\
+\hline
+$x_4 = ict$ (coordinate convention) & Minkowski, 1908 \\
+$E = h\nu$ & Einstein, 1905 \\
+$\lambda = h/p$ & de Broglie, 1924 \\
+$[\hat{q}, \hat{p}] = i\hbar$ & Born--Jordan, 1925 \\
+$i\hbar \partial_t \psi = \hat{H}\psi$ & Schr\"odinger, 1926 \\
+Complementarity (wave/particle) & Bohr, 1927 \\
+$\Delta x \Delta p \geq \hbar/2$ & Heisenberg, 1927 \\
+$K = \int \mathcal{D}x\, \exp(iS/\hbar)$ & Feynman, 1948 \\
+$T_U = \hbar a / (2\pi k_B c)$ & Unruh, 1976 \\
+$C_{\mu\nu\rho\sigma} C^{\mu\nu\rho\sigma}|_{\text{initial}} \to 0$ & Penrose, 1979 \\
+Thermal time hypothesis & Connes--Rovelli, 1994 \\
+$\delta Q = T\,dS$ (across Rindler horizon) & Jacobson, 1995 \\
+$F\Delta x = T\Delta S$ (holographic) & Verlinde, 2011 \\[4pt]
+$\dfrac{dx_4}{dt} = ic$ (physical postulate) & \textbf{McGucken, 1998/99--present} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Distinction from Minkowski's coordinate convention}
+
+Minkowski's $x_4 = ict$~\cite{minkowski1908} is a coordinate convention: a static identification of the fourth Euclidean coordinate with $ict$ for notational purposes, rendering the Minkowski line element Euclidean in four dimensions. The convention carries no derivative, no rate of advance, and no claim that events are physically in motion along $x_4$. Pauli's 1921 encyclopedia article~\cite{pauli1921} and Sommerfeld's papers of the same period adopted the convention without modification. The step from $x_4 = ict$ (static coordinate identification) to $dx_4/dt = ic$ (dynamical postulate: every event actively advances into the fourth dimension at rate $c$, with $i$ encoding perpendicularity rather than serving as a bookkeeping device) introduces physical content absent from the convention. This dynamical-postulate step is due to the present author.
+
+\subsubsection{The dated record: five eras of continuous development}
+
+\paragraph{Era I: Princeton origin and 1998 dissertation appendix (late 1980s--1998).}\label{sec:era1} The conceptual origins of the McGucken Principle trace to the author's undergraduate work at Princeton University with J.\ A.\ Wheeler (academic advisor), P.\ J.\ E.\ Peebles (quantum mechanics instructor), and J.\ H.\ Taylor Jr.\ (experimental physics and junior-paper advisor). The specific conversations with Wheeler (photon stationary in $x_4$) and Peebles (photon's spherically-symmetric probabilistic wavefront at $c$) established the physical picture that would later crystallize as $dx_4/dt = ic$~\cite{mcguckenprincetonafternoons}.
+
+The first formal written record of the postulate and its derivational content appears as \textbf{Appendix B} to the author's 1998 doctoral dissertation at the University of North Carolina at Chapel Hill~\cite{mcguckendissertation}, titled \emph{``Multiple Unit Artificial Retina Chipset to Aid the Visually Impaired and Enhanced Holed-Emitter CMOS Phototransistors''} (advisors W.\ Liu and S.\ Washburn). Appendix B of that dissertation is titled \textbf{\emph{``Physics for Poets: The Law of Moving Dimensions''}} and spans dissertation pages 153--156. The appendix is a dated, university-archived document establishing the 1998 priority on the physical content of the postulate. Its principal contents:
+
+\begin{itemize}
+\item \textbf{The postulate, stated in 1998 form} (dissertation p.\ 153): ``I propose that these two postulates [Einstein's two postulates of relativity] may be expressed in an alternative manner, by stating the following law of moving dimensions: I.\ The time dimension is moving or expanding relative to the three spatial dimensions.''
+
+\item \textbf{The kinematic derivation of the rate $c$} (dissertation p.\ 153): starting from Einstein's second postulate as the null-vector condition $\sum_{j=1}^{3} x_j^2 - c^2 t^2 = 0$, reducing to $x = ct$ for one spatial dimension, and differentiating to obtain
+\[
+\frac{dx}{dt} = c.
+\]
+This is the pre-compact (real-axis, coordinate-time) form of the postulate; the compact three-symbol imaginary-unit form $dx_4/dt = ic$ follows by identifying the advancing coordinate with $x_4 = ict$ in the Minkowski convention, a step taken in the 2006 Usenet record and formally in the 2008 FQXi submission.
+
+\item \textbf{The mass/energy duality (Level 1) in prose form} (dissertation p.\ 155--156): ``A photon has no spatial dimension, as it is matter fully rotated into the time dimension. Einstein's relation which expresses the equivalence between matter and energy (AB.1) holds true because radiative energy, consisting of photons, is merely matter rotated fully into the time dimension.'' Equation (AB.1) is $E = mc^2$, derived from the rotation of four-velocity into the time dimension --- the Channel-A/Channel-B four-velocity-budget reading developed formally in Section~\ref{sec:kinematic} of the present paper.
+
+\item \textbf{Wave/particle duality (Level 5) as the dual-channel reading} (dissertation p.\ 154): ``Wave-particle duality and quantum mechanical probabilistic behavior can be accounted for by the relative motion between the dimensions, which both particles and waves exist in.''
+
+\item \textbf{Feynman path integral} (dissertation p.\ 154): ``Feynman's many-path integrals, reflecting the notion that a particle travels all paths, can be accounted for by the fact that until it interacts with matter, a particle has a chance of existing as a pure wave, completely independent of the spatial dimensions.''
+
+\item \textbf{The Second Law and entropy (Level 7)} (dissertation p.\ 154): ``The law of increasing entropy can be accounted for with the fact that all particles have a chance of existing in a dimension which is expanding at a constant rate, equally in all directions, relative to the rest. The spherical symmetry of a photon's wavefront can also be accounted'' --- this is the same geometric argument formalized in Section~\ref{sec:thermo} of the present paper.
+
+\item \textbf{Time dilation and length contraction} (dissertation p.\ 154--155): derived from the four-velocity-budget apportionment ``as an entity gains velocity, it is rotated into the moving time dimension.''
+
+\item \textbf{The de Broglie relation reading} (dissertation p.\ 155): ``A more energetic photon has a higher probability of interacting with matter as it passes it by, as its shorter wavelength represents a greater existence in space-time'' --- the $\lambda = h/p$ relation as a four-velocity-budget statement.
+
+\item \textbf{The energy and momentum operators in quantum mechanics} (dissertation p.\ 156): ``In quantum mechanics energy is accounted for by the operator which represents the infinitesimal change with respect to time, while momentum is accounted for by operator which represents the infinitesimal change with respect to space.'' This is the Stone--von Neumann pair $\hat{H} = i\hbar \partial_t$ and $\hat{p} = -i\hbar \partial_x$ that drives Level 3 of the present paper's seven-level structure.
+
+\item \textbf{Derivation of Einstein's first postulate from the law of moving dimensions} (dissertation p.\ 156): ``Einstein's first postulate derives from the fact that in all inertial reference frames, the relative motion between the dimensions is fixed at a constant rate. Thus the laws of physics, and all physical concepts, which are all fundamentally based on the concept of motion or change with respect to time, are also fixed.''
+
+\item \textbf{Figure AB.1}: a space-time diagram with the null vector $x = ct$, captioned: ``Because space and time are moving relative to one-another, the only way to have zero length or interval is to travel at the speed of light.''
+\end{itemize}
+
+Appendix B establishes in 1998 the physical content of every level of the seven-level structure developed in the present paper: the postulate itself (in coordinate-time, pre-compact form $dx/dt = c$), the mass/energy duality (Level 1), the Hamiltonian/Lagrangian / energy-momentum-operator duality (Level 3), wave/particle duality (Level 5), and the Second Law/conservation-law duality (Level 7). The explicit identification of the advancing coordinate with $x_4 = ict$ --- giving the compact $dx_4/dt = ic$ --- appears in the 2006 sci.physics.relativity archive, and the formalization and derivation program from 2008 onward.
+
+\paragraph{Era II: Internet deployments and Usenet (2003--2006).} The theory entered public discussion in 2003--2004 on PhysicsForums.com (author's member registration \#3753) and on the Usenet newsgroups \emph{sci.physics} and \emph{sci.physics.relativity}, under the working names \emph{Moving Dimensions Theory} (MDT) and \emph{Dynamic Dimensions Theory} (DDT).
+
+\textbf{Earliest Google Groups archived post (direct verification).} The earliest post directly verifiable in the Google Groups Usenet archive appears in \emph{sci.physics.relativity}, dated \textbf{29 August 2006, 18:19 UTC}, titled \emph{``On The Novelty and Genius of Moving Dimensions Theory: Its Superiority to String Theory and Loop Quantum Gravity''}~\cite{mcgucken2006usenet}. The post is retrievable at:
+\begin{center}
+\url{https://groups.google.com/g/sci.physics.relativity/c/QeIG-RwiX_A}
+\end{center}
+This 2006 post contains:
+\begin{itemize}
+\item The \textbf{general postulate}: ``The fourth dimension is expanding relative to the three spatial dimensions.''
+\item The \textbf{specific postulate}: ``The fourth dimension is expanding relative to the three spatial dimensions in units of the Planck length at the rate of $c$.''
+\item The \textbf{kinematic derivation} of the rate from the null-vector condition: from $x^2 + y^2 + z^2 - c^2 t^2 = 0$, reducing to $x = ct$, and differentiating: ``by taking the derivative of both sides with respect to $t$, we get $dx/dt = d/dt(ct) = c$.'' This is the derivational content that is compacted into the three-symbol form $dx_4/dt = ic$ in subsequent posts.
+\item The derivation of $E = mc^2$ from the four-velocity budget: ``even though we perceive a ruler along the $x$ axis to be stationary, it is yet traveling through space-time at the fixed speed of $c$.''
+\item The Channel-A/Channel-B reading of wave/particle duality: ``when matter exists in the stationary dimensions, it is seen as mass, or a particle. When matter exists in the time dimension it is seen as wave.''
+\item The derivation of \textbf{quantum nonlocality as $x_4$-coincidence}: ``two events separated in the three spatial dimensions can yet appear to be at the exact same place in the fourth dimension. MDT thus provides the new concept of space-time.'' This is the conceptual precursor of the McGucken Equivalence (Theorems~\ref{law:first} and~\ref{law:second}).
+\item The derivation of \textbf{the Second Law and time's arrow} from spherical $x_4$-expansion: ``the fourth dimension is expanding in a spherically symmetric manner, constantly carrying all initially close photons and particles away from one another\ldots Hence time's arrow and entropy.''
+\item The resolution of the block-universe paradox.
+\item The unification of quantum mechanics and relativity through a single postulate.
+\end{itemize}
+
+Follow-up posts in the same Google Groups thread, dated 2 September 2006 and 5 September 2006 (by the same author under \texttt{Autumn...@gmail.com}), are archived at the same URL and propose the derivation of the spacetime metric and the Schr\"odinger equation from the postulate as the research program. Other archived Usenet threads from the 2006--2010 period contain continuing development under the MDT/DDT names.
+
+\paragraph{Era III: Usenet compact-form, parallel WordPress blog, and FQXi papers (2008--2013).} The compact three-symbol form $dx_4/dt = ic$ appears in the Google Groups archive at least by the \emph{sci.physics} post dated \textbf{11 July 2011, 16:46 UTC}, titled \emph{``Why String Theory, M-Theory, LQG, Multiverses, and Parallel Universes are NOT Physics, and why Moving Dimensions Theory (MDT) IS''}~\cite{mcgucken2011usenet}, retrievable at:
+\begin{center}
+\url{https://groups.google.com/g/sci.physics/c/nfLV4igq5zA}
+\end{center}
+This post states directly: ``MDT's postulate: The fourth dimensions is expanding relative to the three spatial dimensions at $c$. MDT's equation: $dx_4/dt = ic$.''
+
+The same text appeared on the same day on a WordPress blog titled \emph{Hero's Odyssey Physics \& Moving Dimensions Theory} at \url{https://herosjourneyphysics.wordpress.com}, the blog's tagline reading: ``The fourth dimension is expanding at $c$ relative to the three spatial dimensions: $dx_4/dt = ic$.'' The blog's archive (category ``Uncategorized'') contains six posts, all dated 10--11 July 2011, each directly fetch-verified:
+
+\begin{itemize}
+\item \textbf{10 July 2011} (``hello-world'' founding post): \emph{``Three Foundational Papers on Moving Dimensions Theory: Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics''}~\cite{mcguckenherosjourney2011c}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/hello-world/}. Lists the three foundational 2008--2010 FQXi papers.
+
+\item \textbf{10 July 2011}: \emph{``Proofs of Moving Dimensions Theory: Hero's Journey Physics \& Moving Dimensions Theory''}~\cite{mcguckenherosjourney2011d}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/proofs-of-moving-dimensions-theory-heros-journey-physics-moving-dimensions-theory/}. Contains the formal three numbered MDT proofs.
+
+\item \textbf{10 July 2011, 11:35 pm}: \emph{``Time as an Emergent Phenomenon \& Deriving Einstein's Relativity from Moving Dimensions Theory's $dx_4/dt=ic$: Traveling Back to the Heroic Age of Physics In Memory of John Archibald Wheeler''}~\cite{mcguckenherosjourney2011e}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/time-as-an-emergent-phenomenon-deriving-einstein\%e2\%80\%99s-relativity-from-moving-dimensions-theory\%e2\%80\%99s-dx4dtic-traveling-back-to-the-heroic-age-of-physics-in-memory-of-john-archibald-w/}. Shortlink: \url{https://wp.me/p1GStz-a}. Contains the full abstract of the 25 August 2008 FQXi paper, reproducing the postulate and its derivational consequences as published in FQXi.
+
+\item \textbf{10 July 2011, 11:38 pm}: \emph{``Recommendation for Elliot McGucken for Admission to Graduate School of Physics''}~\cite{mcguckenherosjourney2011f}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/recommendation-for-elliot-mcgucken-for-admission-to-graduateschoolof-physics/}. Shortlink: \url{https://wp.me/p1GStz-f}. Contains J.\ A.\ Wheeler's Princeton recommendation letter in full (see below), and a biographical statement confirming: ``While at Princeton, McGucken worked on projects concerning quantum mechanics and general relativity with the late John A.\ Wheeler, and the projects combined to form an appendix treating time as an emergent phenomenon in his dissertation.'' This 2011 statement directly links the 1998 dissertation Appendix B (Section~\ref{sec:era1}) to the Princeton projects with Wheeler on QM and GR.
+
+\item \textbf{10 July 2011}: \emph{``Moving Dimensions Theory (MDT) Honors the Greats' Definition of Science''}~\cite{mcguckenherosjourney2011a}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/moving-dimensions-theory-mdt-honor\%e2\%80\%99s-the-greats\%e2\%80\%99-definition-of-science/}. Contains the foundational programmatic statement: ``just as $S = k \log W$ is engraved on Ludwig von Boltzmann's tombstone\ldots so too shall $dx_4/dt = ic$ be engraved on my tombstone, as sure as $xp - px = i\hbar$ is engraved on Max Born's tombstone.''
+
+\item \textbf{11 July 2011, 3:41 pm}: \emph{``Why String Theory, M-Theory, LQG, Multiverses, and Parallel Universes are NOT Physics, and why Moving Dimensions Theory (MDT's dx4/dt=ic) IS''}~\cite{mcguckenherosjourney2011b}, at \url{https://herosjourneyphysics.wordpress.com/2011/07/11/why-string-theory-m-theory-lqg-multiverses-and-parallel-universes-are-not-physics-and-why-moving-dimensions-theory-mdt-is/}. Shortlink: \url{https://wp.me/p1GStz-C}. Contains the full MDT postulate with three numbered proofs and the Twitter-length proof. Same text as the 11 July 2011 sci.physics Usenet post, posted within hours of each other.
+\end{itemize}
+
+\paragraph{Wheeler's Princeton recommendation letter, verbatim (archived in Era III).} The 10 July 2011 ``Recommendation'' post~\cite{mcguckenherosjourney2011f} reproduces the following text attributed to J.\ A.\ Wheeler, Princeton University:
+
+\begin{quote}
+``More intellectual curiosity, versatility and yen for physics than Elliot McGucken's I have never seen in any senior or graduate student\ldots Originality, powerful motivation, and a can-do spirit make me think that McGucken is a top bet for graduate school in physics\ldots I say this on the basis of close contacts with him over the past year and a half\ldots I gave him as an independent task to figure out the time factor in the standard Schwarzschild expression around a spherically-symmetric center of attraction. I gave him the proofs of my new general-audience, calculus-free book on general relativity, \emph{A Journey Into Gravity and Space Time}. There the space part of the Schwarzschild geometric is worked out by purely geometric methods. `Can you, by poor-man's reasoning, derive what I never have, the time part?' He could and did, and wrote it all up in a beautifully clear account\ldots his second junior paper\ldots entitled \emph{Within a Context}, was done with another advisor, and dealt with an entirely different part of physics, the Einstein-Rosen-Podolsky experiment and delayed choice experiments in general\ldots this paper was so outstanding\ldots I am absolutely delighted that this semester McGucken is doing a project with the cyclotron group on time reversal asymmetry. Electronics, machine-shop work and making equipment function are things in which he now revels. But he revels in Shakespeare, too. Acting the part of Prospero in the Tempest\ldots'' \\
+--- J.\ A.\ Wheeler, Princeton University
+\end{quote}
+
+The letter documents the two Princeton junior papers that preceded the 1998 dissertation Appendix B: (i) the derivation of the \emph{time} part of the Schwarzschild metric by ``poor-man's reasoning'' (geometric methods extending Wheeler's \emph{A Journey Into Gravity and Space Time}), and (ii) the \emph{``Within a Context''} paper on the Einstein-Podolsky-Rosen experiment and Wheeler-style delayed-choice experiments. Together these trace the Princeton origin of both the dual-channel framework's GR content (Schwarzschild geometry) and its nonlocality/Bell content (EPR, delayed choice), which appear in the present paper as Level 1 (mass/energy) through Level 6 (local/nonlocal).
+
+The first formal paper submission outside Usenet is to the Foundational Questions Institute (FQXi) essay contest, dated \textbf{25 August 2008}, titled \emph{``Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics (In Memory of John Archibald Wheeler)''}~\cite{mcguckenfqxi2008}. The FQXi submission is indexed and retrievable at:
+\begin{center}
+\url{https://forums.fqxi.org/d/238-time-as-an-emergent-phenomenon-traveling-back-to-the-heroic-age-of-physics-by-elliot-mcgucken}
+\end{center}
+This paper introduces the postulate as: ``a fourth dimension expanding relative to the three spatial dimensions at the rate of $c$, or $dx_4/dt = ic$,'' and derives $E = mc^2$, wave-particle duality, quantum nonlocality, time's arrow, and entropy from it.
+
+Four additional FQXi essays followed between 2009 and 2013, each developing specific consequences of the postulate: the derivation of the Schr\"odinger equation's imaginary unit, the discrete-$x_4$ Planck-scale quantum structure, the information-theoretic foundations, and Wheeler's ``It from Bit''~\cite{mcguckenfqxi2009, mcguckenfqxi2010, mcguckenfqxi2012, mcguckenfqxi2013}. A further FQXi forum thread titled \emph{``MDT's dx4/dt=ic Triumphs Over the Wrong Physical Assumption That Time Is a Dimension by Elliot McGucken''} is archived at:
+\begin{center}
+\url{https://forums.fqxi.org/d/1429-mdts-dx4dtic-triumphs-over-the-wrong-physical-assumption-that-time-is-a-dimension-by-elliot-mcgucken}
+\end{center}
+
+\paragraph{Three foundational papers archived as full-text PDFs.} The three foundational 2008--2011 papers are also archived as full-text PDFs on the \emph{Hero's Odyssey Physics} WordPress domain, each directly fetch-verified in the present work:
+
+\begin{itemize}
+\item \textbf{2008}: \emph{``Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics (In Memory of John Archibald Wheeler)''}~\cite{mcguckentimepdf2008}, ${\sim}4{,}992$ words, at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_time_as_an_emergent1.pdf}. This full-text PDF contains the explicit integration derivation
+\[
+\int_a^u \frac{dx_4}{dt}\,dt \;=\; \int_a^u ic\,dt \quad\Rightarrow\quad x_4(u) - x_4(a) = icu - ica \quad\Rightarrow\quad x_4 = ict,
+\]
+together with direct quotation of Einstein's 1912 \emph{Manuscript on Relativity} establishing $x_4 = ict$, and the systematic treatment of the five time arrows: radiative, thermodynamic, cosmological, causal, and quantum.
+
+\item \textbf{2009}: \emph{``What is Ultimately Possible in Physics? Physics! A Hero's Journey with Galileo, Newton, Faraday, Maxwell, Planck, Einstein, Schr\"odinger, Bohr, and the Greats towards Moving Dimensions Theory. E pur si muove!''}~\cite{mcguckenultimatelypdf2009}, at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_what_is_ultimately_81.pdf}. This full-text PDF contains the three numbered MDT proofs (photon-stationarity-in-$x_4$, the Einstein/Minkowski $x_4 = ict$ derivation, and the mutual-stationarity proof), the Twitter-length 140-character proof, the bulleted catalogue of MDT derivations, and Figure~1 illustrating two entangled photons on the expanding $x_4$ wavefront.
+
+\item \textbf{2010--2011}: \emph{``On the Emergence of QM, Relativity, Entropy, Time, $i\hbar$, and $ic$ from the Foundational, Physical Reality of a Fourth Dimension $x_4$ Expanding with a Discrete (Digital) Wavelength $\ell_p$ at $c$ Relative to Three Continuous (Analog) Spatial Dimensions''}~\cite{mcguckenemergencepdf2010}, at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_dr-_elliot_mcgucke_7-11.pdf}. Section~1 of this paper (\emph{``Quantum Mechanics \& Relativity @ Princeton with Wheeler, Peebles, \& Taylor''}) is the primary-source account of the three Princeton conversations that seeded the theory: (i) with P.\ J.\ E.\ Peebles on the photon as a spherically-symmetric wavefront of probability expanding at $c$ (using galleys of Peebles' 1992 \emph{Quantum Mechanics}); (ii) with J.\ A.\ Wheeler on the photon remaining stationary in $x_4$ and Wheeler's ``Call to Adventure''; (iii) with J.\ H.\ Taylor Jr.\ on Schr\"odinger's statement that entanglement is the ``characteristic trait'' of QM. Footnote iii of this PDF cites the 1990 Princeton junior paper \emph{Within a Context} on EPR and delayed-choice experiments, and footnote xxxviii cites the 1998 UNC Chapel Hill Ph.D.\ dissertation directly, quoting from its appendix the closing words: ``As physics concerns itself at all levels with changes relative to both space and time, it makes sense that all physics, time, motion, reality, life, and consciousness itself are founded upon a stage which is endowed with intrinsic motion. The underlying fabric of all realty, the dimensions themselves, are moving relative to one another.'' Figure~2 illustrates the $x_4$-wavelength geometry in gravitationally-stretched space, and Figure~1 reproduces Bohr's double-slit diagram from Wheeler \& Zurek's \emph{Quantum Theory and Measurement}.
+\end{itemize}
+
+These three full-text PDFs, combined with the 1998 dissertation Appendix B and the 2006 and 2011 Usenet posts, constitute the directly-verifiable primary-source corpus for the pre-2016 development of the $dx_4/dt = ic$ program.
+
+\paragraph{Era IV: Books and consolidation (2016--2017).} The theory was consolidated in a book series published through 45EPIC Press:
+\begin{itemize}
+\item \emph{Light Time Dimension Theory: The Foundational Physics Unifying Einstein's Relativity and Quantum Mechanics}~\cite{mcguckenbook2016}, 2016.
+\item \emph{Einstein's Relativity Derived from LTD Theory's Principle}~\cite{mcguckenbook2017a}, 2017.
+\item \emph{Relativity and Quantum Mechanics Unified in Pictures}~\cite{mcguckenbook2017b}, 2017.
+\item \emph{Quantum Entanglement and Einstein's ``Spooky Action at a Distance'' Explained via LTD Theory's Expanding Fourth Dimension}~\cite{mcguckenbook2017c}, 2017.
+\item \emph{The Physics of Time: Time \& Its Arrows in Quantum Mechanics, Relativity, The Second Law of Thermodynamics, Entropy, The Twin Paradox, \& Cosmology Explained via LTD Theory's Expanding Fourth Dimension}~\cite{mcguckenbook2017d}, 2017.
+\end{itemize}
+The 2017 \emph{Physics of Time} book contains the full derivation of the Second Law and the arrows of time from the postulate, developed in technical form in Sections~\ref{sec:thermo}.3--\ref{sec:thermo}.5 of the present paper.
+
+\paragraph{Era V: Continuous development and active derivation program (2017--2026).} Continuous development from 2017 to the present on:
+\begin{itemize}
+\item \textbf{Facebook group} \emph{Elliot McGucken Physics}~\cite{mcguckenfb}, 2017--present, $>6000$ followers:
+\begin{center}\url{https://www.facebook.com/elliotmcguckenphysics}\end{center}
+\item \textbf{Medium blog} \emph{Dr.\ Elliot McGucken Theoretical Physics}~\cite{mcguckenmedium}, 2020--present:
+\begin{center}\url{https://goldennumberratio.medium.com/}\end{center}
+\item \textbf{Principal derivation program} at elliotmcguckenphysics.com~\cite{mcguckenphysicscom}, October 2024--present, approximately forty technical papers:
+\begin{center}\url{https://elliotmcguckenphysics.com/}\end{center}
+\end{itemize}
+
+These Era V outputs establish as theorems of $dx_4/dt = ic$: the Minkowski metric, the four-momentum operator and canonical commutation relation, the Schr\"odinger equation, the Feynman path integral, the Born rule, the Dirac equation, Yang-Mills Lagrangians, the Einstein field equations via the Schuller constructive-gravity closure, the full Noether catalog of conservation laws, the four-sector McGucken Lagrangian $\mathcal{L}_{\text{McG}}$, the de Broglie relation, the Heisenberg uncertainty principle, quantum nonlocality and Bell correlations via the McGucken Equivalence, the Bekenstein-Hawking horizon entropy, the cosmological constant, and the Second Law and arrows of time.
+
+\subsubsection{Summary of the dated trail}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Date} & \textbf{Source} & \textbf{Status} \\
+\hline
+1998 & UNC Chapel Hill dissertation, Appendix B & \textbf{Dated, university-archived} \\
+   & \emph{``Physics for Poets: The Law of} & \\
+   & \emph{Moving Dimensions,''} pp.\ 153--156 & \\
+2003--2004 & PhysicsForums.com (member \#3753) & Public forum, author-verified \\
+29 Aug 2006 & \emph{sci.physics.relativity} post & \textbf{Direct Google Groups fetch-verified} \\
+2--5 Sep 2006 & \emph{sci.physics.relativity} follow-ups & Same thread, direct-verified \\
+25 Aug 2008 & FQXi essay contest & Institutionally indexed \\
+2008--2011 & Three full-text foundational PDFs & \textbf{Direct PDF fetch-verified} \\
+2009--2013 & Four additional FQXi essays & Institutionally indexed \\
+10--11 Jul 2011 & \emph{Hero's Odyssey Physics} blog & \textbf{Direct WordPress fetch-verified} \\
+11 Jul 2011 & \emph{sci.physics} (compact ``dx4/dt=ic'') & \textbf{Direct Google Groups fetch-verified} \\
+2016--2017 & 45EPIC Press book series & ISBN-registered publications \\
+2017--present & Facebook group (>6000 followers) & Public, continuously archived \\
+2020--present & Medium technical blog & Public, continuously archived \\
+Oct 2024--2026 & elliotmcguckenphysics.com (40+ papers) & Public, continuously archived \\
+\hline
+\end{tabular}
+\end{center}
+
+By the dated-publication-record standard that physics uses to establish priority --- the same standard by which Newton's priority on the calculus rests on the 1687 \emph{Principia} and Einstein's priority on special relativity rests on the 1905 paper --- priority on the physical content of $dx_4/dt = ic$ rests with the present author, first recorded in the 1998 UNC Chapel Hill dissertation Appendix B (dated, university-archived) in coordinate-time form $dx/dt = c$, and in the compact imaginary-unit form in the 29 August 2006 \emph{sci.physics.relativity} post (direct Google-Groups-fetch-verified). The earliest institutionally-indexed formal-paper record is the 25 August 2008 FQXi essay. No prior author in the surveyed literature has written the postulate --- neither the coordinate-time $dx/dt = c$ as a physical postulate about a moving time dimension, nor the compact $dx_4/dt = ic$ --- nor derived the seven dualities of mass/energy, space/time, quantum mechanics, and thermodynamics from a single geometric statement of fourth-dimensional expansion at rate $c$.
+
+\subsection{Level 3 (foundational QM): prior art on single-route derivations}
+
+\textbf{Feynman 1948}~\cite{feynman1948} writes $K = \int \mathcal{D}x \exp(iS/\hbar)$ as a postulate from which the Schr\"odinger equation follows by short-time kernel expansion. Feynman does not derive the path integral from a deeper principle, and does not derive the Hamiltonian canonical commutation relation independently.
+
+\textbf{Stone 1932}~\cite{stone1932} and \textbf{von Neumann 1931}~\cite{vonneumann1931} write $U(a) = \exp(-ia\hat{p}/\hbar)$, $[\hat{q}, \hat{p}] = i\hbar \mathbb{1}$ and establish the Schr\"odinger representation's uniqueness. They do not derive the path integral from the same starting point.
+
+\textbf{Dirac 1933}~\cite{dirac1933} anticipated the Lagrangian formulation with $\langle q_f | q_i \rangle \sim \exp(iS/\hbar)$ but did not construct the continuum path integral.
+
+\textbf{Geometric quantization} (Kostant 1970, Souriau 1970) constructs quantum operators from symplectic phase space via prequantization, polarization, and metaplectic correction. It generates the Hamiltonian formulation but not the Lagrangian path integral as an independent derivation.
+
+\textbf{Stochastic mechanics} (Nelson 1966~\cite{nelson1966}, Lindgren--Liukkonen 2019) derives the Schr\"odinger equation from postulated stochastic-like dynamics but takes the diffusion constant $\hbar/(2m)$ as input rather than derives it.
+
+\textbf{Trace dynamics} (Adler 1994, 2004~\cite{adler2004}) derives $[\hat{q}, \hat{p}] = i\hbar$ as a Ward identity of matrix dynamics statistics but takes the $i$ as built into the matrix algebra rather than derived.
+
+\textbf{Gap}: no prior framework derives both formulations as independent theorems through disjoint chains from the same geometric postulate. The present paper derives $[\hat{q}, \hat{p}] = i\hbar$ via Propositions~\ref{prop:H1}--\ref{prop:H5} (Hamiltonian route, Channel A) and Propositions~\ref{prop:L1}--\ref{prop:L6} (Lagrangian route, Channel B), with the factors $i$ and $\hbar$ inherited geometrically from $dx_4/dt = ic$ on each route.
+
+\subsection{Level 5 (ontological QM): prior art on wave/particle duality}
+
+\textbf{Bohr 1927/1928}~\cite{bohr1928} introduced complementarity as an interpretation: wave and particle aspects apply in mutually exclusive experimental contexts. Bohr did not identify a geometric source from which both descend.
+
+\textbf{Bohmian mechanics}~\cite{bohm1952} treats the duality by positing a physically real guiding wavefunction and point-particle trajectories. The duality is preserved; its geometric origin is not derived.
+
+\textbf{Everett 1957}~\cite{everett1957} and successors treat particle localization as a branching phenomenon in the universal wavefunction. The duality's geometric origin is not addressed.
+
+\textbf{Gap}: no prior framework identifies a geometric source from which both the wave and particle aspects descend. The present paper (Section~\ref{sec:wpd}) derives the wave aspect from Channel B (Huygens from $x_4$-spherical expansion) and the particle aspect from Channel A (localized eigenvalue structure from Stone's theorem on spatial-translation invariance), both channels of the same $dx_4/dt = ic$.
+
+\subsection{Level 6 (causal/correlational QM): prior art on nonlocality}
+
+\textbf{Einstein--Podolsky--Rosen 1935}~\cite{EPR1935} identified the correlational structure. \textbf{Bell 1964}~\cite{bell1964} converted it into a testable inequality. \textbf{Aspect 1982}~\cite{aspect1982}, \textbf{Weihs--Jennewein--Zeilinger 1998}~\cite{zeilinger1998}, and \textbf{Hensen 2015 loophole-free}~\cite{hensen2015} experimentally confirmed nonlocality.
+
+Interpretive frameworks: Bohmian mechanics posits explicit nonlocal pilot waves; many-worlds posits branching correlation within a universal state; Copenhagen accepts nonlocality as an accepted structural feature without geometric explanation; relational quantum mechanics (Rovelli 1996); QBism (Fuchs 2013).
+
+\textbf{Gap}: no prior framework derives nonlocality as a geometric consequence of a spacetime-dynamical postulate. The present paper (Section~\ref{sec:causal}) derives nonlocality from Proposition~\ref{prop:coincidence}: photons at $|\mathbf{v}| = c$ satisfy $dx_4/d\tau = 0$, so co-emitted photons share $x_4$-coordinate forever regardless of three-dimensional spatial separation. Bell correlations $E(\mathbf{a}, \mathbf{b}) = -\cos\theta_{ab}$ are the three-dimensional shadow of this four-dimensional $x_4$-coincidence on the light cone. This is the McGucken Equivalence (Proposition~\ref{prop:McGEquiv}).
+
+\subsection{Level 7 (thermodynamic): prior art on Loschmidt and the arrows of time}
+
+\textbf{Boltzmann 1872}~\cite{boltzmann1872} derived the $H$-theorem assuming Stosszahlansatz (molecular chaos). \textbf{Loschmidt 1876}~\cite{loschmidt1876} objected that time-reversal symmetry precludes a strict $H$-theorem. \textbf{Boltzmann 1877} responded statistically. The statistical response is unsatisfactory because probability is not necessity and requires auxiliary low-entropy initial conditions.
+
+\textbf{Penrose 1979, 1989}~\cite{penrose1989} proposed the Weyl curvature hypothesis, grounding the thermodynamic arrow in a cosmological boundary condition rather than a dynamical postulate; quantified the initial-state improbability as $10^{-10^{123}}$.
+
+\textbf{Jacobson 1995}~\cite{jacobson1995} derives Einstein field equations from $\delta Q = T dS$ applied to Rindler horizons, assuming the Unruh temperature and horizon orientation as inputs.
+
+\textbf{Verlinde 2011}~\cite{verlinde2011} derives Newtonian gravity from holographic entropy gradients, assuming the screen and its orientation.
+
+\textbf{Connes--Rovelli 1994}~\cite{connesrovelli1994} derives a time-flow from a statistical state via modular automorphisms, requiring the state as input.
+
+\textbf{Poincar\'e recurrence defense} (Thomson 1874) argues the Second Law holds on timescales shorter than the Poincar\'e recurrence time. Does not derive the conservation laws from the same source.
+
+\textbf{CPT-symmetry approach} (Klimenko 2013--2019) and \textbf{case-intensional logic reformulation} (M\"uller 2019) address the Loschmidt objection in their respective frameworks. Neither derives both the Noether catalog and the Second Law from a single geometric postulate.
+
+\textbf{Quantum Inaccessibility approach} (arXiv 2511.03843, 2025) treats the Second Law as operational inaccessibility of time-reversed microstates under quantum control. Framework-level, not postulate-level; does not derive the conservation laws from the same source.
+
+\textbf{Gap}: no prior framework in the surveyed record derives both the time-symmetric Noether conservation laws AND the time-asymmetric Second Law as independent theorems of a single geometric dynamical postulate. Each prior framework either addresses one pillar (Jacobson, Verlinde, Padmanabhan, Penrose for thermodynamics; Noether and Standard Model Lagrangians for conservation) or treats the tension between them through statistical, logical, or operational reformulation. The present paper (Section~\ref{sec:thermo}) derives the Noether catalog through Channel A (Propositions~\ref{prop:poincare}--\ref{prop:diffeo}) and the Second Law with strict $dS/dt > 0$ for all $t > 0$ through Channel B (Propositions~\ref{prop:random walk}--\ref{prop:photonentropy}), with Loschmidt dissolved by the dual-channel structure itself (\S\ref{sec:thermo}.5) and the Past Hypothesis derived as a theorem (\S\ref{sec:thermo}.6).
+
+\subsection{Novelty of the synthesis}
+
+The component derivation steps recapitulate established physics: Feynman's path integral expansion at the Lagrangian route, Stone--von Neumann uniqueness at the Hamiltonian route, Noether's theorem at the conservation-law level, Boltzmann--Gibbs statistics at the entropy level, Aspect--Zeilinger--Hensen experiments at the nonlocality level. The component steps are not novel.
+
+What is novel is the synthesis. The specific claims the author asserts as new to the dated record:
+
+\begin{enumerate}
+\item \textbf{The postulate.} $dx_4/dt = ic$ as a physical dynamical statement about fourth-dimensional expansion, distinct from Minkowski's coordinate convention $x_4 = ict$. First formal record: 1998--1999 dissertation appendix; first public deployment 2003; first formal paper 2008 FQXi.
+\item \textbf{The dual-channel reading.} $dx_4/dt = ic$ as simultaneously carrying algebraic-symmetry content (Channel A) and geometric-propagation content (Channel B), each producing structurally parallel consequences at multiple levels of physical description.
+\item \textbf{The seven-level unification.} The same dual-channel structure generating mass/energy duality ($E = mc^2$ as Channel A limit), space/time duality (Minkowski interval as Pythagorean joint), foundational QM duality (Hamiltonian/Lagrangian), dynamical QM duality (Heisenberg/Schr\"odinger), ontological QM duality (particle/wave), causal QM duality (local/nonlocal), and thermodynamic duality (conservation/Second Law).
+\item \textbf{The Loschmidt resolution.} Loschmidt's 1876 objection dissolved by the dual-channel structure itself: the time-symmetric conservation laws and the time-asymmetric Second Law are two readings of the same principle through two channels, neither reducible to the other. Structural precedent: wave/particle duality (accepted since 1927).
+\item \textbf{The Past Hypothesis dissolution.} Penrose's $10^{-10^{123}}$ fine-tuning dissolved as a theorem: $t = 0$ is the lowest-entropy moment by construction, as the geometric starting point of $x_4$'s expansion.
+\item \textbf{The McGucken Equivalence.} Bell correlations as the three-dimensional shadow of four-dimensional $x_4$-coincidence for photons, derived from the fact that photons at $|\mathbf{v}| = c$ do not advance in $x_4$.
+\item \textbf{The Compton-coupling diffusion prediction.} $D_x^{(\text{McG})} = \epsilon^2 c^2 \Omega / (2\gamma^2)$, species-independent and temperature-persistent, as a laboratory-testable signature of the dual-channel framework.
+\end{enumerate}
+
+These seven claims constitute the novelty of the present paper. Each is distinct from the prior record surveyed in \S\S8.2--8.6 above.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Wave/particle duality has been accepted physics for ninety-nine years. Its structural logic --- a single physical object admitting two logically distinct readings selected by experimental context --- is not controversial. The McGucken Principle $dx_4/dt = ic$ is the geometric source of this accepted structure. Recognizing the source extends the structure to four other levels of physical description:
+
+\begin{itemize}
+\item \textbf{Mass/energy (Level 1):} $E^2 = (pc)^2 + (mc^2)^2$ with $E = mc^2$ as Channel A limit; mass and energy as dual readings of the four-velocity budget.
+\item \textbf{Space/time (Level 2):} Minkowski interval $ds^2 = d\mathbf{x}^2 - c^2 dt^2$ as Pythagorean joint of Channel A (time as symmetry parameter) and Channel B (space as propagation domain).
+\item \textbf{Foundational (Level 3):} Hamiltonian and Lagrangian formulations of quantum mechanics as disjoint derivations of $[\hat{q}, \hat{p}] = i\hbar$ from $dx_4/dt = ic$.
+\item \textbf{Dynamical (Level 4):} Heisenberg and Schr\"odinger pictures as Channel A and Channel B readings of the same unitary evolution.
+\item \textbf{Ontological (Level 5):} Wave and particle aspects --- the structural precedent.
+\item \textbf{Causal/correlational (Level 6):} Local microcausality and nonlocal Bell correlations as the three-dimensional shadow of four-dimensional $x_4$-coincidence.
+\item \textbf{Thermodynamic (Level 7):} Noether conservation laws and the Second Law as Channel A and Channel B readings, resolving the Loschmidt objection and dissolving the Past Hypothesis.
+\end{itemize}
+
+The framework predicts a species-independent, temperature-persistent diffusion $D_x^{(\text{McG})} = \epsilon^2 c^2 \Omega/(2\gamma^2)$ as a laboratory-testable signature. It derives the Noether catalog (ten Poincar\'e charges, three internal-gauge charges, diffeomorphism-covariant stress-energy conservation) through Channel A and the Second Law with strict $dS/dt > 0$ for all $t > 0$ through Channel B from the same starting equation. It runs through completely disjoint intermediate structures in each case --- the structural signature, identified by Einstein as the mark of a correct foundation, that a theory's impressiveness increases ``the greater the simplicity of its premises, the more different kinds of things it relates, and the more extended is its area of applicability.''
+
+The dual-channel framework does not require defense beyond what physics has already accepted at Level 5. It extends accepted structure to unresolved problems, and where it does so it dissolves those problems rather than rephrasing them. Loschmidt's 1876 tension is not a tension: conservation laws and the Second Law are two readings of $dx_4/dt = ic$ through two channels, neither reducible to the other, both real. Penrose's $10^{-10^{123}}$ fine-tuning is not a tuning: $t = 0$ is the lowest-entropy moment by construction, as the geometric starting point of $x_4$'s expansion.
+
+One equation. Seven levels of duality. The derivation program is complete in the sense that it identifies the geometric source of the dual-reading structure that quantum mechanics has used since 1927, and extends that structure to thermodynamics where the same logical move resolves a 150-year-old problem.
+
+\begin{thebibliography}{99}
+
+\bibitem{bohr1928} N. Bohr, \emph{The quantum postulate and the recent development of atomic theory}, Nature \textbf{121}, 580 (1928).
+
+\bibitem{mcguckenfqxi} E. McGucken, FQXi essay contest submissions (2008--2013).
+
+\bibitem{mcguckenbook} E. McGucken, \emph{Light Time Dimension Theory}, 45EPIC Press (2016--2017).
+
+\bibitem{mcguckennonloc} E. McGucken, \emph{The McGucken Equivalence: Nonlocality as Four-Dimensional Coincidence}, elliotmcguckenphysics.com (2025).
+
+\bibitem{EPR1935} A. Einstein, B. Podolsky, and N. Rosen, \emph{Can quantum-mechanical description of physical reality be considered complete?}, Phys.\ Rev.\ \textbf{47}, 777 (1935).
+
+\bibitem{bell1964} J. S. Bell, \emph{On the Einstein Podolsky Rosen paradox}, Physics \textbf{1}, 195 (1964).
+
+\bibitem{aspect1982} A. Aspect, J. Dalibard, and G. Roger, \emph{Experimental test of Bell's inequalities using time-varying analyzers}, Phys.\ Rev.\ Lett.\ \textbf{49}, 1804 (1982).
+
+\bibitem{zeilinger1998} G. Weihs, T. Jennewein, C. Simon, H. Weinfurter, and A. Zeilinger, \emph{Violation of Bell's inequality under strict Einstein locality conditions}, Phys.\ Rev.\ Lett.\ \textbf{81}, 5039 (1998).
+
+\bibitem{hensen2015} B. Hensen et al., \emph{Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres}, Nature \textbf{526}, 682 (2015).
+
+\bibitem{feynman1948} R. P. Feynman, \emph{Space-time approach to non-relativistic quantum mechanics}, Rev.\ Mod.\ Phys.\ \textbf{20}, 367 (1948).
+
+\bibitem{stone1932} M. H. Stone, \emph{On one-parameter unitary groups in Hilbert space}, Ann.\ Math.\ \textbf{33}, 643 (1932).
+
+\bibitem{vonneumann1931} J. von Neumann, \emph{Die Eindeutigkeit der Schr\"odingerschen Operatoren}, Math.\ Ann.\ \textbf{104}, 570 (1931).
+
+\bibitem{noether1918} E. Noether, \emph{Invariante Variationsprobleme}, Nachr.\ K\"onig.\ Gesellsch.\ Wiss.\ G\"ottingen, Math.-Phys.\ Kl., 235 (1918).
+
+\bibitem{loschmidt1876} J. Loschmidt, \emph{\"Uber den Zustand des W\"armegleichgewichtes}, Wien.\ Ber.\ \textbf{73}, 128 (1876).
+
+\bibitem{boltzmann1872} L. Boltzmann, \emph{Weitere Studien \"uber das W\"armegleichgewicht unter Gasmolek\"ulen}, Wien.\ Ber.\ \textbf{66}, 275 (1872).
+
+\bibitem{penrose1989} R. Penrose, \emph{The Emperor's New Mind}, Oxford University Press (1989).
+
+\bibitem{jacobson1995} T. Jacobson, \emph{Thermodynamics of spacetime}, Phys.\ Rev.\ Lett.\ \textbf{75}, 1260 (1995).
+
+\bibitem{verlinde2011} E. Verlinde, \emph{On the origin of gravity and the laws of Newton}, JHEP \textbf{04}, 029 (2011).
+
+\bibitem{unruh1976} W. G. Unruh, \emph{Notes on black-hole evaporation}, Phys.\ Rev.\ D \textbf{14}, 870 (1976).
+
+\bibitem{bekenstein1973} J. D. Bekenstein, \emph{Black holes and entropy}, Phys.\ Rev.\ D \textbf{7}, 2333 (1973).
+
+\bibitem{connesrovelli1994} A. Connes and C. Rovelli, \emph{Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories}, Class.\ Quant.\ Grav.\ \textbf{11}, 2899 (1994).
+
+\bibitem{nelson1966} E. Nelson, \emph{Derivation of the Schr\"odinger equation from Newtonian mechanics}, Phys.\ Rev.\ \textbf{150}, 1079 (1966).
+
+\bibitem{debroglie1924} L. de Broglie, \emph{Recherches sur la th\'eorie des quanta}, PhD thesis, Paris (1924).
+
+\bibitem{einstein1905} A. Einstein, \emph{\"Uber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}, Ann.\ Phys.\ \textbf{17}, 132 (1905).
+
+\bibitem{reichenbach1956} H. Reichenbach, \emph{The Direction of Time}, University of California Press (1956).
+
+\bibitem{hestenes1966} D. Hestenes, \emph{Space-Time Algebra}, Gordon and Breach (1966).
+
+\bibitem{adler2004} S. L. Adler, \emph{Quantum Theory as an Emergent Phenomenon}, Cambridge University Press (2004).
+
+\bibitem{minkowski1908} H. Minkowski, \emph{Raum und Zeit}, Physikalische Zeitschrift \textbf{10}, 75 (1909); address delivered at the 80th Assembly of German Natural Scientists and Physicians, Cologne, 21 September 1908.
+
+\bibitem{pauli1921} W. Pauli, \emph{Relativit\"atstheorie}, in \emph{Encyklop\"adie der mathematischen Wissenschaften}, Vol.\ V19, Teubner (1921).
+
+\bibitem{dirac1933} P. A. M. Dirac, \emph{The Lagrangian in quantum mechanics}, Phys.\ Zeitschrift der Sowjetunion \textbf{3}, 64 (1933).
+
+\bibitem{mcguckendissertation} E. McGucken, \emph{Multiple Unit Artificial Retina Chipset to Aid the Visually Impaired and Enhanced Holed-Emitter CMOS Phototransistors} (doctoral dissertation, University of North Carolina at Chapel Hill, 1998; advisors W.\ Liu and S.\ Washburn). Appendix B, \emph{``Physics for Poets: The Law of Moving Dimensions''}, pp.\ 153--156, contains the first formal written record of the postulate (in coordinate-time form $dx/dt = c$), the derivation of $E = mc^2$ (eq.\ AB.1) from four-velocity rotation into the time dimension, wave/particle duality as the dual-channel reading, Feynman-path-integral content, the Second Law and entropy from spherical $x_4$-expansion, the energy/momentum operator pair, time dilation, length contraction, and the derivation of Einstein's first postulate from the law of moving dimensions. Figure AB.1 (dissertation p.\ 154) shows the null-vector space-time diagram $x = ct$.
+
+\bibitem{mcguckenfqxi2008} E. McGucken, \emph{Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics (In Memory of John Archibald Wheeler)}, FQXi essay contest, 25 August 2008.
+
+\bibitem{bohm1952} D. Bohm, \emph{A suggested interpretation of the quantum theory in terms of ``hidden'' variables I, II}, Phys.\ Rev.\ \textbf{85}, 166 and 180 (1952).
+
+\bibitem{everett1957} H. Everett, \emph{``Relative state'' formulation of quantum mechanics}, Rev.\ Mod.\ Phys.\ \textbf{29}, 454 (1957).
+
+\bibitem{fuchs2013} C. A. Fuchs, \emph{QBism, the perimeter of quantum Bayesianism}, arXiv:1003.5209 (2010); C. A. Fuchs, N. D. Mermin, and R. Schack, \emph{An introduction to QBism with an application to the locality of quantum mechanics}, Am.\ J.\ Phys.\ \textbf{82}, 749 (2014).
+
+\bibitem{rovelli1996} C. Rovelli, \emph{Relational quantum mechanics}, Int.\ J.\ Theor.\ Phys.\ \textbf{35}, 1637 (1996).
+
+\bibitem{grmela1997} M. Grmela and H. C. \"Ottinger, \emph{Dynamics and thermodynamics of complex fluids. I. Development of a general formalism}, Phys.\ Rev.\ E \textbf{56}, 6620 (1997).
+
+\bibitem{heisenberg1927} W. Heisenberg, \emph{\"Uber den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik}, Z.\ Phys.\ \textbf{43}, 172 (1927).
+
+\bibitem{mcguckenprincetonafternoons} E. McGucken, \emph{Princeton Afternoons with Wheeler: The Origin of dx\_4/dt = ic}, historical note, elliotmcguckenphysics.com (2025). Account of the undergraduate conversations with J.\ A.\ Wheeler, P.\ J.\ E.\ Peebles, and J.\ H.\ Taylor Jr.\ that preceded the 1998--1999 dissertation appendix.
+
+\bibitem{mcgucken2006usenet} E. McGucken (posting as \texttt{drel...@gmail.com}), \emph{On The Novelty and Genius of Moving Dimensions Theory: Its Superiority to String Theory and Loop Quantum Gravity}, Usenet newsgroup \emph{sci.physics.relativity}, posted 29 August 2006, 18:19 UTC. Follow-up posts in the same thread dated 2 September 2006 and 5 September 2006. Archived at Google Groups: \url{https://groups.google.com/g/sci.physics.relativity/c/QeIG-RwiX_A}. Contains the general and specific postulates of Moving Dimensions Theory, the derivation $dx/dt = c$ from the null-vector condition, and the physical content of the $dx_4/dt = ic$ postulate in prose form.
+
+\bibitem{mcgucken2011usenet} E. McGucken (posting as \emph{Hero's Journey Entrepreneurship: Austrian Economics: Great Books \& Classics}), \emph{Why String Theory, M-Theory, LQG, Multiverses, and Parallel Universes are NOT Physics, and why Moving Dimensions Theory (MDT) IS}, Usenet newsgroup \emph{sci.physics}, posted 11 July 2011, 16:46 UTC; follow-up same day at 17:32 UTC. Archived at Google Groups: \url{https://groups.google.com/g/sci.physics/c/nfLV4igq5zA}. Contains the compact three-symbol form: ``MDT's equation: $dx_4/dt = ic$.''
+
+\bibitem{mcguckenherosjourney2011a} E. McGucken, \emph{Moving Dimensions Theory (MDT) Honors the Greats' Definition of Science}, blog post, \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 10 July 2011. Archived at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/moving-dimensions-theory-mdt-honor\%e2\%80\%99s-the-greats\%e2\%80\%99-definition-of-science/}. Contains the tombstone-engraving declaration placing $dx_4/dt = ic$ alongside Boltzmann's $S = k\log W$ and Born's $xp - px = i\hbar$.
+
+\bibitem{mcguckenherosjourney2011b} E. McGucken, \emph{Why String Theory, M-Theory, LQG, Multiverses, and Parallel Universes are NOT Physics, and why Moving Dimensions Theory (MDT's $dx_4/dt=ic$) IS}, blog post, \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 11 July 2011, 3:41 pm. Archived at \url{https://herosjourneyphysics.wordpress.com/2011/07/11/why-string-theory-m-theory-lqg-multiverses-and-parallel-universes-are-not-physics-and-why-moving-dimensions-theory-mdt-is/}. Shortlink: \url{https://wp.me/p1GStz-C}. Contains the full statement of the postulate with three numbered MDT proofs and is the published text of the book chapter \emph{Hero's Journey Physics}; same text as the 11 July 2011 sci.physics Usenet post.
+
+\bibitem{mcguckenherosjourney2011c} E. McGucken, \emph{Three Foundational Papers on Moving Dimensions Theory: Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics}, blog post (``hello-world'' founding post), \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 10 July 2011. Archived at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/hello-world/}. Introduces the three foundational 2008--2010 FQXi papers.
+
+\bibitem{mcguckenherosjourney2011d} E. McGucken, \emph{Proofs of Moving Dimensions Theory: Hero's Journey Physics \& Moving Dimensions Theory}, blog post, \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 10 July 2011. Archived at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/proofs-of-moving-dimensions-theory-heros-journey-physics-moving-dimensions-theory/}. Contains the three numbered MDT proofs in standalone form.
+
+\bibitem{mcguckenherosjourney2011e} E. McGucken, \emph{Time as an Emergent Phenomenon \& Deriving Einstein's Relativity from Moving Dimensions Theory's $dx_4/dt=ic$: Traveling Back to the Heroic Age of Physics In Memory of John Archibald Wheeler}, blog post, \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 10 July 2011, 11:35 pm. Shortlink: \url{https://wp.me/p1GStz-a}. Contains the full abstract of the 25 August 2008 FQXi paper.
+
+\bibitem{mcguckenherosjourney2011f} E. McGucken, \emph{Recommendation for Elliot McGucken for Admission to Graduate School of Physics}, blog post, \emph{Hero's Odyssey Physics \& Moving Dimensions Theory}, 10 July 2011, 11:38 pm. Archived at \url{https://herosjourneyphysics.wordpress.com/2011/07/10/recommendation-for-elliot-mcgucken-for-admission-to-graduateschoolof-physics/}. Shortlink: \url{https://wp.me/p1GStz-f}. Contains the verbatim J.\ A.\ Wheeler Princeton recommendation letter and a biographical statement linking the 1998 dissertation appendix to the Princeton projects with Wheeler on QM and GR.
+
+\bibitem{mcguckentimepdf2008} E. McGucken, \emph{Time as an Emergent Phenomenon: Traveling Back to the Heroic Age of Physics, In Memory of John Archibald Wheeler}, full-text PDF (${\sim}4{,}992$ words), 2008 FQXi essay. Archived at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_time_as_an_emergent1.pdf}. Contains the integration derivation showing $dx_4/dt = ic \Rightarrow x_4 = ict$, direct quotation of Einstein's 1912 \emph{Manuscript on Relativity}, and the five time arrows (radiative, thermodynamic, cosmological, causal, quantum).
+
+\bibitem{mcguckenultimatelypdf2009} E. McGucken, \emph{What is Ultimately Possible in Physics? Physics! A Hero's Journey with Galileo, Newton, Faraday, Maxwell, Planck, Einstein, Schrodinger, Bohr, and the Greats towards Moving Dimensions Theory. E pur si muove!}, full-text PDF, 2009 FQXi essay. Archived at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_what_is_ultimately_81.pdf}. Contains the three numbered MDT proofs, the Twitter-length proof, the bulleted catalogue of MDT derivations, and Fig.~1 illustrating two entangled photons on the expanding $x_4$ wavefront.
+
+\bibitem{mcguckenemergencepdf2010} E. McGucken, \emph{On the Emergence of QM, Relativity, Entropy, Time, $i\hbar$, and $ic$ from the Foundational, Physical Reality of a Fourth Dimension $x_4$ Expanding with a Discrete (Digital) Wavelength $\ell_p$ at $c$ Relative to Three Continuous (Analog) Spatial Dimensions}, full-text PDF. Archived at \url{https://herosjourneyphysics.wordpress.com/wp-content/uploads/2011/07/mcgucken_dr-_elliot_mcgucke_7-11.pdf}. Section 1 documents the three definitive Princeton conversations: with P.\ J.\ E.\ Peebles (photon as spherically-symmetric wavefront expanding at $c$), J.\ A.\ Wheeler (photon remains stationary in $x_4$), and J.\ H.\ Taylor Jr.\ (entanglement as the characteristic trait of QM). References the 1990 Princeton junior paper \emph{Within a Context} on EPR/delayed-choice experiments (footnote iii) and the 1998 UNC Chapel Hill dissertation appendix (footnote xxxviii). Figure~2 illustrates the $x_4$-wavelength geometry in gravitationally-stretched space; Figure~1 reproduces Bohr's double-slit diagram.
+
+\bibitem{mcguckenfqxi2009} E. McGucken, \emph{What is Ultimately Possible in Physics?}, FQXi essay contest (2009). Archived at forums.fqxi.org.
+
+\bibitem{mcguckenfqxi2010} E. McGucken, \emph{On the Emergence of QM, Relativity, Entropy, Time, $i\hbar$, and $ic$ from the Foundational, Physical Reality of a Fourth Dimension $x_4$ Expanding with a Discrete (Digital) Wavelength $\ell_p$ at $c$ Relative to Three Continuous (Analog) Spatial Dimensions}, FQXi essay contest (2010). Archived at forums.fqxi.org.
+
+\bibitem{mcguckenfqxi2012} E. McGucken, \emph{Questioning the Foundations}, FQXi essay contest (2012). Archived at forums.fqxi.org.
+
+\bibitem{mcguckenfqxi2013} E. McGucken, \emph{It from Bit or Bit from It?}, FQXi essay contest (2013). Archived at forums.fqxi.org.
+
+\bibitem{mcguckenbook2016} E. McGucken, \emph{Light Time Dimension Theory: The Foundational Physics Unifying Einstein's Relativity and Quantum Mechanics: A Simple, Illustrated Introduction}, 45EPIC Hero's Odyssey Mythology Press (2016).
+
+\bibitem{mcguckenbook2017a} E. McGucken, \emph{Einstein's Relativity Derived from LTD Theory's Principle: The Fourth Dimension is Expanding at c: $dx_4/dt = ic$}, 45EPIC Hero's Odyssey Mythology Press (2017).
+
+\bibitem{mcguckenbook2017b} E. McGucken, \emph{Relativity and Quantum Mechanics Unified in Pictures: Light Time Dimension Theory: $dx_4/dt = ic$}, 45EPIC Hero's Odyssey Mythology Press (2017).
+
+\bibitem{mcguckenbook2017c} E. McGucken, \emph{Quantum Entanglement and Einstein's ``Spooky Action at a Distance'' Explained via LTD Theory's Expanding Fourth Dimension $dx_4/dt = ic$}, 45EPIC Hero's Odyssey Mythology Press (2017).
+
+\bibitem{mcguckenbook2017d} E. McGucken, \emph{The Physics of Time: Time \& Its Arrows in Quantum Mechanics, Relativity, The Second Law of Thermodynamics, Entropy, The Twin Paradox, \& Cosmology Explained via LTD Theory's Expanding Fourth Dimension $dx_4/dt = ic$}, 45EPIC Hero's Odyssey Mythology Press (2017).
+
+\bibitem{mcguckenfb} E. McGucken, \emph{Elliot McGucken Physics} (Facebook page), 2017--present. \url{https://www.facebook.com/elliotmcguckenphysics}. Continuous public exposition of $dx_4/dt = ic$ and its derivations from 2017 to the present; $>6000$ followers.
+
+\bibitem{mcguckenmedium} E. McGucken, \emph{Dr.\ Elliot McGucken Theoretical Physics} (Medium blog), 2020--present. \url{https://goldennumberratio.medium.com/}. Technical-exposition blog containing approximately one hundred posts on the McGucken Principle and its consequences.
+
+\bibitem{mcguckenphysicscom} E. McGucken, \emph{elliotmcguckenphysics.com --- Light Time Dimension Theory}, principal derivation program, October 2024--present. \url{https://elliotmcguckenphysics.com/}. Approximately forty technical papers deriving consequences of $dx_4/dt = ic$ across quantum mechanics, general relativity, thermodynamics, gauge theory, and cosmology.
+
+\end{thebibliography}
+
+\end{document}
